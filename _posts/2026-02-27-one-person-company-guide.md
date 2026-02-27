@@ -3,9 +3,7 @@ layout: post
 title: "AI一人公司完全指南"
 date: 2026-02-27
 author: 功哥
-category: AI一人公司
-permalink: /one-person-company/2026-02-27-one-person-company-guide/
-tags: [创业, AI, 独立开发者]
+category: one-person-company
 description: "从0到$10k MRR的完整路径"
 ---
 

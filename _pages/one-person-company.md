@@ -9,7 +9,7 @@ permalink: /one-person-company/
     <p>独立创业者的AI时代成功路径</p>
     
     <article class="post-item">
-        <h2><a href="/one-person-company/2026-02-27-one-person-company-guide/">AI一人公司完全指南</a></h2>
+        <h2><a href="/one-person-company/2026/02/27/one-person-company-guide.html">AI一人公司完全指南</a></h2>
         <p class="meta">2026年02月27日</p>
         <p>从0到$10k MRR的完整路径，10大成功模式，TOP 5成功要素</p>
     </article>

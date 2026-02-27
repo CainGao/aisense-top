@@ -7,6 +7,9 @@ baseurl: ""
 # Markdown配置
 markdown: kramdown
 
+# 文章URL格式
+permalink: /:categories/:year/:month/:day/:title/
+
 # 插件
 plugins:
   - jekyll-seo-tag
