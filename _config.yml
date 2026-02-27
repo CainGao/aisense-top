@@ -1,28 +1,15 @@
 title: AI Sense
-tagline: AI时代的技术和商业洞察
-description: 每日AI机器人早报、GitHub热榜分析、AI一人公司案例、技术文章
+description: AI时代的技术和商业洞察
 author: 功哥
-email: your-email@example.com
-
-# 网站URL
 url: "https://aisense.top"
 baseurl: ""
 
-# 时区
-timezone: Asia/Shanghai
-lang: zh-CN
-
 # Markdown配置
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 
 # 插件
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
 
 # 默认值
 defaults:
@@ -31,8 +18,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "功哥"
-      comments: true
   - scope:
       path: ""
       type: "pages"
@@ -47,15 +32,15 @@ exclude:
   - vendor
   - README.md
   - LICENSE
-  - CLEANUP-GUIDE.md
-  - Moltbot-Skills-Selection.md
-  - NEWS-SOURCES.md
-  - TOOLS-SOURCES.md
   - news/
   - tools/
   - about/
   - database/
   - scripts/
+  - CLEANUP-GUIDE.md
+  - Moltbot-Skills-Selection.md
+  - NEWS-SOURCES.md
+  - TOOLS-SOURCES.md
 
 # 包含文件
 include:

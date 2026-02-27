@@ -8,21 +8,6 @@ title: 首页
     <p class="tagline">AI时代的技术和商业洞察</p>
 </div>
 
-<div class="latest-content">
-    <h2>📰 最新内容</h2>
-    
-    {% assign posts = site.posts | sort: date | reverse %}
-    {% for post in posts limit:10 %}
-    <article class="post-preview">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p class="meta">{{ post.date | date: "%Y年%m月%d日" }}</p>
-        {% if post.description %}
-        <p>{{ post.description }}</p>
-        {% endif %}
-    </article>
-    {% endfor %}
-</div>
-
 <div class="categories">
     <h2>🎯 核心栏目</h2>
     
@@ -30,25 +15,25 @@ title: 首页
         <div class="category-card">
             <h3>📰 AI机器人早报</h3>
             <p>每日更新，掌握机器人行业最新动态</p>
-            <a href="{{ '/ai-news/' | relative_url }}" class="btn">查看更多</a>
+            <a href="/ai-news/" class="btn">查看更多</a>
         </div>
         
         <div class="category-card">
             <h3>📊 GitHub热榜分析</h3>
             <p>深度解析开源项目，发现技术趋势</p>
-            <a href="{{ '/github-trending/' | relative_url }}" class="btn">查看更多</a>
+            <a href="/github-trending/" class="btn">查看更多</a>
         </div>
         
         <div class="category-card">
             <h3>💼 AI一人公司</h3>
             <p>独立创业者的AI时代成功路径</p>
-            <a href="{{ '/one-person-company/' | relative_url }}" class="btn">查看更多</a>
+            <a href="/one-person-company/" class="btn">查看更多</a>
         </div>
         
         <div class="category-card">
             <h3>🦞 OpenClaw指南</h3>
             <p>个人AI助手的使用最佳实践</p>
-            <a href="{{ '/openclaw/' | relative_url }}" class="btn">查看更多</a>
+            <a href="/openclaw/" class="btn">查看更多</a>
         </div>
     </div>
 </div>
