@@ -8,7 +8,7 @@ baseurl: ""
 markdown: kramdown
 
 # 文章URL格式
-permalink: /:categories/:year/:month/:day/:title/
+permalink: /:categories/:year/:month/:day/:title.html
 
 # 插件
 plugins:
