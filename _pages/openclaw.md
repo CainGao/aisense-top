@@ -27,8 +27,8 @@ permalink: /openclaw/
     </article>
     
     <article class="post-item">
-        <h2>⚡ OpenClaw定时任务完全指南</h2>
-        <p class="meta">即将发布</p>
-        <p>如何使用Cron任务自动化你的工作流</p>
+        <h2><a href="/posts/2026-02-27-openclaw-cron-guide.html">🤖 睡醒就有早报看：OpenClaw定时任务配置指南</a></h2>
+        <p class="meta">2026年02月27日</p>
+        <p>让AI每天自动为你工作，解放双手，提升效率！</p>
     </article>
 </div>
