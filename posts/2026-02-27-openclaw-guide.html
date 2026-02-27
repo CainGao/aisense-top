@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw从零开始：5分钟搭建你的AI私人助理 | AI Sense</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">
+                    <h1>AI Sense</h1>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/ai-news/">📰 AI机器人早报</a></li>
+                    <li><a href="/github-trending/">📊 GitHub热榜</a></li>
+                    <li><a href="/one-person-company/">💼 AI一人公司</a></li>
+                    <li><a href="/openclaw/">🦞 OpenClaw</a></li>
+                    <li><a href="/about/">📖 关于</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <article class="post">
+            <header class="post-header">
+                <h1 class="post-title">📖 OpenClaw从零开始：5分钟搭建你的AI私人助理</h1>
+                <div class="post-meta">
+                    <span class="post-date">2026年02月27日</span>
+                    <span class="post-author">作者：功哥</span>
+                </div>
+            </header>
+            
+            <div class="post-content">
+                <h2>🎯 目标</h2>
+                <p>5分钟内完成OpenClaw的安装和基本配置，打造你的第一个AI私人助理。</p>
+                
+                <h2>📋 准备工作</h2>
+                <ul>
+                    <li>macOS / Linux / Windows 系统</li>
+                    <li>Node.js 18+ 已安装</li>
+                    <li>基本的命令行操作能力</li>
+                </ul>
+                
+                <h2>🚀 安装步骤</h2>
+                
+                <h3>步骤1：安装OpenClaw</h3>
+                <pre><code>npm install -g openclaw</code></pre>
+                
+                <h3>步骤2：初始化配置</h3>
+                <pre><code>openclaw init</code></pre>
+                <p>按照提示完成基本配置。</p>
+                
+                <h3>步骤3：启动Gateway</h3>
+                <pre><code>openclaw gateway start</code></pre>
+                <p>Gateway是OpenClaw的核心服务，负责AI模型调用和消息路由。</p>
+                
+                <h3>步骤4：配置AI模型</h3>
+                <pre><code>openclaw configure --section ai</code></pre>
+                <p>输入你的AI API密钥（OpenAI、Anthropic等）。</p>
+                
+                <h3>步骤5：测试运行</h3>
+                <pre><code>openclaw status</code></pre>
+                <p>如果看到"Gateway: running"，说明安装成功！</p>
+                
+                <h2>💡 第一个任务</h2>
+                <p>尝试让AI帮你做一件事：</p>
+                <pre><code>openclaw ask "帮我写一个Python脚本，计算斐波那契数列"</code></pre>
+                
+                <h2>🔧 常用命令</h2>
+                <ul>
+                    <li><code>openclaw status</code> - 查看系统状态</li>
+                    <li><code>openclaw gateway start</code> - 启动Gateway</li>
+                    <li><code>openclaw gateway stop</code> - 停止Gateway</li>
+                    <li><code>openclaw configure</code> - 配置系统</li>
+                    <li><code>openclaw cron add</code> - 添加定时任务</li>
+                </ul>
+                
+                <h2>📚 下一步</h2>
+                <ul>
+                    <li>配置飞书集成</li>
+                    <li>添加定时任务</li>
+                    <li>安装Skills扩展</li>
+                    <li>自定义AI行为</li>
+                </ul>
+                
+                <h2>🔗 相关链接</h2>
+                <ul>
+                    <li><a href="https://docs.openclaw.ai">OpenClaw官方文档</a></li>
+                    <li><a href="https://github.com/openclaw/openclaw">GitHub仓库</a></li>
+                    <li><a href="https://discord.com/invite/clawd">社区Discord</a></li>
+                </ul>
+                
+                <p><strong>恭喜！你已经成功搭建了AI私人助理！</strong> 🎉</p>
+            </div>
+            
+            <footer class="post-footer">
+                <p><a href="/openclaw/">← 返回OpenClaw指南列表</a></p>
+            </footer>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 AI Sense | Powered by Jekyll & GitHub Pages</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

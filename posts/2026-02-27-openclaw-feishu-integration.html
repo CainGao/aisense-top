@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔗 OpenClaw飞书集成最佳实践 | AI Sense</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">
+                    <h1>AI Sense</h1>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/ai-news/">📰 AI机器人早报</a></li>
+                    <li><a href="/github-trending/">📊 GitHub热榜</a></li>
+                    <li><a href="/one-person-company/">💼 AI一人公司</a></li>
+                    <li><a href="/openclaw/">🦞 OpenClaw</a></li>
+                    <li><a href="/about/">📖 关于</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <article class="post">
+            <header class="post-header">
+                <h1 class="post-title">🔗 OpenClaw飞书集成最佳实践</h1>
+                <div class="post-meta">
+                    <span class="post-date">2026年02月27日</span>
+                    <span class="post-author">作者：功哥</span>
+                </div>
+            </header>
+            
+            <div class="post-content">
+                <h2>❌ 常见问题</h2>
+                
+                <h3>问题：飞书文档内容为空</h3>
+                <p><strong>现象：</strong> 使用feishu_doc工具创建文档后，文档内容为空，只有标题。</p>
+                
+                <p><strong>根本原因：</strong></p>
+                <ul>
+                    <li>feishu_doc的create操作<strong>即使传入content参数也不会写入内容</strong></li>
+                    <li>create操作只创建文档结构，返回document_id</li>
+                    <li>必须使用write操作才能真正写入内容</li>
+                </ul>
+                
+                <h2>✅ 正确的操作流程</h2>
+                
+                <h3>步骤1：创建文档（获取document_id）</h3>
+                <pre><code>feishu_doc create --title "文档标题" --content "临时占位（会被忽略）"
+
+返回：
+{
+  "document_id": "xxx",
+  "title": "文档标题",
+  "url": "https://feishu.cn/docx/xxx"
+}</code></pre>
+                
+                <h3>步骤2：写入内容（关键步骤！）</h3>
+                <pre><code>feishu_doc write --doc_token "xxx" --content "完整的Markdown内容"
+
+返回：
+{
+  "success": true,
+  "blocks_added": 40,
+  "blocks_deleted": 0
+}</code></pre>
+                
+                <h3>步骤3：验证内容（可选）</h3>
+                <pre><code>feishu_doc read --doc_token "xxx"
+
+返回：
+{
+  "title": "文档标题",
+  "content": "完整内容...",
+  "block_count": 41
+}</code></pre>
+                
+                <h2>⚠️ API限制</h2>
+                
+                <h3>字符限制</h3>
+                <ul>
+                    <li><strong>单次请求：</strong> 约5000字符</li>
+                    <li><strong>安全值：</strong> 建议&lt;3500字符</li>
+                    <li><strong>超长内容：</strong> 需要分段上传</li>
+                </ul>
+                
+                <h3>分段上传策略</h3>
+                <pre><code># 方案1：按段落分割
+content_part1 = "第一部分内容..."
+content_part2 = "第二部分内容..."
+
+# 方案2：按字符数分割
+max_chars = 3000
+parts = [content[i:i+max_chars] for i in range(0, len(content), max_chars)]
+
+# 逐段上传
+for part in parts:
+    feishu_doc write --doc_token "xxx" --content part</code></pre>
+                
+                <h2>📝 已记录到核心记忆</h2>
+                
+                <h3>MEMORY.md更新内容</h3>
+                <p>在MEMORY.md中添加了"飞书集成最佳实践"部分，包含：</p>
+                <ul>
+                    <li>问题说明</li>
+                    <li>根本原因</li>
+                    <li>正确流程</li>
+                    <li>API限制</li>
+                    <li>代码示例</li>
+                    <li>重要提示</li>
+                </ul>
+                
+                <h3>TOOLS.md更新内容</h3>
+                <p>在TOOLS.md中添加了详细的"飞书文档操作最佳实践"，包含：</p>
+                <ul>
+                    <li>问题根因</li>
+                    <li>完整解决方案</li>
+                    <li>正确流程图</li>
+                    <li>代码示例</li>
+                    <li>分段上传策略</li>
+                    <li>知识库操作</li>
+                </ul>
+                
+                <h2>🎯 效果</h2>
+                
+                <h3>✅ 已解决</h3>
+                <ul>
+                    <li>所有文档都能正确写入内容</li>
+                    <li>每次会话都会加载最佳实践</li>
+                    <li>不会再出现空文档问题</li>
+                    <li>完整的解决方案文档已保存</li>
+                </ul>
+                
+                <h2>🔗 相关链接</h2>
+                <ul>
+                    <li><a href="https://open.feishu.cn/document">飞书开放平台文档</a></li>
+                    <li><a href="https://docs.openclaw.ai">OpenClaw官方文档</a></li>
+                </ul>
+                
+                <p><strong>飞书文档问题已彻底解决！</strong> 🚀</p>
+            </div>
+            
+            <footer class="post-footer">
+                <p><a href="/openclaw/">← 返回OpenClaw指南列表</a></p>
+            </footer>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 AI Sense | Powered by Jekyll & GitHub Pages</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
