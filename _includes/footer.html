@@ -1,0 +1,29 @@
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>{{ site.title }}</h3>
+                <p>{{ site.description }}</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="{{ '/' | relative_url }}">首页</a></li>
+                    <li><a href="{{ '/about/' | relative_url }}">关于</a></li>
+                    <li><a href="{{ '/feed.xml' | relative_url }}">RSS订阅</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>联系方式</h3>
+                <p>站长：{{ site.author }}</p>
+                <p>邮箱：{{ site.email }}</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }} | Powered by Jekyll & GitHub Pages</p>
+        </div>
+    </div>
+</footer>
