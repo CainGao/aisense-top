@@ -51,6 +51,11 @@ exclude:
   - Moltbot-Skills-Selection.md
   - NEWS-SOURCES.md
   - TOOLS-SOURCES.md
+  - news/
+  - tools/
+  - about/
+  - database/
+  - scripts/
 
 # 包含文件
 include:
