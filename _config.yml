@@ -17,20 +17,12 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    block:
-      line_numbers: true
 
 # 插件
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-paginate
-
-# 分页
-paginate: 10
-paginate_path: "/page:num/"
 
 # 默认值
 defaults:
