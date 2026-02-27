@@ -4,6 +4,7 @@ title: "2026-02-28 GitHub热榜分析"
 date: 2026-02-28
 author: 功哥
 category: GitHub热榜
+permalink: /github-trending/2026-02-28-github-trending/
 description: "深度解析GitHub热门项目，发现技术趋势"
 ---
 

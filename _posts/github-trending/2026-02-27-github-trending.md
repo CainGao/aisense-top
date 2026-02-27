@@ -4,7 +4,7 @@ title: "2026-02-27 GitHub热榜分析"
 date: 2026-02-27
 author: 功哥
 category: GitHub热榜
-tags: [GitHub, 开源, 趋势]
+permalink: /github-trending/2026-02-27-github-trending/
 description: "深度解析GitHub热门项目，发现技术趋势"
 ---
 
