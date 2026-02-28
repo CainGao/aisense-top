@@ -71,7 +71,7 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 0.8rem;
+    gap: 1rem;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -80,16 +80,18 @@ body {
     text-decoration: none;
     color: #555;
     font-weight: 500;
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     white-space: nowrap;
+    border: 1px solid transparent;
 }
 
 .nav-menu a:hover {
-    color: #007bff;
-    background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+    color: #667eea;
+    background: rgba(102,126,234,0.08);
+    border-color: rgba(102,126,234,0.2);
     transform: translateY(-2px);
 }
 
@@ -102,27 +104,30 @@ main.container {
 /* 首页Hero区域 */
 .hero {
     text-align: center;
-    padding: 4rem 0 3rem;
-    background: linear-gradient(135deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%);
+    padding: 5rem 2rem 4rem;
+    background: linear-gradient(135deg, rgba(102,126,234,0.08) 0%, rgba(118,75,162,0.08) 100%);
     border-radius: 16px;
     margin-bottom: 3rem;
+    border: 1px solid rgba(102,126,234,0.1);
 }
 
 .hero h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: -1px;
 }
 
 .hero .tagline {
-    font-size: 1.3rem;
-    color: #666;
+    font-size: 1.4rem;
+    color: #555;
     font-weight: 500;
+    line-height: 1.6;
 }
 
 /* 最新内容区域 */
@@ -131,37 +136,40 @@ main.container {
 }
 
 .latest-content h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 2rem;
     color: #333;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.8rem;
     border-bottom: 3px solid #667eea;
+    display: inline-block;
 }
 
 .post-preview {
     background: #fff;
-    padding: 1.8rem;
+    padding: 2rem;
     margin-bottom: 1.5rem;
     border-radius: 12px;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #e8e8e8;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .post-preview:hover {
     border-color: #667eea;
-    box-shadow: 0 8px 24px rgba(102,126,234,0.12);
+    box-shadow: 0 12px 32px rgba(102,126,234,0.15);
     transform: translateY(-4px);
 }
 
 .post-preview h3 {
-    margin: 0 0 0.8rem 0;
-    font-size: 1.4rem;
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
 }
 
 .post-preview h3 a {
     color: #333;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: 600;
 }
 
 .post-preview h3 a:hover {
@@ -169,15 +177,17 @@ main.container {
 }
 
 .post-preview .meta {
-    color: #999;
+    color: #888;
     font-size: 0.9rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .post-preview p {
     color: #666;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1rem;
 }
 
 /* 核心栏目区域 */
@@ -186,44 +196,48 @@ main.container {
 }
 
 .categories h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 2rem;
     color: #333;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.8rem;
     border-bottom: 3px solid #667eea;
+    display: inline-block;
 }
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .category-card {
     background: #fff;
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     border-radius: 12px;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #e8e8e8;
     transition: all 0.3s ease;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .category-card:hover {
     border-color: #667eea;
-    box-shadow: 0 8px 24px rgba(102,126,234,0.12);
-    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(102,126,234,0.15);
+    transform: translateY(-6px);
 }
 
 .category-card h3 {
-    font-size: 1.3rem;
-    margin: 0 0 1rem 0;
+    font-size: 1.4rem;
+    margin: 0 0 1.2rem 0;
     color: #333;
+    font-weight: 600;
 }
 
 .category-card p {
     color: #666;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+    margin-bottom: 1.8rem;
+    line-height: 1.7;
+    font-size: 1rem;
 }
 
 /* 分类列表页 */
@@ -247,28 +261,30 @@ main.container {
 /* 文章列表项 */
 .post-item {
     background: #fff;
-    padding: 1.8rem;
+    padding: 2rem;
     margin-bottom: 1.5rem;
     border-radius: 12px;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #e8e8e8;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .post-item:hover {
     border-color: #667eea;
-    box-shadow: 0 8px 24px rgba(102,126,234,0.12);
+    box-shadow: 0 12px 32px rgba(102,126,234,0.15);
     transform: translateY(-4px);
 }
 
 .post-item h2, .post-item h3 {
-    margin: 0 0 0.8rem 0;
+    margin: 0 0 1rem 0;
 }
 
 .post-item h2 a, .post-item h3 a {
     color: #333;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     transition: color 0.3s ease;
+    font-weight: 600;
 }
 
 .post-item h2 a:hover, .post-item h3 a:hover {
@@ -276,15 +292,17 @@ main.container {
 }
 
 .post-item .meta {
-    color: #999;
+    color: #888;
     font-size: 0.9rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .post-item p {
     color: #666;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1rem;
 }
 
 /* 文章页面 */
@@ -399,19 +417,20 @@ main.container {
 /* 按钮 */
 .btn {
     display: inline-block;
-    padding: 0.8rem 1.8rem;
+    padding: 0.9rem 2rem;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-decoration: none;
-    border-radius: 25px;
-    font-weight: 500;
+    border-radius: 8px;
+    font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+    box-shadow: 0 4px 16px rgba(102,126,234,0.3);
+    font-size: 0.95rem;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102,126,234,0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(102,126,234,0.4);
     filter: brightness(1.1);
 }
 
