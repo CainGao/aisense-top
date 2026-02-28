@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+#!/bin/bash
+
+# 统一所有HTML文件的模板脚本
+
+TEMPLATE_HEADER='<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2026-02-28 AI机器人早报 | AI Sense</title>
-    
+    <title>{{TITLE}} | AI Sense</title>
+    {{META}}
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
@@ -28,10 +32,9 @@
     </header>
     
     <main class="container">
-        <article class="post">
-                <p>文章内容加载中...</p>
-                <p><a href="/">← 返回首页</a></p>
-        </article>
+        <article class="post">'
+
+TEMPLATE_FOOTER='        </article>
     </main>
     
     <footer>
@@ -58,4 +61,37 @@
         </div>
     </footer>
 </body>
-</html>
+</html>'
+
+# 处理posts目录下的所有HTML文件
+cd /Users/caingao/.openclaw/workspace/aisense-top/posts
+
+for file in *.html; do
+    echo "Processing $file..."
+    
+    # 提取标题
+    title=$(grep -o '<title>.*</title>' "$file" | sed 's/<title>\(.*\)<\/title>/\1/' | sed 's/ | AI Sense$//')
+    
+    # 提取meta标签
+    meta=$(grep -E '<meta name="(description|keywords)"' "$file")
+    
+    # 提取内容（从post-content到</article>之前）
+    content=$(sed -n '/<div class="post-content">/,/<\/article>/p' "$file" | sed '1d;$d' | sed '$d')
+    
+    # 如果没有post-content，尝试提取main内容
+    if [ -z "$content" ]; then
+        content=$(sed -n '/<main/,/<\/main>/p' "$file" | sed '1d;$d')
+    fi
+    
+    # 创建新文件
+    {
+        echo "$TEMPLATE_HEADER" | sed "s/{{TITLE}}/$title/" | sed "s|{{META}}|$meta|"
+        echo "$content"
+        echo "$TEMPLATE_FOOTER"
+    } > "${file}.new"
+    
+    # 替换原文件
+    mv "${file}.new" "$file"
+done
+
+echo "All files unified!"
