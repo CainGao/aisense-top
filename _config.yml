@@ -48,3 +48,13 @@ exclude:
 # 包含文件
 include:
   - _pages
+
+# 访问统计和广告配置（需要在对应平台申请后填入）
+# Google Analytics（访问统计）
+google_analytics: UA-XXXXXXXXX-X  # 替换为你的Google Analytics ID
+
+# Google AdSense（广告联盟）
+google_adsense: ca-pub-XXXXXXXXXX  # 替换为你的AdSense发布商ID
+
+# 百度统计（可选）
+baidu_tongji: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  # 替换为你的百度统计ID
