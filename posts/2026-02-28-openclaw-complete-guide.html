@@ -243,12 +243,59 @@
         <div class="section" id="intro">
             <h2>1. OpenClaw简介</h2>
             
-            <div class="image-container">
-                <img src="https://picsum.photos/800/400?random=1" alt="OpenClaw Logo">
-                <p class="caption">OpenClaw - 开源AI助手平台</p>
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem; border-radius: 10px; text-align: center; margin: 2rem 0;">
+                <h2 style="margin: 0; font-size: 3rem;">🦞 OpenClaw</h2>
+                <p style="margin: 1rem 0 0 0; font-size: 1.5rem;">开源AI助手平台 · 多通道 · 可扩展</p>
+                <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold;">50+</div>
+                        <div>内置工具</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold;">10+</div>
+                        <div>支持通道</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold;">100%</div>
+                        <div>开源免费</div>
+                    </div>
+                </div>
             </div>
             
             <p>OpenClaw是一个强大的开源AI助手平台，支持多通道接入（飞书、钉钉、Discord等），提供丰富的工具集成和灵活的定制能力。无论你是开发者、产品经理还是内容创作者，OpenClaw都能成为你的得力助手。</p>
+            
+            <h3>OpenClaw基础框架</h3>
+            
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                <h4 style="margin-top: 0;">🏗️ 架构组件</h4>
+                <ul style="line-height: 1.8;">
+                    <li><strong>Gateway（网关）</strong>：核心服务，处理所有通道连接和消息路由</li>
+                    <li><strong>Agent（代理）</strong>：AI助手实例，处理用户对话和任务执行</li>
+                    <li><strong>Skills（技能）</strong>：扩展功能模块，提供特定能力（如文档处理、数据分析）</li>
+                    <li><strong>Channels（通道）</strong>：多平台接入（飞书、钉钉、Discord等）</li>
+                    <li><strong>Tools（工具）</strong>：底层能力（文件操作、网络请求、代码执行）</li>
+                    <li><strong>MCP Server</strong>：标准化协议扩展，连接外部服务</li>
+                </ul>
+                
+                <h4 style="margin-top: 2rem;">🔄 工作流程</h4>
+                <div style="background: white; padding: 1.5rem; border-radius: 6px; font-family: monospace; overflow-x: auto;">
+用户消息 → Gateway → Agent → AI模型 → 工具调用 → 响应生成 → Gateway → 用户
+                </div>
+                
+                <h4 style="margin-top: 2rem;">📁 目录结构</h4>
+                <div class="code-block" style="margin-top: 0.5rem;">
+                    <code>~/.openclaw/
+├── workspace/              # 工作空间
+│   ├── config.yaml         # 主配置
+│   ├── MEMORY.md           # 长期记忆
+│   ├── USER.md             # 用户信息
+│   ├── SOUL.md             # AI人设
+│   └── channels/           # 通道配置
+├── skills/                 # 自定义技能
+├── cache/                  # 缓存数据
+└── logs/                   # 日志文件</code>
+                </div>
+            </div>
             
             <h3>核心特性</h3>
             
@@ -340,9 +387,29 @@ openclaw gateway status</code>
                 </li>
             </ol>
             
-            <div class="image-container">
-                <img src="https://picsum.photos/800/500?random=2" alt="安装流程图">
-                <p class="caption">OpenClaw安装流程</p>
+            <div style="background: white; padding: 2rem; border-radius: 8px; border: 2px solid #007bff; margin: 2rem 0;">
+                <h3 style="margin-top: 0; text-align: center;">🔄 安装流程图</h3>
+                <div style="display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; margin: 1rem 0;">
+                    <div style="text-align: center; margin: 1rem;">
+                        <div style="width: 60px; height: 60px; background: #007bff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto;">1</div>
+                        <p style="margin-top: 0.5rem;"><strong>安装Node.js</strong></p>
+                    </div>
+                    <div style="font-size: 2rem; color: #007bff;">→</div>
+                    <div style="text-align: center; margin: 1rem;">
+                        <div style="width: 60px; height: 60px; background: #007bff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto;">2</div>
+                        <p style="margin-top: 0.5rem;"><strong>安装CLI</strong></p>
+                    </div>
+                    <div style="font-size: 2rem; color: #007bff;">→</div>
+                    <div style="text-align: center; margin: 1rem;">
+                        <div style="width: 60px; height: 60px; background: #007bff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto;">3</div>
+                        <p style="margin-top: 0.5rem;"><strong>初始化</strong></p>
+                    </div>
+                    <div style="font-size: 2rem; color: #007bff;">→</div>
+                    <div style="text-align: center; margin: 1rem;">
+                        <div style="width: 60px; height: 60px; background: #28a745; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto;">✓</div>
+                        <p style="margin-top: 0.5rem;"><strong>启动Gateway</strong></p>
+                    </div>
+                </div>
             </div>
             
             <div class="warning-box">
@@ -385,7 +452,7 @@ agent:
   thinking: "low"
 
 gateway:
-  port: 3000
+  port: 18789
   host: "localhost"
 
 channels:
@@ -422,6 +489,41 @@ llm:
   api_key: "your-api-key-here"</code>
             </div>
             
+            <div class="warning-box">
+                <strong>⚠️ GLM接入重要说明</strong>
+                <p style="margin: 0.5rem 0;">智谱GLM-5有两个API端点，请根据你的套餐类型正确配置：</p>
+                <div class="code-block" style="margin: 1rem 0;">
+                    <code># 通用API端点（默认）
+https://open.bigmodel.cn/api/paas/v4
+
+# GLM编码套餐专用端点（仅限编码场景）
+https://open.bigmodel.cn/api/coding/paas/v4</code>
+                </div>
+                <p style="margin: 0.5rem 0;"><strong>注意：</strong></p>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li>使用<strong>GLM编码套餐</strong>时，必须配置专属的Coding端点</li>
+                    <li>Coding端点仅限编码场景，不适用于通用API场景</li>
+                    <li>通用场景请使用通用端点</li>
+                    <li>API密钥获取：<a href="https://bigmodel.cn/usercenter/proj-mgmt/apikeys" target="_blank">API Keys页面</a></li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>配置示例：</strong></p>
+                <div class="code-block" style="margin: 0.5rem 0;">
+                    <code># 通用套餐
+llm:
+  provider: "zhipu"
+  model: "glm-5"
+  api_key: "your-api-key"
+  base_url: "https://open.bigmodel.cn/api/paas/v4"
+
+# 编码套餐
+llm:
+  provider: "zhipu"
+  model: "glm-5"
+  api_key: "your-api-key"
+  base_url: "https://open.bigmodel.cn/api/coding/paas/v4"</code>
+                </div>
+            </div>
+            
             <div class="tip-box">
                 <strong>💡 模型选择建议</strong>
                 <ul style="margin: 0.5rem 0 0 1.5rem;">
@@ -441,6 +543,13 @@ llm:
             </div>
             
             <h3>4.1 创建飞书应用</h3>
+            
+            <div style="background: #e7f3ff; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                <h4 style="margin-top: 0;">📱 飞书集成架构</h4>
+                <div style="background: white; padding: 1rem; border-radius: 6px; font-family: monospace; text-align: center; margin-top: 1rem;">
+飞书机器人 → OpenClaw Gateway (18789) → Agent → AI模型 → 工具调用 → 响应
+                </div>
+            </div>
             
             <ol class="step-list">
                 <li><strong>访问飞书开放平台</strong><br>
@@ -494,9 +603,19 @@ http://your-server:3000/webhook/feishu
 ✅ contact.user.updated_v3 (用户信息变更)</code>
             </div>
             
-            <div class="image-container">
-                <img src="https://picsum.photos/800/600?random=4" alt="飞书配置界面">
-                <p class="caption">飞书事件订阅配置</p>
+            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                <h4 style="margin-top: 0;">🔧 飞书事件订阅配置示例</h4>
+                <div class="code-block" style="margin-top: 0.5rem;">
+                    <code># 配置示例
+请求地址: http://your-server:18789/webhook/feishu
+事件订阅:
+  ✅ im.message.receive_v1    # 接收消息
+  ✅ contact.user.updated_v3  # 用户信息变更
+  
+# 验证Token（可选）
+Verification Token: your-verification-token
+Encrypt Key: your-encrypt-key</code>
+                </div>
             </div>
             
             <h3>4.4 测试连接</h3>
@@ -525,9 +644,11 @@ openclaw gateway logs
         <div class="section" id="dingtalk">
             <h2>5. 钉钉通道配置</h2>
             
-            <div class="image-container">
-                <img src="https://picsum.photos/800/400?random=5" alt="钉钉集成">
-                <p class="caption">钉钉机器人集成</p>
+            <div style="background: #e7f3ff; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                <h4 style="margin-top: 0;">📱 钉钉集成架构</h4>
+                <div style="background: white; padding: 1rem; border-radius: 6px; font-family: monospace; text-align: center; margin-top: 1rem;">
+钉钉机器人 → OpenClaw Gateway (Stream模式) → Agent → AI模型 → 响应
+                </div>
             </div>
             
             <h3>5.1 创建钉钉应用</h3>
@@ -597,9 +718,11 @@ channels:
         <div class="section" id="cron">
             <h2>6. 定时任务配置</h2>
             
-            <div class="image-container">
-                <img src="https://picsum.photos/800/400?random=6" alt="定时任务">
-                <p class="caption">OpenClaw定时任务管理</p>
+            <div style="background: #fff3cd; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                <h4 style="margin-top: 0;">⏰ 定时任务工作流程</h4>
+                <div style="background: white; padding: 1rem; border-radius: 6px; font-family: monospace; text-align: center; margin-top: 1rem;">
+Cron触发 → Gateway调度 → Agent执行 → 任务完成 → 通知用户
+                </div>
             </div>
             
             <h3>6.1 创建定时任务</h3>
@@ -697,9 +820,11 @@ openclaw cron create
         <div class="section" id="mcp">
             <h2>7. MCP集成</h2>
             
-            <div class="image-container">
-                <img src="https://picsum.photos/800/400?random=7" alt="MCP集成">
-                <p class="caption">Model Context Protocol集成</p>
+            <div style="background: #d4edda; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                <h4 style="margin-top: 0;">🔗 MCP协议架构</h4>
+                <div style="background: white; padding: 1rem; border-radius: 6px; font-family: monospace; text-align: center; margin-top: 1rem;">
+OpenClaw Agent ↔ MCP Client ↔ MCP Server (文件系统/GitHub/...)
+                </div>
             </div>
             
             <h3>7.1 什么是MCP？</h3>
@@ -838,9 +963,10 @@ OpenClaw：你的生日是3月15日（来自MEMORY.md）</code>
             <p><strong>A:</strong> 检查以下几点：</p>
             <ul style="margin-left: 1.5rem;">
                 <li>确认Node.js版本 >= 18</li>
-                <li>检查端口3000是否被占用</li>
+                <li>检查端口18789是否被占用（默认端口）</li>
                 <li>查看日志： <code>openclaw gateway logs</code></li>
                 <li>尝试清理缓存： <code>rm -rf ~/.openclaw/cache</code></li>
+                <li>检查服务状态： <code>openclaw gateway status</code></li>
             </ul>
             
             <h3>Q2: 飞书机器人无响应？</h3>
