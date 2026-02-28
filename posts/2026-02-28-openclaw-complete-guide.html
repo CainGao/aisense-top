@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>未知标题 | AI Sense</title>
-    
+    <title>OpenClaw完整部署指南：从安装到实战配置 | AI Sense</title>
+    description
+    keywords
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
@@ -30,7 +31,7 @@
     <main class="container">
         <article class="post">
             <header class="post-header">
-                <h1 class="post-title">未知标题</h1>
+                <h1 class="post-title">OpenClaw完整部署指南：从安装到实战配置</h1>
                 <div class="post-meta">
                     <span class="post-date">2026-02-28</span>
                     <span class="post-author">作者：功哥</span>
@@ -38,7 +39,805 @@
             </header>
             
             <div class="post-content">
-<p>内容加载中...</p>
+<div class="guide-header">
+            <h1>🦞 OpenClaw完整部署指南</h1>
+            <p class="subtitle">从安装到实战配置，打造你的AI私人助理</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">作者：功哥 | 更新时间：2026年2月28日 | 阅读时长：约25分钟</p>
+        </div>
+        
+        <div class="toc">
+            <h2>📑 目录</h2>
+            <ul>
+                <li><a href="#intro">1. OpenClaw简介</a></li>
+                <li><a href="#install">2. 环境准备与安装</a></li>
+                <li><a href="#config">3. 基础配置</a></li>
+                <li><a href="#feishu">4. 飞书通道配置</a></li>
+                <li><a href="#dingtalk">5. 钉钉通道配置</a></li>
+                <li><a href="#cron">6. 定时任务配置</a></li>
+                <li><a href="#mcp">7. MCP集成</a></li>
+                <li><a href="#advanced">8. 高级功能</a></li>
+                <li><a href="#faq">9. 常见问题</a></li>
+            </ul>
+        </div>
+        
+        <div class="section" id="intro">
+            <h2>1. OpenClaw简介</h2>
+            
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem; border-radius: 10px; text-align: center; margin: 2rem 0;">
+                <h2 style="margin: 0; font-size: 3rem;">🦞 OpenClaw</h2>
+                <p style="margin: 1rem 0 0 0; font-size: 1.5rem;">开源AI助手平台 · 多通道 · 可扩展</p>
+                <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold;">50+</div>
+                        <div>内置工具</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold;">10+</div>
+                        <div>支持通道</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; font-weight: bold;">100%</div>
+                        <div>开源免费</div>
+                    </div>
+                </div>
+            </div>
+            
+            <p>OpenClaw是一个强大的开源AI助手平台，支持多通道接入（飞书、钉钉、Discord等），提供丰富的工具集成和灵活的定制能力。无论你是开发者、产品经理还是内容创作者，OpenClaw都能成为你的得力助手。</p>
+            
+            <h3>OpenClaw基础框架</h3>
+            
+            <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                <h4 style="margin-top: 0;">🏗️ 架构组件</h4>
+                <ul style="line-height: 1.8;">
+                    <li><strong>Gateway（网关）</strong>：核心服务，处理所有通道连接和消息路由</li>
+                    <li><strong>Agent（代理）</strong>：AI助手实例，处理用户对话和任务执行</li>
+                    <li><strong>Skills（技能）</strong>：扩展功能模块，提供特定能力（如文档处理、数据分析）</li>
+                    <li><strong>Channels（通道）</strong>：多平台接入（飞书、钉钉、Discord等）</li>
+                    <li><strong>Tools（工具）</strong>：底层能力（文件操作、网络请求、代码执行）</li>
+                    <li><strong>MCP Server</strong>：标准化协议扩展，连接外部服务</li>
+                </ul>
+                
+                <h4 style="margin-top: 2rem;">🔄 工作流程</h4>
+                <div style="background: white; padding: 1.5rem; border-radius: 6px; font-family: monospace; overflow-x: auto;">
+用户消息 → Gateway → Agent → AI模型 → 工具调用 → 响应生成 → Gateway → 用户
+                </div>
+                
+                <h4 style="margin-top: 2rem;">📁 目录结构</h4>
+                <div class="code-block" style="margin-top: 0.5rem;">
+                    <code>~/.openclaw/
+├── workspace/              # 工作空间
+│   ├── config.yaml         # 主配置
+│   ├── MEMORY.md           # 长期记忆
+│   ├── USER.md             # 用户信息
+│   ├── SOUL.md             # AI人设
+│   └── channels/           # 通道配置
+├── skills/                 # 自定义技能
+├── cache/                  # 缓存数据
+└── logs/                   # 日志文件</code>
+                </div>
+            </div>
+            
+            <h3>核心特性</h3>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🔌 多通道Gateway</h4>
+                    <p>单个Gateway进程连接飞书、钉钉、Discord、Telegram、WhatsApp、iMessage等</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>🎯 Skill技能系统</h4>
+                    <p>强大的技能扩展能力，支持自定义技能和50+内置工具（文档处理、数据分析、网络搜索等）</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>🤖 多智能体路由</h4>
+                    <p>按智能体、工作区或发送者隔离会话，支持多个AI助手协同工作</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>⏰ 定时任务</h4>
+                    <p>支持Cron表达式定时任务，自动执行周期性工作</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>🌐 Web控制界面</h4>
+                    <p>浏览器仪表板，管理聊天、配置、会话和节点</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>📱 移动节点</h4>
+                    <p>配对iOS和Android节点，支持Canvas功能</p>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <strong>💡 为什么选择OpenClaw？</strong>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li><strong>开源免费</strong>：完全开源，无需付费</li>
+                    <li><strong>本地部署</strong>：数据隐私有保障</li>
+                    <li><strong>高度可定制</strong>：支持自定义技能和工具</li>
+                    <li><strong>活跃社区</strong>：持续更新，社区支持</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section" id="install">
+            <h2>2. 环境准备与安装</h2>
+            
+            <h3>2.1 系统要求</h3>
+            
+            <ul>
+                <li><strong>操作系统</strong>：macOS、Linux、Windows（WSL2）</li>
+                <li><strong>Node.js</strong>：v18.0.0 或更高版本</li>
+                <li><strong>内存</strong>：至少4GB RAM</li>
+                <li><strong>存储</strong>：至少2GB可用空间</li>
+            </ul>
+            
+            <h3>2.2 安装步骤</h3>
+            
+            <ol class="step-list">
+                <li><strong>安装Node.js</strong><br>
+                    推荐使用nvm管理Node.js版本：
+                    <div class="code-block">
+                        <code># 安装nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+# 安装Node.js
+nvm install 18
+nvm use 18</code>
+                    </div>
+                </li>
+                
+                <li><strong>安装OpenClaw CLI</strong>
+                    <div class="code-block">
+                        <code>npm install -g openclaw@latest</code>
+                    </div>
+                </li>
+                
+                <li><strong>运行新手引导</strong>
+                    <div class="code-block">
+                        <code># 引导式设置并安装服务
+openclaw onboard --install-daemon</code>
+                    </div>
+                </li>
+                
+                <li><strong>启动Gateway服务</strong>
+                    <div class="code-block">
+                        <code># 启动Gateway（默认端口18789）
+openclaw gateway --port 18789
+
+# 或作为守护进程
+openclaw gateway start
+
+# 查看状态
+openclaw gateway status</code>
+                    </div>
+                </li>
+            </ol>
+            
+            <div class="warning-box">
+                <strong>⚠️ 注意事项</strong>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li>确保网络畅通，能够访问npm仓库</li>
+                    <li>macOS用户可能需要安装Xcode Command Line Tools</li>
+                    <li>Windows用户建议使用WSL2以获得最佳体验</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section" id="config">
+            <h2>3. 基础配置</h2>
+            
+            <h3>3.1 配置文件结构</h3>
+            
+            <p>OpenClaw的配置文件位于 <code>~/.openclaw/workspace/</code> 目录下：</p>
+            
+            <div class="code-block">
+                <code>~/.openclaw/workspace/
+├── config.yaml          # 主配置文件
+├── MEMORY.md            # 长期记忆
+├── USER.md              # 用户信息
+├── SOUL.md              # AI人设
+├── channels/            # 通道配置
+│   ├── feishu.yaml
+│   └── dingtalk.yaml
+└── skills/              # 自定义技能
+    └── custom-skill/</code>
+            </div>
+            
+            <h3>3.2 主配置文件</h3>
+            
+            <div class="code-block">
+                <code># config.yaml示例
+agent:
+  name: "锋子"
+  model: "zai/glm-5"
+  thinking: "low"
+
+gateway:
+  port: 18789
+  host: "localhost"
+
+channels:
+  - feishu
+  - dingtalk
+
+tools:
+  - read
+  - write
+  - exec
+  - web_search
+  - web_fetch</code>
+            </div>
+            
+            <h3>3.3 配置AI模型</h3>
+            
+            <p>OpenClaw支持多种AI模型，包括：</p>
+            
+            <ul>
+                <li><span class="badge">推荐</span> <strong>智谱GLM-5</strong>：zai/glm-5</li>
+                <li><span class="badge">推荐</span> <strong>Claude 3.5</strong>：anthropic/claude-3.5-sonnet</li>
+                <li><span class="badge beta">Beta</span> <strong>GPT-4</strong>：openai/gpt-4</li>
+                <li><span class="badge new">New</span> <strong>DeepSeek</strong>：deepseek/deepseek-chat</li>
+            </ul>
+            
+            <div class="code-block">
+                <code># 配置API密钥
+openclaw configure --section llm
+
+# 或手动编辑config.yaml
+llm:
+  provider: "zhipu"
+  model: "glm-5"
+  api_key: "your-api-key-here"</code>
+            </div>
+            
+            <div class="warning-box">
+                <strong>⚠️ GLM接入重要说明</strong>
+                <p style="margin: 0.5rem 0;">智谱GLM-5有两个API端点，请根据你的套餐类型正确配置：</p>
+                <div class="code-block" style="margin: 1rem 0;">
+                    <code># 通用API端点（默认）
+https://open.bigmodel.cn/api/paas/v4
+
+# GLM编码套餐专用端点（仅限编码场景）
+https://open.bigmodel.cn/api/coding/paas/v4</code>
+                </div>
+                <p style="margin: 0.5rem 0;"><strong>注意：</strong></p>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li>使用<strong>GLM编码套餐</strong>时，必须配置专属的Coding端点</li>
+                    <li>Coding端点仅限编码场景，不适用于通用API场景</li>
+                    <li>通用场景请使用通用端点</li>
+                    <li>API密钥获取：<a href="https://bigmodel.cn/usercenter/proj-mgmt/apikeys" target="_blank">API Keys页面</a></li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>配置示例：</strong></p>
+                <div class="code-block" style="margin: 0.5rem 0;">
+                    <code># 通用套餐
+llm:
+  provider: "zhipu"
+  model: "glm-5"
+  api_key: "your-api-key"
+  base_url: "https://open.bigmodel.cn/api/paas/v4"
+
+# 编码套餐
+llm:
+  provider: "zhipu"
+  model: "glm-5"
+  api_key: "your-api-key"
+  base_url: "https://open.bigmodel.cn/api/coding/paas/v4"</code>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                <strong>💡 模型选择建议</strong>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li><strong>中文场景</strong>：推荐智谱GLM-5或DeepSeek</li>
+                    <li><strong>代码任务</strong>：推荐Claude 3.5或GPT-4</li>
+                    <li><strong>成本考虑</strong>：推荐DeepSeek或GLM-5</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section" id="feishu">
+            <h2>4. 飞书通道配置</h2>
+            
+            <div class="image-container">
+                <img src="https://picsum.photos/800/400?random=3" alt="飞书集成">
+                <p class="caption">飞书机器人集成</p>
+            </div>
+            
+            <h3>4.1 创建飞书应用</h3>
+            
+            <ol class="step-list">
+                <li><strong>访问飞书开放平台</strong><br>
+                    打开 <a href="https://open.feishu.cn" target="_blank">https://open.feishu.cn</a>，登录并创建企业自建应用
+                </li>
+                
+                <li><strong>配置应用权限</strong><br>
+                    在"权限管理"中添加以下权限：
+                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                        <li>获取用户基本信息</li>
+                        <li>获取与发送单聊、群聊消息</li>
+                        <li>读取、修改知识库文档</li>
+                    </ul>
+                </li>
+                
+                <li><strong>获取应用凭证</strong><br>
+                    在"凭证与基础信息"页面获取：
+                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                        <li><strong>App ID</strong></li>
+                        <li><strong>App Secret</strong></li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <h3>4.2 配置OpenClaw</h3>
+            
+            <div class="code-block">
+                <code># 运行配置向导
+openclaw configure --section channels
+
+# 选择feishu通道
+? 选择要配置的通道: feishu
+? 输入App ID: cli_xxxxxxxxxxxxx
+? 输入App Secret: xxxxxxxxxxxxxxxxxxxxxxxx
+? 启用加密? (y/N): y
+? 输入Encrypt Key: (可选)
+? 启用验证? (y/N): y
+? 输入Verification Token: (可选)</code>
+            </div>
+            
+            <h3>4.3 配置事件订阅</h3>
+            
+            <p>在飞书应用后台配置事件订阅：</p>
+            
+            <div class="code-block">
+                <code>请求地址：
+http://your-server:18789/webhook/feishu
+
+事件订阅：
+✅ im.message.receive_v1 (接收消息)
+✅ contact.user.updated_v3 (用户信息变更)</code>
+            </div>
+            
+            <h3>4.4 测试连接</h3>
+            
+            <div class="code-block">
+                <code># 启动Gateway
+openclaw gateway restart
+
+# 查看日志
+openclaw gateway logs
+
+# 测试发送消息
+在飞书中找到你的机器人，发送"你好"</code>
+            </div>
+            
+            <div class="tip-box">
+                <strong>💡 飞书配置技巧</strong>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li>使用内网穿透工具（如ngrok）进行本地测试</li>
+                    <li>生产环境建议配置域名和SSL证书</li>
+                    <li>定期检查事件订阅状态</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section" id="dingtalk">
+            <h2>5. 钉钉通道配置</h2>
+            
+            <h3>5.1 创建钉钉应用</h3>
+            
+            <ol class="step-list">
+                <li><strong>访问钉钉开放平台</strong><br>
+                    打开 <a href="https://open.dingtalk.com" target="_blank">https://open.dingtalk.com</a>，创建企业内部应用
+                </li>
+                
+                <li><strong>配置应用能力</strong><br>
+                    开通以下能力：
+                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                        <li>机器人能力</li>
+                        <li>消息推送</li>
+                        <li>通讯录管理</li>
+                    </ul>
+                </li>
+                
+                <li><strong>获取应用凭证</strong><br>
+                    记录以下信息：
+                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                        <li><strong>Client ID</strong></li>
+                        <li><strong>Client Secret</strong></li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <h3>5.2 配置OpenClaw</h3>
+            
+            <div class="code-block">
+                <code># 配置钉钉通道
+openclaw configure --section channels
+
+# 选择dingtalk通道
+? 选择要配置的通道: dingtalk
+? 输入Client ID: dingxxxxxxxxxxxxxxx
+? 输入Client Secret: xxxxxxxxxxxxxxxxxxxxxxxx
+? 输入Agent ID: 123456789
+? 启用Stream模式? (y/N): y</code>
+            </div>
+            
+            <h3>5.3 配置Stream模式</h3>
+            
+            <p>钉钉推荐使用Stream模式（WebSocket）接收消息，无需配置公网地址：</p>
+            
+            <div class="code-block">
+                <code># config.yaml
+channels:
+  dingtalk:
+    enabled: true
+    client_id: "dingxxxxxxxxxxxxxxx"
+    client_secret: "xxxxxxxxxxxxxxxxxxxxxxxx"
+    agent_id: "123456789"
+    stream_mode: true  # 启用Stream模式</code>
+            </div>
+            
+            <div class="warning-box">
+                <strong>⚠️ 钉钉配置注意事项</strong>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li>Stream模式需要保持Gateway持续运行</li>
+                    <li>企业内部应用需要管理员权限</li>
+                    <li>消息频率有限制，避免发送过快</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section" id="cron">
+            <h2>6. 定时任务配置</h2>
+            
+            <h3>6.1 创建定时任务</h3>
+            
+            <p>OpenClaw支持Cron表达式定时任务，可以自动执行周期性工作：</p>
+            
+            <div class="code-block">
+                <code># 创建定时任务
+openclaw cron create
+
+# 交互式配置
+? 任务名称: AI每日早报
+? 执行时间 (Cron表达式): 0 8 * * *
+? 任务类型: isolated (独立运行)
+? 目标Agent: main
+? 任务内容: 
+  每天早上8点生成AI行业早报
+  包含：技术突破、产品发布、投融资动态
+  推送到飞书知识库</code>
+            </div>
+            
+            <h3>6.2 Cron表达式说明</h3>
+            
+            <div class="code-block">
+                <code>Cron表达式格式：秒 分 时 日 月 周
+
+示例：
+0 8 * * *      # 每天早上8:00
+0 9 * * 1-5    # 周一到周五早上9:00
+0 0 * * 0      # 每周日0:00
+0 30 7 * * *   # 每天7:30</code>
+            </div>
+            
+            <h3>6.3 任务类型</h3>
+            
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <thead>
+                    <tr style="background: #f8f9fa;">
+                        <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: left;">类型</th>
+                        <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: left;">说明</th>
+                        <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: left;">适用场景</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;"><code>isolated</code></td>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">独立运行，不阻塞主会话</td>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">日报生成、数据采集</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;"><code>main</code></td>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">在主会话中执行</td>
+                        <td style="padding: 0.75rem; border: 1px solid #ddd;">需要用户交互的任务</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>6.4 管理定时任务</h3>
+            
+            <div class="code-block">
+                <code># 查看所有任务
+openclaw cron list
+
+# 启用任务
+openclaw cron enable <task-id>
+
+# 禁用任务
+openclaw cron disable <task-id>
+
+# 删除任务
+openclaw cron delete <task-id>
+
+# 查看任务日志
+openclaw cron logs <task-id></code>
+            </div>
+            
+            <h3>6.5 实战案例</h3>
+            
+            <div class="tip-box">
+                <strong>📝 实战案例：玄幻小说自动创作</strong>
+                <p style="margin-top: 0.5rem;">配置7个定时任务，每天凌晨0-6点，每小时自动创作3章小说：</p>
+                <div class="code-block" style="margin-top: 0.5rem;">
+                    <code># 任务1：0点创作
+openclaw cron create
+? 任务名称: 玄幻小说-0点
+? 执行时间: 0 0 * * *
+? 任务类型: isolated
+? 任务内容: 创作小说第X、X+1、X+2章，推送到GitHub
+
+# 重复创建7个任务（0点-6点）</code>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" id="mcp">
+            <h2>7. MCP集成</h2>
+            
+            <h3>7.1 什么是MCP？</h3>
+            
+            <p>MCP（Model Context Protocol）是一个标准化的协议，用于扩展AI模型的能力。通过MCP，OpenClaw可以连接各种外部工具和服务。</p>
+            
+            <h3>7.2 安装MCP Server</h3>
+            
+            <div class="code-block">
+                <code># 安装MCP CLI
+npm install -g @modelcontextprotocol/cli
+
+# 安装文件系统MCP Server
+npm install -g @modelcontextprotocol/server-filesystem
+
+# 安装GitHub MCP Server
+npm install -g @modelcontextprotocol/server-github</code>
+            </div>
+            
+            <h3>7.3 配置MCP Server</h3>
+            
+            <div class="code-block">
+                <code># 编辑config.yaml
+mcp:
+  servers:
+    filesystem:
+      command: "mcp-server-filesystem"
+      args: ["/path/to/allowed/directory"]
+      
+    github:
+      command: "mcp-server-github"
+      env:
+        GITHUB_TOKEN: "your-github-token"</code>
+            </div>
+            
+            <h3>7.4 使用MCP工具</h3>
+            
+            <p>配置完成后，OpenClaw会自动识别MCP工具：</p>
+            
+            <div class="code-block">
+                <code># 用户：帮我读取文件内容
+# OpenClaw会自动调用MCP的read_file工具
+
+# 用户：提交代码到GitHub
+# OpenClaw会调用MCP的GitHub工具</code>
+            </div>
+            
+            <div class="tip-box">
+                <strong>💡 MCP最佳实践</strong>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li>只安装可信的MCP Server</li>
+                    <li>限制文件系统访问权限</li>
+                    <li>定期更新MCP Server版本</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section" id="advanced">
+            <h2>8. 高级功能</h2>
+            
+            <h3>8.1 Skill技能系统</h3>
+            
+            <p>OpenClaw的Skill技能系统是其核心能力之一，提供强大的扩展性：</p>
+            
+            <h4>内置技能（50+）</h4>
+            <ul style="margin-left: 1.5rem;">
+                <li><strong>文档处理</strong>：read, write, edit（文件操作）</li>
+                <li><strong>网络搜索</strong>：web_search, web_fetch（搜索和抓取）</li>
+                <li><strong>代码执行</strong>：exec, process（命令执行）</li>
+                <li><strong>浏览器控制</strong>：browser, canvas（UI自动化）</li>
+                <li><strong>消息推送</strong>：message, tts（消息和语音）</li>
+                <li><strong>飞书集成</strong>：feishu_doc, feishu_wiki, feishu_bitable（飞书文档）</li>
+                <li><strong>记忆系统</strong>：memory_search, memory_get（长期记忆）</li>
+                <li><strong>子代理</strong>：sessions_spawn, subagents（多Agent协作）</li>
+            </ul>
+            
+            <h4>自定义技能</h4>
+            <p>创建自定义技能，扩展AI的能力：</p>
+            
+            <p>创建自定义技能，扩展AI的能力：</p>
+            
+            <div class="code-block">
+                <code># 创建技能目录
+mkdir -p ~/.openclaw/skills/my-skill
+cd ~/.openclaw/skills/my-skill
+
+# 创建SKILL.md
+cat > SKILL.md << 'EOF'
+# 自定义技能：天气查询
+
+## 描述
+查询指定城市的天气信息
+
+## 使用场景
+- 用户询问天气
+- 需要出行建议
+
+## 执行步骤
+1. 使用weather API查询天气
+2. 格式化返回结果
+3. 提供穿衣建议
+EOF
+
+# 创建脚本（可选）
+touch script.sh</code>
+            </div>
+            
+            <h4>技能市场（ClawHub）</h4>
+            <p>从ClawHub发现和安装社区技能：</p>
+            <div class="code-block">
+                <code># 访问技能市场
+https://clawhub.com
+
+# 安装技能
+openclaw skill install &lt;skill-name&gt;</code>
+            </div>
+            
+            <h3>8.2 多Agent协作</h3>
+            
+            <p>OpenClaw支持多个Agent协作完成任务：</p>
+            
+            <div class="code-block">
+                <code># 配置子Agent
+agents:
+  - name: "写作助手"
+    model: "zai/glm-5"
+    skills: ["writing", "editing"]
+    
+  - name: "代码助手"
+    model: "anthropic/claude-3.5-sonnet"
+    skills: ["coding", "debugging"]
+
+# 使用子Agent
+用户：帮我写一篇技术文章
+OpenClaw：我会调用"写作助手"来完成这个任务...</code>
+            </div>
+            
+            <h3>8.3 记忆系统</h3>
+            
+            <p>OpenClaw具有强大的记忆系统，分为三个层次：</p>
+            
+            <ul>
+                <li><strong>长期记忆（MEMORY.md）</strong>：存储重要信息和决策</li>
+                <li><strong>短期记忆（memory/YYYY-MM-DD.md）</strong>：记录日常活动</li>
+                <li><strong>会话记忆</strong>：当前对话的上下文</li>
+            </ul>
+            
+            <div class="code-block">
+                <code># 手动添加记忆
+用户：记住我的生日是3月15日
+OpenClaw：好的，我已经记录到MEMORY.md中了
+
+# 查询记忆
+用户：我的生日是什么时候？
+OpenClaw：你的生日是3月15日（来自MEMORY.md）</code>
+            </div>
+        </div>
+        
+        <div class="section" id="faq">
+            <h2>9. 常见问题</h2>
+            
+            <h3>Q1: Gateway无法启动？</h3>
+            <p><strong>A:</strong> 检查以下几点：</p>
+            <ul style="margin-left: 1.5rem;">
+                <li>确认Node.js版本 >= 18</li>
+                <li>检查端口18789是否被占用（默认端口）</li>
+                <li>查看日志： <code>openclaw gateway logs</code></li>
+                <li>尝试清理缓存： <code>rm -rf ~/.openclaw/cache</code></li>
+                <li>检查服务状态： <code>openclaw gateway status</code></li>
+            </ul>
+            
+            <h3>Q2: 飞书机器人无响应？</h3>
+            <p><strong>A:</strong> 排查步骤：</p>
+            <ul style="margin-left: 1.5rem;">
+                <li>检查事件订阅地址是否正确</li>
+                <li>确认Gateway服务正在运行</li>
+                <li>检查飞书应用权限配置</li>
+                <li>查看Gateway日志中的错误信息</li>
+            </ul>
+            
+            <h3>Q3: 定时任务不执行？</h3>
+            <p><strong>A:</strong> 可能的原因：</p>
+            <ul style="margin-left: 1.5rem;">
+                <li>Cron表达式错误</li>
+                <li>任务被禁用</li>
+                <li>Gateway服务未运行</li>
+                <li>时区配置不正确</li>
+            </ul>
+            
+            <h3>Q4: 如何备份数据？</h3>
+            <p><strong>A:</strong> 备份整个工作空间：</p>
+            <div class="code-block">
+                <code># 备份
+tar -czf openclaw-backup.tar.gz ~/.openclaw
+
+# 恢复
+tar -xzf openclaw-backup.tar.gz -C ~/</code>
+            </div>
+            
+            <h3>Q5: 如何升级OpenClaw？</h3>
+            <div class="code-block">
+                <code># 升级CLI
+npm update -g openclaw
+
+# 升级配置
+openclaw migrate</code>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>10. 总结</h2>
+            
+            <p>OpenClaw是一个功能强大的AI助手平台，通过本指南，你已经掌握了：</p>
+            
+            <ul style="margin-left: 1.5rem;">
+                <li>✅ OpenClaw的安装和基础配置</li>
+                <li>✅ 飞书和钉钉通道的配置</li>
+                <li>✅ 定时任务的创建和管理</li>
+                <li>✅ MCP协议的集成使用</li>
+                <li>✅ 高级功能和自定义技能</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>🚀 下一步建议</strong>
+                <ul style="margin: 0.5rem 0 0 1.5rem;">
+                    <li>探索更多内置技能和工具</li>
+                    <li>创建自定义技能满足特定需求</li>
+                    <li>加入OpenClaw社区交流经验</li>
+                    <li>关注GitHub仓库获取最新更新</li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
+                <h3 style="margin-top: 0;">📚 相关资源</h3>
+                <p>
+                    <a href="https://github.com/openclaw/openclaw" target="_blank" style="margin-right: 1rem;">GitHub仓库</a>
+                    <a href="https://docs.openclaw.ai" target="_blank" style="margin-right: 1rem;">官方文档</a>
+                    <a href="https://discord.com/invite/clawd" target="_blank">社区支持</a>
+                </p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
+            <p style="color: #666;">
+                <strong>作者：</strong>功哥 | 
+                <strong>更新时间：</strong>2026年2月28日 | 
+                <strong>字数：</strong>约6500字
+            </p>
+            <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">
+                本文首发于 <a href="https://aisense.top">AI Sense</a>，转载请注明出处
+            </p>
+        </div>
             </div>
             
             <footer class="post-footer">
