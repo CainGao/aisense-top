@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "🤖 机器人产业"
+title: "🤖 机器人时代来了"
 permalink: /robot/
 ---
 
 <div class="category-list">
-    <h1>🤖 机器人产业</h1>
+    <h1>🤖 机器人时代来了</h1>
     <p>人形机器人、工业机器人、服务机器人最新资讯与开发动态</p>
     
     <div class="robot-info">

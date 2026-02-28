@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "🦞 OpenClaw指南"
+title: "🦞 我的AI管家"
 permalink: /openclaw/
 ---
 
 <div class="category-list">
-    <h1>🦞 OpenClaw指南</h1>
+    <h1>🦞 我的AI管家</h1>
     <p>个人AI助手的使用最佳实践</p>
     
     <article class="post-item">
