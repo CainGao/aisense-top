@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "关于"
+title: "🙋 关于我"
 permalink: /about/
 ---
 
 <div class="page">
-    <h1>关于 AI Sense</h1>
+    <h1>🙋 关于 AI Sense</h1>
     
     <p>AI Sense 是一个专注于AI时代技术和商业洞察的内容平台。</p>
     

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "📊 GitHub热榜分析"
+title: "⭐ 今天又Star了啥"
 permalink: /github-trending/
 ---
 
 <div class="category-list">
-    <h1>📊 GitHub热榜分析</h1>
+    <h1>⭐ 今天又Star了啥</h1>
     <p>深度解析开源项目，发现技术趋势</p>
     
     <article class="post-item">
