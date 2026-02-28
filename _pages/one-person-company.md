@@ -21,8 +21,8 @@ permalink: /one-person-company/
     </article>
     
     <article class="post-item">
-        <h2>🚀 10个$20k+/mo的AI一人公司案例</h2>
-        <p class="meta">即将发布</p>
-        <p>深度分析10个成功的AI一人公司案例，揭秘他们的成功秘诀</p>
+        <h2><a href="/posts/2026-02-28-10-ai-one-person-company-cases.html">🚀 10个$20k+/mo的AI一人公司案例</a></h2>
+        <p class="meta">2026年02月28日 | 阅读时长：约20分钟</p>
+        <p>深度分析10个月收入超过$20k的AI一人公司成功案例，包括PhotoAI、InteriorAI、HeadshotPro等，揭秘他们的商业模式、增长策略和关键成功要素</p>
     </article>
 </div>
