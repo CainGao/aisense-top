@@ -9,7 +9,7 @@ permalink: /ai-news/
     <p>每日更新，掌握机器人行业最新动态</p>
     
     <article class="post-item">
-        <h2><a href="/posts/2026-02-29-ai-news.html">2026-02-29 AI机器人早报</a></h2>
+        <h2><a href="/posts/2026-03-01-ai-news.html">2026-03-01 AI机器人早报</a></h2>
         <p class="meta">2026年02月29日</p>
         <p>特斯拉Optimus工厂部署、小米CyberOne 2发布、库卡AI视觉系统</p>
     </article>

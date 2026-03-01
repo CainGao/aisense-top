@@ -5,7 +5,7 @@ title: 首页
 
 <div class="hero">
     <h1>🌐 AI Sense</h1>
-    <p class="tagline">让AI帮你赚钱，让技术更有趣</p>
+    <p class="tagline">大人，时代变了 🤖</p>
 </div>
 
 <div class="latest-content">
@@ -18,13 +18,13 @@ title: 首页
     </article>
     
     <article class="post-preview">
-        <h3><a href="/posts/2026-02-29-github-trending.html">2026-02-29 GitHub热榜分析</a></h3>
+        <h3><a href="/posts/2026-03-01-github-trending.html">2026-03-01 GitHub热榜分析</a></h3>
         <p class="meta">2026年02月29日 | ⭐ 今天又Star了啥</p>
         <p>Google Gemini Ultra、Claude 3.5、OpenAI Sora</p>
     </article>
     
     <article class="post-preview">
-        <h3><a href="/posts/2026-02-29-ai-news.html">2026-02-29 AI机器人早报</a></h3>
+        <h3><a href="/posts/2026-03-01-ai-news.html">2026-03-01 AI机器人早报</a></h3>
         <p class="meta">2026年02月29日 | 😴 睡醒就有早报看</p>
         <p>特斯拉Optimus工厂部署、小米CyberOne 2发布、库卡AI视觉系统</p>
     </article>
@@ -37,7 +37,7 @@ title: 首页
     
     <article class="post-preview">
         <h3><a href="/posts/2026-02-27-one-person-company-guide.html">AI一人公司完全指南</a></h3>
-        <p class="meta">2026年02月27日 | 💪 一个人也能当老板</p>
+        <p class="meta">2026年02月27日 | 🍜 一个人如何混饭吃</p>
         <p>从0到$10k MRR的完整路径，10大成功模式</p>
     </article>
 </div>
@@ -65,7 +65,7 @@ title: 首页
         </div>
         
         <div class="category-card">
-            <h3>💪 一个人也能当老板</h3>
+            <h3>🍜 一个人如何混饭吃</h3>
             <p>独立创业者的AI时代成功路径</p>
             <a href="/one-person-company/" class="btn">学习赚钱之道</a>
         </div>

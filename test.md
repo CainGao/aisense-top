@@ -10,7 +10,7 @@ permalink: /test/
     
     <h2>文章列表测试</h2>
     <ul>
-        <li><a href="/posts/2026-02-29-ai-news.html">2026-02-29 AI机器人早报</a></li>
+        <li><a href="/posts/2026-03-01-ai-news.html">2026-03-01 AI机器人早报</a></li>
         <li><a href="/posts/2026-02-28-ai-news.html">2026-02-28 AI机器人早报</a></li>
         <li><a href="/posts/2026-02-27-ai-news.html">2026-02-27 AI机器人早报</a></li>
     </ul>

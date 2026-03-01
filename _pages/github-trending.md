@@ -9,7 +9,7 @@ permalink: /github-trending/
     <p>深度解析开源项目，发现技术趋势</p>
     
     <article class="post-item">
-        <h2><a href="/posts/2026-02-29-github-trending.html">2026-02-29 GitHub热榜分析</a></h2>
+        <h2><a href="/posts/2026-03-01-github-trending.html">2026-03-01 GitHub热榜分析</a></h2>
         <p class="meta">2026年02月29日</p>
         <p>Google Gemini Ultra、Claude 3.5、OpenAI Sora</p>
     </article>

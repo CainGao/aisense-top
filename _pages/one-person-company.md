@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "💪 一个人也能当老板"
+title: "🍜 一个人如何混饭吃"
 permalink: /one-person-company/
 ---
 
 <div class="category-list">
-    <h1>💪 一个人也能当老板</h1>
+    <h1>🍜 一个人如何混饭吃</h1>
     <p>独立创业者的AI时代成功路径</p>
     
     <article class="post-item">
