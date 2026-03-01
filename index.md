@@ -5,7 +5,7 @@ title: 首页
 
 <div class="hero">
     <h1>🌐 AI Sense</h1>
-    <p class="tagline">大人，时代变了 🤖</p>
+    <p class="tagline">大人，时代变了 🤖 现在到我的主场了</p>
 </div>
 
 <div class="latest-content">
