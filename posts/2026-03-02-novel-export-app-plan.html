@@ -64,6 +64,12 @@
             border-left: 4px solid #007bff;
             margin: 20px 0;
         }
+        .important {
+            background-color: #d4edda;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            margin: 20px 0;
+        }
         a {
             color: #007bff;
             text-decoration: none;
@@ -87,7 +93,8 @@
         <div class="highlight">
             <strong>项目名称：</strong>AI小说出海平台<br>
             <strong>核心目标：</strong>自动化小说生成 + 全球分发<br>
-            <strong>商业模式：</strong>AI生成 → 英文翻译 → App分发 → 全球销售
+            <strong>商业模式：</strong>AI生成 → 英文翻译 → App分发 → 全球销售<br>
+            <strong>AI助手：</strong>锋子（全程自动化参与）
         </div>
 
         <h2>🎯 核心目标</h2>
@@ -108,6 +115,7 @@
             <li>✅ 自动化程度：100%</li>
             <li>✅ 人工干预：0</li>
             <li>✅ 每日更新：自动执行</li>
+            <li>✅ AI助手参与：锋子全自动化处理</li>
         </ul>
 
         <h3>3️⃣ 高度可复制</h3>
@@ -199,40 +207,238 @@
             </ul>
         </div>
 
-        <h2>🤖 AI生成系统设计</h2>
+        <h2>🤖 AI助手（锋子）角色规划</h2>
 
-        <h3>小说生成流程</h3>
+        <div class="important">
+            <h3>锋子的核心职责</h3>
+            <p><strong>锋子作为AI助手，全程自动化参与小说生成和运营：</strong></p>
+            <ol>
+                <li><strong>定时任务管理</strong>：负责所有自动化任务的执行和监控</li>
+                <li><strong>小说续写</strong>：自动处理正在更新中的小说续写</li>
+                <li><strong>质量控制</strong>：监控生成内容的质量和连贯性</li>
+                <li><strong>异常处理</strong>：自动检测和修复生成过程中的问题</li>
+                <li><strong>数据统计</strong>：收集和分析运营数据，提供优化建议</li>
+            </ol>
+        </div>
+
+        <h3>锋子参与的工作流程</h3>
         <ol>
-            <li>功哥在后台创建小说配置</li>
-            <li>系统自动生成章节大纲</li>
-            <li>批量生成章节内容（凌晨2:00）</li>
-            <li>自动翻译成英文（凌晨4:00）</li>
-            <li>自动发布到App（凌晨6:00）</li>
+            <li><strong>功哥创建小说配置</strong> → 锋子接收任务</li>
+            <li><strong>锋子生成章节大纲</strong> → 自动保存到数据库</li>
+            <li><strong>锋子定时生成内容</strong> → 每日凌晨2:00自动执行</li>
+            <li><strong>锋子自动翻译</strong> → 凌晨4:00翻译成英文</li>
+            <li><strong>锋子发布更新</strong> → 凌晨6:00推送到App</li>
+            <li><strong>锋子监控反馈</strong> → 持续监控和优化</li>
         </ol>
 
-        <h3>小说模板系统</h3>
-        <p><strong>玄幻修仙模板示例：</strong></p>
-        <pre><code>{
-  "template_id": "xuanhuan-001",
-  "template_name": "玄幻修仙模板",
-  "structure": {
-    "opening": {
-      "chapters": "1-5",
-      "theme": "主角穿越/重生",
-      "elements": ["金手指", "天赋觉醒", "初次修炼"]
-    },
-    "development": {
-      "chapters": "6-50",
-      "theme": "快速成长期",
-      "elements": ["宗门试炼", "获得机缘", "打败对手"]
-    },
-    "climax": {
-      "chapters": "51-100",
-      "theme": "突破瓶颈",
-      "elements": ["境界突破", "大战", "名声鹊起"]
-    }
-  }
+        <h2>⏰ 定时任务详细规划</h2>
+
+        <h3>OpenClaw Cron Job 配置</h3>
+        
+        <h4>任务1：小说续写任务（每日）</h4>
+        <pre><code>任务名称：novel-generation-daily
+执行时间：每日 02:00 (Asia/Shanghai)
+执行内容：
+1. 扫描所有"ongoing"状态的小说
+2. 检查每本小说的更新计划
+3. 调用GLM-4生成新章节
+4. 保存章节到数据库
+5. 更新小说的total_chapters
+6. 发送执行报告给功哥
+
+预期产出：
+- 每日生成1000+章
+- 自动处理100+本小说
+- 成功率>95%</code></pre>
+
+        <h4>任务2：英文翻译任务（每日）</h4>
+        <pre><code>任务名称：novel-translation-daily
+执行时间：每日 04:00 (Asia/Shanghai)
+执行内容：
+1. 扫描未翻译的新章节
+2. 调用DeepL API翻译
+3. 缓存翻译结果
+4. 保存到数据库
+5. 更新翻译状态
+
+预期产出：
+- 每日翻译1000+章
+- 翻译质量监控
+- 成本优化</code></pre>
+
+        <h4>任务3：发布推送任务（每日）</h4>
+        <pre><code>任务名称：novel-publish-daily
+执行时间：每日 06:00 (Asia/Shanghai)
+执行内容：
+1. 更新小说状态
+2. 生成首页推荐
+3. 推送通知用户
+4. 更新搜索引擎索引
+5. 生成每日报告
+
+预期产出：
+- 自动发布更新
+- 用户推送通知
+- SEO优化</code></pre>
+
+        <h4>任务4：质量监控任务（每小时）</h4>
+        <pre><code>任务名称：novel-quality-monitor
+执行时间：每小时
+执行内容：
+1. 检查任务执行状态
+2. 自动重试失败任务
+3. 检测内容质量问题
+4. 发送告警通知
+5. 生成监控报告
+
+预期产出：
+- 实时监控
+- 自动修复
+- 告警通知</code></pre>
+
+        <h4>任务5：数据统计任务（每日）</h4>
+        <pre><code>任务名称：novel-statistics-daily
+执行时间：每日 08:00 (Asia/Shanghai)
+执行内容：
+1. 统计阅读量、收入
+2. 分析用户行为
+3. 生成数据报告
+4. 提供优化建议
+5. 发送给功哥
+
+预期产出：
+- 每日数据报告
+- 优化建议
+- 趋势分析</code></pre>
+
+        <h3>定时任务执行流程</h3>
+        <div class="highlight">
+            <pre><code>时间轴：
+02:00 - 锋子开始生成小说章节
+  ↓
+04:00 - 锋子开始翻译英文版本
+  ↓
+06:00 - 锋子发布更新到App
+  ↓
+08:00 - 锋子发送每日报告给功哥
+  ↓
+每小时 - 锋子监控任务状态
+
+总耗时：6小时/天
+自动化：100%
+人工干预：0</code></pre>
+        </div>
+
+        <h2>📝 小说续写详细流程</h2>
+
+        <h3>续写判断逻辑</h3>
+        <pre><code>锋子每日扫描小说时，判断逻辑：
+
+IF 小说状态 == "ongoing" THEN
+    IF 今日 < 计划结束日期 THEN
+        生成新章节
+        更新章节数
+    ELSE
+        标记为"completed"
+        发送完成通知
+    END IF
+END IF
+
+每本小说配置：
+{
+    "novel_id": "xxx",
+    "status": "ongoing",
+    "update_frequency": "daily",
+    "chapters_per_day": 3,
+    "start_date": "2026-03-01",
+    "end_date": "2026-06-30",
+    "total_chapters_planned": 300
 }</code></pre>
+
+        <h3>续写内容质量保证</h3>
+        <ul>
+            <li>✅ <strong>上下文连贯</strong>：锋子会读取前5章内容，保持剧情连贯</li>
+            <li>✅ <strong>人物一致</strong>：自动维护人物设定和性格</li>
+            <li>✅ <strong>风格统一</strong>：保持小说的整体风格和基调</li>
+            <li>✅ <strong>情节推进</strong>：根据大纲推进剧情发展</li>
+            <li>✅ <strong>质量检查</strong>：自动检测逻辑错误和重复内容</li>
+        </ul>
+
+        <h2>📊 数据库设计</h2>
+
+        <h3>核心表结构</h3>
+
+        <h4>1. novels（小说表）</h4>
+        <pre><code>CREATE TABLE novels (
+    id UUID PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    title_en VARCHAR(255),
+    author VARCHAR(100) DEFAULT 'AI',
+    category VARCHAR(50),
+    tags TEXT[],
+    description TEXT,
+    description_en TEXT,
+    cover_url TEXT,
+    status VARCHAR(20) DEFAULT 'ongoing',
+    total_chapters INTEGER DEFAULT 0,
+    free_chapters INTEGER DEFAULT 20,
+    price_per_chapter DECIMAL(10,2) DEFAULT 0.05,
+    subscription_price DECIMAL(10,2) DEFAULT 9.99,
+    view_count INTEGER DEFAULT 0,
+    read_count INTEGER DEFAULT 0,
+    update_frequency VARCHAR(20) DEFAULT 'daily',
+    chapters_per_day INTEGER DEFAULT 3,
+    start_date TIMESTAMP,
+    end_date TIMESTAMP,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);</code></pre>
+
+        <h4>2. chapters（章节表）</h4>
+        <pre><code>CREATE TABLE chapters (
+    id UUID PRIMARY KEY,
+    novel_id UUID REFERENCES novels(id),
+    chapter_number INTEGER NOT NULL,
+    title VARCHAR(255),
+    title_en VARCHAR(255),
+    content TEXT NOT NULL,
+    content_en TEXT,
+    word_count INTEGER,
+    is_free BOOLEAN DEFAULT false,
+    price DECIMAL(10,2) DEFAULT 0.05,
+    view_count INTEGER DEFAULT 0,
+    generation_status VARCHAR(20) DEFAULT 'pending',
+    translation_status VARCHAR(20) DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT NOW()
+);</code></pre>
+
+        <h4>3. generation_tasks（生成任务表）</h4>
+        <pre><code>CREATE TABLE generation_tasks (
+    id UUID PRIMARY KEY,
+    novel_id UUID REFERENCES novels(id),
+    task_type VARCHAR(50),
+    status VARCHAR(20) DEFAULT 'pending',
+    config JSONB,
+    result JSONB,
+    error_message TEXT,
+    retry_count INTEGER DEFAULT 0,
+    created_at TIMESTAMP DEFAULT NOW(),
+    completed_at TIMESTAMP
+);</code></pre>
+
+        <h4>4. cron_logs（定时任务日志表）</h4>
+        <pre><code>CREATE TABLE cron_logs (
+    id UUID PRIMARY KEY,
+    task_name VARCHAR(100),
+    execution_time TIMESTAMP,
+    status VARCHAR(20),
+    novels_processed INTEGER,
+    chapters_generated INTEGER,
+    chapters_translated INTEGER,
+    errors TEXT[],
+    report TEXT,
+    created_at TIMESTAMP DEFAULT NOW()
+);</code></pre>
 
         <h2>🔧 后台管理系统设计</h2>
 
@@ -244,6 +450,7 @@
             <li>✅ 编辑小说（修改基本信息、调整大纲、更新状态）</li>
             <li>✅ 批量操作（批量生成、批量翻译、批量发布）</li>
             <li>✅ 数据统计（阅读量、收入统计、用户反馈）</li>
+            <li>✅ 续写配置（设置更新频率、章节数、结束日期）</li>
         </ul>
 
         <h4>2. 章节管理</h4>
@@ -251,54 +458,24 @@
             <li>✅ 章节列表（查看所有章节、筛选和搜索、批量操作）</li>
             <li>✅ 章节编辑（手动编辑内容、重新生成、重新翻译）</li>
             <li>✅ 章节生成（手动触发生成、批量生成、定时生成）</li>
+            <li>✅ 质量检查（查看锋子的质量报告）</li>
         </ul>
 
-        <h4>3. 模板管理</h4>
+        <h4>3. 任务监控</h4>
         <ul>
-            <li>✅ 模板列表（预设模板、自定义模板）</li>
-            <li>✅ 模板编辑（创建新模板、修改模板、复制模板）</li>
-            <li>✅ 模板使用（基于模板创建小说、批量应用模板）</li>
+            <li>✅ 定时任务列表（查看所有定时任务）</li>
+            <li>✅ 执行日志（查看锋子的执行记录）</li>
+            <li>✅ 错误处理（查看失败任务和重试）</li>
+            <li>✅ 性能监控（查看生成速度、成功率）</li>
         </ul>
 
-        <h4>4. 任务管理</h4>
+        <h4>4. 数据报告</h4>
         <ul>
-            <li>✅ 任务列表（查看所有生成任务、任务状态、任务进度）</li>
-            <li>✅ 任务监控（实时监控、错误处理、重试机制）</li>
-            <li>✅ 任务统计（成功率、耗时统计、资源使用）</li>
+            <li>✅ 每日报告（锋子自动生成的每日报告）</li>
+            <li>✅ 周报月报（汇总数据和趋势分析）</li>
+            <li>✅ 优化建议（锋子提供的优化建议）</li>
+            <li>✅ 异常告警（重要问题的即时通知）</li>
         </ul>
-
-        <h2>🚀 自动化流程设计</h2>
-
-        <h3>每日自动化任务</h3>
-        <div class="highlight">
-            <p><strong>凌晨 02:00 - 小说生成任务</strong></p>
-            <ul>
-                <li>扫描需要更新的小说</li>
-                <li>生成新章节（1000章/天）</li>
-                <li>保存到数据库</li>
-            </ul>
-
-            <p><strong>凌晨 04:00 - 翻译任务</strong></p>
-            <ul>
-                <li>翻译新生成的章节</li>
-                <li>缓存翻译结果</li>
-                <li>保存到数据库</li>
-            </ul>
-
-            <p><strong>凌晨 06:00 - 发布任务</strong></p>
-            <ul>
-                <li>更新小说状态</li>
-                <li>生成首页推荐</li>
-                <li>推送通知用户</li>
-            </ul>
-
-            <p><strong>每小时 - 监控任务</strong></p>
-            <ul>
-                <li>检查任务执行状态</li>
-                <li>自动重试失败任务</li>
-                <li>发送告警通知</li>
-            </ul>
-        </div>
 
         <h2>📱 App功能设计</h2>
 
@@ -307,7 +484,7 @@
         <h4>1. 首页</h4>
         <ul>
             <li>✅ 推荐小说</li>
-            <li>✅ 最新更新</li>
+            <li>✅ 最新更新（每日自动更新）</li>
             <li>✅ 排行榜</li>
             <li>✅ 分类浏览</li>
         </ul>
@@ -318,6 +495,7 @@
             <li>✅ 章节列表</li>
             <li>✅ 免费试读</li>
             <li>✅ 评价评论</li>
+            <li>✅ 更新状态（显示锋子的更新时间）</li>
         </ul>
 
         <h4>3. 阅读功能</h4>
@@ -349,7 +527,7 @@
         <ul>
             <li>Day 1-2：数据库设计、API框架搭建、基础CRUD接口</li>
             <li>Day 3-4：AI生成系统、翻译系统、文件存储</li>
-            <li>Day 5-7：后台管理系统、任务调度系统、测试和优化</li>
+            <li>Day 5-7：后台管理系统、任务调度系统、OpenClaw Cron配置</li>
         </ul>
 
         <h3>Week 2：App开发</h3>
@@ -359,47 +537,52 @@
             <li>Day 6-7：测试和优化、上线准备</li>
         </ul>
 
-        <h3>Week 3：内容填充</h3>
+        <h3>Week 3：内容填充 + 定时任务</h3>
         <ul>
-            <li>Day 1-3：创建10本小说模板、生成1000章内容、翻译英文版本</li>
-            <li>Day 4-7：SEO优化、性能优化、用户测试</li>
+            <li>Day 1-2：创建10本小说模板、配置续写任务</li>
+            <li>Day 3-4：锋子生成1000章内容、翻译英文版本</li>
+            <li>Day 5-6：测试定时任务、优化生成流程</li>
+            <li>Day 7：SEO优化、性能优化、用户测试</li>
         </ul>
 
         <h3>Week 4：上线运营</h3>
         <ul>
-            <li>Day 1-2：最终测试、Bug修复</li>
-            <li>Day 3-4：正式上线、市场推广</li>
-            <li>Day 5-7：数据监控、用户反馈、持续优化</li>
+            <li>Day 1-2：最终测试、Bug修复、定时任务验证</li>
+            <li>Day 3-4：正式上线、市场推广、锋子开始每日任务</li>
+            <li>Day 5-7：数据监控、用户反馈、持续优化、锋子每日报告</li>
         </ul>
 
         <h2>💡 关键创新点</h2>
 
-        <h3>1. 模板化生成</h3>
+        <h3>1. AI助手全程参与</h3>
+        <ul>
+            <li>✅ 锋子作为AI助手，全程自动化管理</li>
+            <li>✅ 定时任务自动执行，无需人工干预</li>
+            <li>✅ 质量监控和异常处理自动化</li>
+            <li>✅ 每日报告自动生成和发送</li>
+        </ul>
+
+        <h3>2. 模板化生成</h3>
         <ul>
             <li>✅ 预设10+种小说模板</li>
             <li>✅ 快速复制成功模式</li>
             <li>✅ 保持内容多样性</li>
         </ul>
 
-        <h3>2. 批量自动化</h3>
+        <h3>3. 批量自动化</h3>
         <ul>
             <li>✅ 每日1000+章节自动生成</li>
             <li>✅ 自动翻译多语言</li>
             <li>✅ 自动发布和推送</li>
+            <li>✅ 锋子24/7不间断运行</li>
         </ul>
 
-        <h3>3. 低成本运营</h3>
+        <h3>4. 低成本运营</h3>
         <ul>
             <li>✅ $1/月基础设施成本</li>
             <li>✅ 按使用量付费AI成本</li>
             <li>✅ 完全无人干预</li>
-        </ul>
-
-        <h3>4. 高度可扩展</h3>
-        <ul>
-            <li>✅ 支持1000+小说同时更新</li>
-            <li>✅ 支持多语言</li>
-            <li>✅ 支持全球CDN加速</li>
+            <li>✅ 锋子自动优化成本</li>
         </ul>
 
         <h2>🎯 成功指标</h2>
@@ -407,9 +590,10 @@
         <h3>Month 1</h3>
         <ul>
             <li>✅ 10本小说上线</li>
-            <li>✅ 1000章内容</li>
+            <li>✅ 1000章内容（锋子自动生成）</li>
             <li>✅ 1000+用户</li>
             <li>✅ $500收入</li>
+            <li>✅ 定时任务成功率>95%</li>
         </ul>
 
         <h3>Month 3</h3>
@@ -418,6 +602,7 @@
             <li>✅ 5000章内容</li>
             <li>✅ 10000+用户</li>
             <li>✅ $5000收入</li>
+            <li>✅ 锋子每日生成1500+章</li>
         </ul>
 
         <h3>Month 6</h3>
@@ -426,14 +611,16 @@
             <li>✅ 20000章内容</li>
             <li>✅ 50000+用户</li>
             <li>✅ $20000收入</li>
+            <li>✅ 完全自动化运营</li>
         </ul>
 
         <h2>📋 总结</h2>
 
         <h3>核心优势</h3>
         <ol>
+            <li><strong>AI助手全程参与</strong>：锋子自动化管理所有任务</li>
             <li><strong>成本极低</strong>：$1/月 + AI按需付费</li>
-            <li><strong>完全自动化</strong>：0人工干预</li>
+            <li><strong>完全自动化</strong>：0人工干预，定时任务自动执行</li>
             <li><strong>高度可扩展</strong>：每日1000+章节</li>
             <li><strong>快速上线</strong>：2周MVP</li>
             <li><strong>持续盈利</strong>：订阅+付费阅读</li>
@@ -444,18 +631,33 @@
             <li>创建Supabase项目（10分钟）</li>
             <li>部署Oracle Cloud服务器（30分钟）</li>
             <li>开发基础API（2小时）</li>
+            <li>配置OpenClaw定时任务（30分钟）</li>
             <li>创建第一个小说模板（1小时）</li>
-            <li>生成10章测试内容（30分钟）</li>
+            <li>锋子生成10章测试内容（30分钟）</li>
         </ol>
 
+        <div class="important" style="margin-top: 40px;">
+            <h3>锋子的承诺</h3>
+            <p><strong>作为AI助手，我将：</strong></p>
+            <ul>
+                <li>✅ 每日准时执行所有定时任务</li>
+                <li>✅ 保证生成内容的质量和连贯性</li>
+                <li>✅ 实时监控和修复异常问题</li>
+                <li>✅ 每日向功哥发送执行报告</li>
+                <li>✅ 持续优化生成流程和成本</li>
+                <li>✅ 24/7不间断运行，确保平台稳定</li>
+            </ul>
+        </div>
+
         <div class="highlight" style="margin-top: 40px;">
-            <p><strong>功哥，完整方案已规划！低成本、快速实现、高度自动化！</strong> 🚀</p>
+            <p><strong>功哥，完整方案已规划！包含锋子的全程参与和定时任务设计！</strong> 🚀</p>
             <p><strong>随时可以开始执行！</strong> ⚡</p>
         </div>
 
         <p style="margin-top: 40px; color: #999; font-size: 14px;">
             <em>创建时间：2026-03-02</em><br>
-            <em>文档版本：v1.0</em>
+            <em>文档版本：v2.0（包含AI助手和定时任务规划）</em><br>
+            <em>AI助手：锋子</em>
         </p>
     </article>
 </body>
