@@ -9,6 +9,12 @@ permalink: /github-trending/
     <p>深度解析开源项目，发现技术趋势</p>
     
     <article class="post-item">
+        <h2><a href="/posts/2026-03-02-github-trending.html">2026-03-02 GitHub热榜分析</a></h2>
+        <p class="meta">2026年03月02日</p>
+        <p>alibaba/OpenSandbox (+1,186 stars)、ruvnet/ruflo (+766 stars)、moeru-ai/airi (+738 stars)、AI代理框架占40%、沙箱安全占25%</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-01-github-trending.html">2026-03-01 GitHub热榜分析</a></h2>
         <p class="meta">2026年02月29日</p>
         <p>Google Gemini Ultra、Claude 3.5、OpenAI Sora</p>

@@ -9,6 +9,12 @@ permalink: /ai-news/
     <p>每日更新，掌握机器人行业最新动态</p>
     
     <article class="post-item">
+        <h2><a href="/posts/2026-03-02-ai-news.html">2026-03-02 AI机器人早报</a></h2>
+        <p class="meta">2026年03月02日</p>
+        <p>Figure 01机器人完全自主操作、OpenAI与机器人公司合作、傅利叶智能8亿D轮融资、发那科CRX协作机器人、优必选Walker X商用版</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-01-ai-news.html">2026-03-01 AI机器人早报</a></h2>
         <p class="meta">2026年02月29日</p>
         <p>特斯拉Optimus工厂部署、小米CyberOne 2发布、库卡AI视觉系统</p>
