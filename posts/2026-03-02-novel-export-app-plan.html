@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🚀 小说出海App完整项目规划（详细技术方案） - AI Sense</title>
+    <title>🚀 小说出海App完整项目规划（单体架构版） - AI Sense</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <style>
         body {
@@ -116,14 +116,15 @@
 </head>
 <body>
     <article>
-        <h1>🚀 小说出海App完整项目规划（详细技术方案）</h1>
+        <h1>🚀 小说出海App完整项目规划（单体架构版）</h1>
         
         <div class="highlight">
             <strong>项目名称：</strong>AI小说出海平台<br>
             <strong>核心目标：</strong>自动化英文小说生成 + Android App全球分发<br>
             <strong>商业模式：</strong>AI直接生成英文小说 → Android App分发 → 全球销售<br>
             <strong>AI助手：</strong>锋子（全程自动化参与）<br>
-            <strong>技术栈：</strong>Go后端 + React AntDesign管理后台 + Flutter Android App<br>
+            <strong>技术栈：</strong>Go单体后端 + React AntDesign管理后台 + Flutter Android App<br>
+            <strong>架构类型：</strong>单体架构（简单、快速、易维护）<br>
             <strong>核心优化：</strong>直接生成英文内容，无需翻译，降低成本50%
         </div>
 
@@ -141,7 +142,7 @@
                     <tr>
                         <td><strong>后端服务</strong></td>
                         <td>Go (Golang)</td>
-                        <td>高性能、并发支持好、部署简单</td>
+                        <td>单体架构、高性能、部署简单</td>
                     </tr>
                     <tr>
                         <td><strong>后台管理</strong></td>
@@ -182,7 +183,7 @@
             </table>
         </div>
 
-        <h2>一、系统架构设计</h2>
+        <h2>一、系统架构设计（单体架构）</h2>
 
         <h3>1.1 整体架构</h3>
 
@@ -203,21 +204,22 @@
 └─────────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────────┐
-│              API网关层（Nginx + Go）                       │
-│  - 负载均衡                                               │
-│  - 请求路由                                               │
-│  - 限流控制                                               │
-│  - JWT认证                                               │
-└─────────────────────────────────────────────────────────┘
-                          ↓
-┌─────────────────────────────────────────────────────────┐
-│                 业务逻辑层（Go Services）                  │
-│  - 用户服务（UserService）                                │
-│  - 小说服务（NovelService）                               │
-│  - 章节服务（ChapterService）                             │
-│  - 订单服务（OrderService）                               │
-│  - 支付服务（PaymentService）                             │
-│  - AI生成服务（AIGenerationService）                      │
+│            单体应用（Go HTTP Server）                      │
+│  ┌─────────────────────────────────────────────┐        │
+│  │          API路由层（Gin Router）              │        │
+│  └─────────────────────────────────────────────┘        │
+│  ┌─────────────────────────────────────────────┐        │
+│  │          业务逻辑层（Services）               │        │
+│  │  - UserService                               │        │
+│  │  - NovelService                              │        │
+│  │  - ChapterService                            │        │
+│  │  - OrderService                              │        │
+│  │  - PaymentService                            │        │
+│  │  - AIGenerationService                       │        │
+│  └─────────────────────────────────────────────┘        │
+│  ┌─────────────────────────────────────────────┐        │
+│  │          数据访问层（Repository）             │        │
+│  └─────────────────────────────────────────────┘        │
 └─────────────────────────────────────────────────────────┘
                           ↓
 ┌──────────────┬──────────────┬──────────────┬────────────┐
@@ -225,45 +227,65 @@
 │   (主数据库)  │   (缓存)      │   Storage    │            │
 │              │              │   (文件存储)  │   - GLM-4  │
 │              │              │              │   - PayPal │
-└──────────────┴──────────────┴──────────────┴────────────┘</code></pre>
+└──────────────┴──────────────┴──────────────┴────────────┘
+
+单体架构优势：
+✅ 开发简单：一个项目，统一管理
+✅ 部署容易：一个二进制文件
+✅ 调试方便：所有代码在一起
+✅ 性能更好：无网络调用开销
+✅ 成本更低：只需一台服务器
+✅ 适合MVP：快速迭代验证</code></pre>
         </div>
 
-        <h3>1.2 微服务架构</h3>
+        <h3>1.2 为什么选择单体架构</h3>
 
-        <pre><code>后端微服务划分：
-
-1. API Gateway（端口：8080）
-   - 请求路由
-   - 认证鉴权
-   - 限流熔断
-   - 日志记录
-
-2. User Service（端口：8081）
-   - 用户注册登录
-   - 用户信息管理
-   - 订阅管理
-   - 权限控制
-
-3. Novel Service（端口：8082）
-   - 小说CRUD
-   - 章节管理
-   - 分类标签
-   - 搜索功能
-
-4. Order Service（端口：8083）
-   - 订单创建
-   - 订单查询
-   - 退款处理
-
-5. Payment Service（端口：8084）
-   - PayPal集成
-   - 支付处理
-   - 回调处理
-
-6. AI Generation Service（端口：8085）
-   - 小说生成
-   - 定时任务
-   - 质量监控</code></pre>
+        <div class="important">
+            <h4>单体架构 vs 微服务架构</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>对比项</th>
+                        <th>单体架构</th>
+                        <th>微服务架构</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>开发复杂度</strong></td>
+                        <td>✅ 简单（一个项目）</td>
+                        <td>❌ 复杂（多个服务）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>部署难度</strong></td>
+                        <td>✅ 容易（一个二进制）</td>
+                        <td>❌ 困难（多个容器）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>调试效率</strong></td>
+                        <td>✅ 高效（统一日志）</td>
+                        <td>❌ 低效（分布式追踪）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>运维成本</strong></td>
+                        <td>✅ 低（一台服务器）</td>
+                        <td>❌ 高（多台服务器）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>性能</strong></td>
+                        <td>✅ 好（无网络开销）</td>
+                        <td>❌ 一般（网络调用）</td>
+                    </tr>
+                    <tr>
+                        <td><strong>适合阶段</strong></td>
+                        <td>✅ MVP、初创期</td>
+                        <td>❌ 大规模、成熟期</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>结论：对于小说出海MVP项目，单体架构是最优选择！</strong></p>
+        </div>
 
         <h2>二、数据库设计（PostgreSQL）</h2>
 
@@ -536,41 +558,34 @@ CREATE INDEX idx_orders_user_status ON orders(user_id, status);
 
 -- 全文搜索索引
 CREATE INDEX idx_novels_title_search ON novels USING gin(to_tsvector('english', title));
-CREATE INDEX idx_novels_desc_search ON novels USING gin(to_tsvector('english', description));
+CREATE INDEX idx_novels_desc_search ON novels USING gin(to_tsvector('english', description));</code></pre>
 
--- 分区表（按月分区，提升查询性能）
-CREATE TABLE orders_2026_03 PARTITION OF orders
-    FOR VALUES FROM ('2026-03-01') TO ('2026-04-01');</code></pre>
+        <h2>三、Go后端开发（单体架构）</h2>
 
-        <h2>三、Go后端开发</h2>
-
-        <h3>3.1 项目结构</h3>
+        <h3>3.1 项目结构（单体应用）</h3>
 
         <pre><code>novel-platform/
 ├── cmd/
-│   ├── api/
-│   │   └── main.go              # API服务入口
+│   ├── server/
+│   │   └── main.go              # HTTP服务入口（唯一入口）
 │   └── cron/
 │       └── main.go              # 定时任务入口
 ├── internal/
-│   ├── api/
-│   │   ├── handlers/            # HTTP处理器
-│   │   │   ├── user.go
-│   │   │   ├── novel.go
-│   │   │   ├── chapter.go
-│   │   │   ├── order.go
-│   │   │   └── payment.go
-│   │   ├── middleware/          # 中间件
-│   │   │   ├── auth.go
-│   │   │   ├── cors.go
-│   │   │   ├── logger.go
-│   │   │   └── ratelimit.go
-│   │   └── router.go            # 路由配置
+│   ├── config/
+│   │   ├── config.yaml          # 配置文件
+│   │   └── config.go            # 配置加载
 │   ├── models/                  # 数据模型
 │   │   ├── user.go
 │   │   ├── novel.go
 │   │   ├── chapter.go
-│   │   └── order.go
+│   │   ├── order.go
+│   │   └── generation_task.go
+│   ├── handlers/                # HTTP处理器
+│   │   ├── user_handler.go
+│   │   ├── novel_handler.go
+│   │   ├── chapter_handler.go
+│   │   ├── order_handler.go
+│   │   └── payment_handler.go
 │   ├── services/                # 业务逻辑
 │   │   ├── user_service.go
 │   │   ├── novel_service.go
@@ -581,7 +596,13 @@ CREATE TABLE orders_2026_03 PARTITION OF orders
 │   ├── repository/              # 数据访问层
 │   │   ├── user_repo.go
 │   │   ├── novel_repo.go
-│   │   └── chapter_repo.go
+│   │   ├── chapter_repo.go
+│   │   └── order_repo.go
+│   ├── middleware/              # 中间件
+│   │   ├── auth.go
+│   │   ├── cors.go
+│   │   ├── logger.go
+│   │   └── ratelimit.go
 │   └── utils/                   # 工具函数
 │       ├── jwt.go
 │       ├── validator.go
@@ -589,13 +610,10 @@ CREATE TABLE orders_2026_03 PARTITION OF orders
 ├── pkg/
 │   ├── cache/                   # Redis缓存
 │   │   └── redis.go
-│   ├── queue/                   # 消息队列
-│   │   └── rabbitmq.go
-│   └── logger/                  # 日志
-│       └── zap.go
-├── config/
-│   ├── config.yaml              # 配置文件
-│   └── config.go                # 配置加载
+│   ├── logger/                  # 日志
+│   │   └── zap.go
+│   └── queue/                   # 简单的任务队列
+│       └── task_queue.go
 ├── migrations/                  # 数据库迁移
 │   ├── 001_init.up.sql
 │   └── 001_init.down.sql
@@ -606,17 +624,33 @@ CREATE TABLE orders_2026_03 PARTITION OF orders
 │   ├── Dockerfile
 │   └── docker-compose.yml
 ├── go.mod
-└── go.sum</code></pre>
+└── go.sum
+
+单体架构优势：
+✅ 一个项目：所有代码统一管理
+✅ 一个入口：cmd/server/main.go
+✅ 简单部署：编译成一个二进制文件
+✅ 轻松调试：统一日志和错误处理</code></pre>
 
         <h3>3.2 核心代码实现</h3>
 
-        <h4>3.2.1 main.go（API服务入口）</h4>
+        <h4>3.2.1 main.go（HTTP服务入口）</h4>
         <pre><code>package main
 
 import (
+    "context"
     "log"
-    "novel-platform/internal/api"
+    "net/http"
+    "os"
+    "os/signal"
+    "syscall"
+    "time"
+    
     "novel-platform/internal/config"
+    "novel-platform/internal/handlers"
+    "novel-platform/internal/middleware"
+    "novel-platform/internal/repository"
+    "novel-platform/internal/services"
     "novel-platform/pkg/cache"
     "novel-platform/pkg/logger"
     
@@ -644,22 +678,136 @@ func main() {
         log.Fatalf("Failed to init database: %v", err)
     }
     
+    // 初始化Repository层
+    userRepo := repository.NewUserRepository(db)
+    novelRepo := repository.NewNovelRepository(db)
+    chapterRepo := repository.NewChapterRepository(db)
+    orderRepo := repository.NewOrderRepository(db)
+    
+    // 初始化Service层
+    userService := services.NewUserService(userRepo)
+    novelService := services.NewNovelService(novelRepo, chapterRepo)
+    chapterService := services.NewChapterService(chapterRepo)
+    orderService := services.NewOrderService(orderRepo)
+    paymentService := services.NewPaymentService(cfg.Payment)
+    aiService := services.NewAIService(cfg.AI)
+    
+    // 初始化Handler层
+    userHandler := handlers.NewUserHandler(userService)
+    novelHandler := handlers.NewNovelHandler(novelService)
+    chapterHandler := handlers.NewChapterHandler(chapterService)
+    orderHandler := handlers.NewOrderHandler(orderService, paymentService)
+    
     // 创建路由
     router := gin.Default()
     
-    // 配置中间件
-    router.Use(api.CORS())
-    router.Use(api.Logger())
-    router.Use(api.RateLimit(cfg.RateLimit))
+    // 配置全局中间件
+    router.Use(middleware.CORS())
+    router.Use(middleware.Logger())
+    router.Use(middleware.RateLimit(cfg.RateLimit))
+    router.Use(middleware.Recovery())
     
     // 注册路由
-    api.RegisterRoutes(router, db, cfg)
-    
-    // 启动服务
-    log.Printf("Server starting on port %s", cfg.Server.Port)
-    if err := router.Run(":" + cfg.Server.Port); err != nil {
-        log.Fatalf("Failed to start server: %v", err)
+    api := router.Group("/api/v1")
+    {
+        // 用户相关
+        users := api.Group("/users")
+        {
+            users.POST("/register", userHandler.Register)
+            users.POST("/login", userHandler.Login)
+            users.GET("/profile", middleware.Auth(), userHandler.Profile)
+            users.PUT("/profile", middleware.Auth(), userHandler.UpdateProfile)
+        }
+        
+        // 小说相关
+        novels := api.Group("/novels")
+        {
+            novels.GET("", novelHandler.List)
+            novels.GET("/:id", novelHandler.Detail)
+            novels.GET("/:id/chapters", novelHandler.Chapters)
+            novels.POST("", middleware.Auth(), middleware.Admin(), novelHandler.Create)
+            novels.PUT("/:id", middleware.Auth(), middleware.Admin(), novelHandler.Update)
+            novels.DELETE("/:id", middleware.Auth(), middleware.Admin(), novelHandler.Delete)
+        }
+        
+        // 章节相关
+        chapters := api.Group("/chapters")
+        {
+            chapters.GET("/:id", middleware.Auth(), chapterHandler.Detail)
+            chapters.POST("/:id/read", middleware.Auth(), chapterHandler.MarkAsRead)
+        }
+        
+        // 订单相关
+        orders := api.Group("/orders")
+        {
+            orders.Use(middleware.Auth())
+            orders.POST("", orderHandler.Create)
+            orders.GET("", orderHandler.List)
+            orders.GET("/:id", orderHandler.Detail)
+        }
+        
+        // 支付相关
+        payment := api.Group("/payment")
+        {
+            payment.Use(middleware.Auth())
+            payment.POST("/create", paymentHandler.CreatePayment)
+            payment.POST("/callback", paymentHandler.Callback)
+        }
+        
+        // 用户书架
+        bookshelf := api.Group("/bookshelf")
+        {
+            bookshelf.Use(middleware.Auth())
+            bookshelf.GET("", novelHandler.Bookshelf)
+            bookshelf.POST("/:id", novelHandler.AddToBookshelf)
+            bookshelf.DELETE("/:id", novelHandler.RemoveFromBookshelf)
+        }
+        
+        // 搜索
+        search := api.Group("/search")
+        {
+            search.GET("", novelHandler.Search)
+        }
     }
+    
+    // 健康检查
+    router.GET("/health", func(c *gin.Context) {
+        c.JSON(http.StatusOK, gin.H{
+            "status": "ok",
+            "timestamp": time.Now().Unix(),
+        })
+    })
+    
+    // 启动HTTP服务
+    srv := &http.Server{
+        Addr:    ":" + cfg.Server.Port,
+        Handler: router,
+    }
+    
+    // 优雅关闭
+    go func() {
+        if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+            log.Fatalf("Failed to start server: %v", err)
+        }
+    }()
+    
+    log.Printf("Server started on port %s", cfg.Server.Port)
+    
+    // 等待中断信号
+    quit := make(chan os.Signal, 1)
+    signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
+    <-quit
+    
+    log.Println("Shutting down server...")
+    
+    ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+    defer cancel()
+    
+    if err := srv.Shutdown(ctx); err != nil {
+        log.Fatal("Server forced to shutdown:", err)
+    }
+    
+    log.Println("Server exited")
 }</code></pre>
 
         <h4>3.2.2 novel_service.go（小说服务）</h4>
@@ -675,21 +823,24 @@ import (
 )
 
 type NovelService struct {
-    novelRepo  *repository.NovelRepository
+    novelRepo   *repository.NovelRepository
     chapterRepo *repository.ChapterRepository
-    aiService  *AIService
+    aiService   *AIService
 }
 
 func NewNovelService(
     novelRepo *repository.NovelRepository,
     chapterRepo *repository.ChapterRepository,
-    aiService *AIService,
 ) *NovelService {
     return &NovelService{
         novelRepo:   novelRepo,
         chapterRepo: chapterRepo,
-        aiService:   aiService,
     }
+}
+
+// SetAIService 设置AI服务（依赖注入）
+func (s *NovelService) SetAIService(aiService *AIService) {
+    s.aiService = aiService
 }
 
 // CreateNovel 创建小说
@@ -701,20 +852,20 @@ func (s *NovelService) CreateNovel(ctx context.Context, req *CreateNovelRequest)
     
     // 创建小说
     novel := &models.Novel{
-        ID:               uuid.New(),
-        Title:            req.Title,
-        Author:           req.Author,
-        Category:         req.Category,
-        Tags:             req.Tags,
-        Description:      req.Description,
-        Status:           "ongoing",
-        FreeChapters:     req.FreeChapters,
-        PricePerChapter:  req.PricePerChapter,
+        ID:                uuid.New(),
+        Title:             req.Title,
+        Author:            req.Author,
+        Category:          req.Category,
+        Tags:              req.Tags,
+        Description:       req.Description,
+        Status:            "ongoing",
+        FreeChapters:      req.FreeChapters,
+        PricePerChapter:   req.PricePerChapter,
         SubscriptionPrice: req.SubscriptionPrice,
-        UpdateFrequency:  req.UpdateFrequency,
-        ChaptersPerDay:   req.ChaptersPerDay,
-        TemplateID:       req.TemplateID,
-        GenerationConfig: req.GenerationConfig,
+        UpdateFrequency:   req.UpdateFrequency,
+        ChaptersPerDay:    req.ChaptersPerDay,
+        TemplateID:        req.TemplateID,
+        GenerationConfig:  req.GenerationConfig,
     }
     
     // 保存到数据库
@@ -723,8 +874,10 @@ func (s *NovelService) CreateNovel(ctx context.Context, req *CreateNovelRequest)
     }
     
     // 生成初始章节大纲
-    if err := s.generateChapterOutlines(ctx, novel); err != nil {
-        return nil, err
+    if s.aiService != nil {
+        if err := s.generateChapterOutlines(ctx, novel); err != nil {
+            return nil, err
+        }
     }
     
     return novel, nil
@@ -796,10 +949,10 @@ func (s *NovelService) generateChapterOutlines(ctx context.Context, novel *model
     // 保存章节大纲
     for _, outline := range outlines {
         chapter := &models.Chapter{
-            NovelID:        novel.ID,
-            ChapterNumber:  outline.ChapterNumber,
-            Title:          outline.Title,
-            Content:        "", // 内容稍后生成
+            NovelID:          novel.ID,
+            ChapterNumber:    outline.ChapterNumber,
+            Title:            outline.Title,
+            Content:          "", // 内容稍后生成
             GenerationStatus: "pending",
         }
         
@@ -809,6 +962,91 @@ func (s *NovelService) generateChapterOutlines(ctx context.Context, novel *model
     }
     
     return nil
+}
+
+// GenerateDailyChapters 每日生成章节（定时任务调用）
+func (s *NovelService) GenerateDailyChapters(ctx context.Context) error {
+    // 查询所有需要更新的小说
+    novels, err := s.novelRepo.GetOngoing(ctx)
+    if err != nil {
+        return err
+    }
+    
+    for _, novel := range novels {
+        // 检查是否需要生成新章节
+        if s.shouldGenerateChapter(novel) {
+            // 生成章节
+            if err := s.generateChapter(ctx, novel); err != nil {
+                log.Printf("Failed to generate chapter for novel %s: %v", novel.ID, err)
+                continue
+            }
+        }
+    }
+    
+    return nil
+}
+
+// shouldGenerateChapter 判断是否需要生成章节
+func (s *NovelService) shouldGenerateChapter(novel *models.Novel) bool {
+    if novel.Status != "ongoing" {
+        return false
+    }
+    
+    // 检查更新频率
+    switch novel.UpdateFrequency {
+    case "daily":
+        return true
+    case "weekly":
+        // 检查是否是每周的更新日
+        return time.Now().Weekday() == time.Monday
+    case "monthly":
+        // 检查是否是每月的更新日
+        return time.Now().Day() == 1
+    default:
+        return false
+    }
+}
+
+// generateChapter 生成单章
+func (s *NovelService) generateChapter(ctx context.Context, novel *models.Novel) error {
+    // 获取下一个章节号
+    nextChapterNum := novel.TotalChapters + 1
+    
+    // 获取前5章作为上下文
+    previousChapters, err := s.chapterRepo.GetRecent(ctx, novel.ID, 5)
+    if err != nil {
+        return err
+    }
+    
+    // 调用AI生成内容
+    content, err := s.aiService.GenerateChapterContent(ctx, novel, nextChapterNum, previousChapters)
+    if err != nil {
+        return err
+    }
+    
+    // 创建章节
+    chapter := &models.Chapter{
+        NovelID:          novel.ID,
+        ChapterNumber:    nextChapterNum,
+        Title:            fmt.Sprintf("Chapter %d", nextChapterNum),
+        Content:          content,
+        WordCount:        len(strings.Fields(content)),
+        IsFree:           nextChapterNum <= novel.FreeChapters,
+        GenerationStatus: "completed",
+        PublishedAt:      timePtr(time.Now()),
+    }
+    
+    // 保存章节
+    if err := s.chapterRepo.Create(ctx, chapter); err != nil {
+        return err
+    }
+    
+    // 更新小说统计
+    novel.TotalChapters++
+    novel.TotalWords += chapter.WordCount
+    novel.LastChapterAt = timePtr(time.Now())
+    
+    return s.novelRepo.Update(ctx, novel)
 }</code></pre>
 
         <h4>3.2.3 ai_service.go（AI生成服务）</h4>
@@ -831,10 +1069,10 @@ type AIService struct {
     client  *http.Client
 }
 
-func NewAIService(apiKey, baseURL string) *AIService {
+func NewAIService(cfg *config.AIConfig) *AIService {
     return &AIService{
-        apiKey:  apiKey,
-        baseURL: baseURL,
+        apiKey:  cfg.APIKey,
+        baseURL: cfg.BaseURL,
         client: &http.Client{
             Timeout: 60 * time.Second,
         },
@@ -869,7 +1107,7 @@ Format: JSON array with chapter_number and title fields.
 }
 
 // GenerateChapterContent 生成章节内容
-func (s *AIService) GenerateChapterContent(ctx context.Context, novel *models.Novel, chapter *models.Chapter, previousChapters []*models.Chapter) (string, error) {
+func (s *AIService) GenerateChapterContent(ctx context.Context, novel *models.Novel, chapterNum int, previousChapters []*models.Chapter) (string, error) {
     // 构建上下文
     context := s.buildContext(novel, previousChapters)
     
@@ -878,7 +1116,7 @@ You are writing an English novel. Here's the context:
 
 Novel Title: %s
 Category: %s
-Chapter %d: %s
+Chapter %d
 
 Previous Context:
 %s
@@ -891,7 +1129,7 @@ Write a compelling chapter of approximately 3000 words. Focus on:
 5. Natural dialogue
 
 Write the chapter content now:
-`, novel.Title, novel.Category, chapter.ChapterNumber, chapter.Title, context)
+`, novel.Title, novel.Category, chapterNum, context)
     
     content, err := s.callGLM4(ctx, prompt)
     if err != nil {
@@ -990,6 +1228,7 @@ import (
     "context"
     "log"
     "novel-platform/internal/config"
+    "novel-platform/internal/repository"
     "novel-platform/internal/services"
     "novel-platform/pkg/logger"
     "time"
@@ -1011,9 +1250,13 @@ func main() {
         log.Fatalf("Failed to init database: %v", err)
     }
     
-    // 初始化服务
-    novelService := services.NewNovelService(db, cfg)
-    aiService := services.NewAIService(cfg.AI.APIKey, cfg.AI.BaseURL)
+    // 初始化Repository和Service
+    novelRepo := repository.NewNovelRepository(db)
+    chapterRepo := repository.NewChapterRepository(db)
+    aiService := services.NewAIService(cfg.AI)
+    
+    novelService := services.NewNovelService(novelRepo, chapterRepo)
+    novelService.SetAIService(aiService)
     
     // 创建定时任务
     c := cron.New(cron.WithSeconds())
@@ -1024,23 +1267,12 @@ func main() {
         ctx, cancel := context.WithTimeout(context.Background(), 4*time.Hour)
         defer cancel()
         
-        if err := novelService.GenerateDailyChapters(ctx, aiService); err != nil {
+        if err := novelService.GenerateDailyChapters(ctx); err != nil {
             log.Printf("Daily generation task failed: %v", err)
         }
     })
     
-    // 任务2：发布更新（04:00）
-    c.AddFunc("0 0 4 * * *", func() {
-        log.Println("Starting daily publish task...")
-        ctx, cancel := context.WithTimeout(context.Background(), 1*time.Hour)
-        defer cancel()
-        
-        if err := novelService.PublishDailyUpdates(ctx); err != nil {
-            log.Printf("Daily publish task failed: %v", err)
-        }
-    })
-    
-    // 任务3：数据统计（08:00）
+    // 任务2：数据统计（08:00）
     c.AddFunc("0 0 8 * * *", func() {
         log.Println("Starting daily statistics task...")
         ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
@@ -1051,7 +1283,7 @@ func main() {
         }
     })
     
-    // 任务4：质量监控（每小时）
+    // 任务3：质量监控（每小时）
     c.AddFunc("0 0 * * * *", func() {
         log.Println("Starting hourly quality check...")
         ctx, cancel := context.WithTimeout(context.Background(), 10*time.Minute)
@@ -1601,391 +1833,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 }</code></pre>
 
-        <h4>5.2.4 novel_detail_screen.dart（小说详情）</h4>
-        <pre><code>import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:novel_app/providers/novel_provider.dart';
-import 'package:novel_app/screens/reader/reader_screen.dart';
-
-class NovelDetailScreen extends StatefulWidget {
-    final String novelId;
-    
-    NovelDetailScreen({required this.novelId});
-    
-    @override
-    _NovelDetailScreenState createState() => _NovelDetailScreenState();
-}
-
-class _NovelDetailScreenState extends State<NovelDetailScreen> {
-    @override
-    void initState() {
-        super.initState();
-        Future.microtask(() =>
-            context.read<NovelProvider>().loadNovelDetail(widget.novelId)
-        );
-    }
-    
-    @override
-    Widget build(BuildContext context) {
-        return Consumer<NovelProvider>(
-            builder: (context, provider, child) {
-                final novel = provider.currentNovel;
-                
-                if (novel == null) {
-                    return Scaffold(
-                        appBar: AppBar(),
-                        body: Center(child: CircularProgressIndicator()),
-                    );
-                }
-                
-                return Scaffold(
-                    body: CustomScrollView(
-                        slivers: [
-                            _buildAppBar(novel),
-                            SliverToBoxAdapter(
-                                child: Padding(
-                                    padding: EdgeInsets.all(16),
-                                    child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                            _buildNovelInfo(novel),
-                                            SizedBox(height: 24),
-                                            _buildStatistics(novel),
-                                            SizedBox(height: 24),
-                                            _buildDescription(novel),
-                                            SizedBox(height: 24),
-                                            _buildChapterList(novel),
-                                        ],
-                                    ),
-                                ),
-                            ),
-                        ],
-                    ),
-                    bottomNavigationBar: _buildBottomBar(novel),
-                );
-            },
-        );
-    }
-    
-    Widget _buildAppBar(novel) {
-        return SliverAppBar(
-            expandedHeight: 300,
-            pinned: true,
-            flexibleSpace: FlexibleSpaceBar(
-                background: Image.network(
-                    novel.coverUrl,
-                    fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) {
-                        return Container(color: Colors.grey[300]);
-                    },
-                ),
-            ),
-        );
-    }
-    
-    Widget _buildNovelInfo(novel) {
-        return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-                Text(
-                    novel.title,
-                    style: Theme.of(context).textTheme.headline5?.copyWith(
-                        fontWeight: FontWeight.bold,
-                    ),
-                ),
-                SizedBox(height: 8),
-                Row(
-                    children: [
-                        Chip(label: Text(novel.category)),
-                        SizedBox(width: 8),
-                        Text('by ${novel.author}'),
-                        Spacer(),
-                        Icon(Icons.star, color: Colors.amber),
-                        Text('${novel.rating}'),
-                    ],
-                ),
-            ],
-        );
-    }
-    
-    Widget _buildStatistics(novel) {
-        return Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-                _buildStatItem('Views', novel.viewCount.toString()),
-                _buildStatItem('Chapters', novel.totalChapters.toString()),
-                _buildStatItem('Favorites', novel.favoriteCount.toString()),
-            ],
-        );
-    }
-    
-    Widget _buildStatItem(String label, String value) {
-        return Column(
-            children: [
-                Text(
-                    value,
-                    style: Theme.of(context).textTheme.headline6,
-                ),
-                Text(
-                    label,
-                    style: Theme.of(context).textTheme.caption,
-                ),
-            ],
-        );
-    }
-    
-    Widget _buildDescription(novel) {
-        return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-                Text(
-                    'Description',
-                    style: Theme.of(context).textTheme.headline6,
-                ),
-                SizedBox(height: 8),
-                Text(novel.description),
-            ],
-        );
-    }
-    
-    Widget _buildChapterList(novel) {
-        return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-                Text(
-                    'Chapters',
-                    style: Theme.of(context).textTheme.headline6,
-                ),
-                SizedBox(height: 8),
-                ListView.builder(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    itemCount: novel.chapters.length,
-                    itemBuilder: (context, index) {
-                        final chapter = novel.chapters[index];
-                        return ListTile(
-                            title: Text('Chapter ${chapter.chapterNumber}: ${chapter.title}'),
-                            trailing: chapter.isFree 
-                                ? Icon(Icons.lock_open, color: Colors.green)
-                                : Icon(Icons.lock, color: Colors.grey),
-                            onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (_) => ReaderScreen(
-                                            novelId: novel.id,
-                                            chapterId: chapter.id,
-                                        ),
-                                    ),
-                                );
-                            },
-                        );
-                    },
-                ),
-            ],
-        );
-    }
-    
-    Widget _buildBottomBar(novel) {
-        return Container(
-            padding: EdgeInsets.all(16),
-            child: Row(
-                children: [
-                    Expanded(
-                        child: OutlinedButton.icon(
-                            icon: Icon(Icons.bookmark_border),
-                            label: Text('Add to Bookshelf'),
-                            onPressed: () {
-                                // 添加到书架
-                            },
-                        ),
-                    ),
-                    SizedBox(width: 16),
-                    Expanded(
-                        child: ElevatedButton.icon(
-                            icon: Icon(Icons.play_arrow),
-                            label: Text('Start Reading'),
-                            onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (_) => ReaderScreen(
-                                            novelId: novel.id,
-                                            chapterId: novel.chapters.first.id,
-                                        ),
-                                    ),
-                                );
-                            },
-                        ),
-                    ),
-                ],
-            ),
-        );
-    }
-}</code></pre>
-
-        <h4>5.2.5 reader_screen.dart（阅读器）</h4>
-        <pre><code>import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:novel_app/providers/novel_provider.dart';
-import 'package:novel_app/utils/theme.dart';
-
-class ReaderScreen extends StatefulWidget {
-    final String novelId;
-    final String chapterId;
-    
-    ReaderScreen({
-        required this.novelId,
-        required this.chapterId,
-    });
-    
-    @override
-    _ReaderScreenState createState() => _ReaderScreenState();
-}
-
-class _ReaderScreenState extends State<ReaderScreen> {
-    final ScrollController _scrollController = ScrollController();
-    double _fontSize = 18.0;
-    bool _showSettings = false;
-    
-    @override
-    void initState() {
-        super.initState();
-        Future.microtask(() =>
-            context.read<NovelProvider>().loadChapter(widget.chapterId)
-        );
-    }
-    
-    @override
-    Widget build(BuildContext context) {
-        return Consumer<NovelProvider>(
-            builder: (context, provider, child) {
-                final chapter = provider.currentChapter;
-                
-                if (chapter == null) {
-                    return Scaffold(
-                        appBar: AppBar(),
-                        body: Center(child: CircularProgressIndicator()),
-                    );
-                }
-                
-                return Scaffold(
-                    appBar: AppBar(
-                        title: Text('Chapter ${chapter.chapterNumber}'),
-                        actions: [
-                            IconButton(
-                                icon: Icon(Icons.settings),
-                                onPressed: () {
-                                    setState(() {
-                                        _showSettings = !_showSettings;
-                                    });
-                                },
-                            ),
-                        ],
-                    ),
-                    body: Column(
-                        children: [
-                            Expanded(
-                                child: SingleChildScrollView(
-                                    controller: _scrollController,
-                                    padding: EdgeInsets.all(16),
-                                    child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                            Text(
-                                                chapter.title,
-                                                style: Theme.of(context).textTheme.headline5,
-                                            ),
-                                            SizedBox(height: 24),
-                                            Text(
-                                                chapter.content,
-                                                style: TextStyle(
-                                                    fontSize: _fontSize,
-                                                    height: 1.8,
-                                                ),
-                                            ),
-                                        ],
-                                    ),
-                                ),
-                            ),
-                            if (_showSettings) _buildSettingsPanel(),
-                        ],
-                    ),
-                    bottomNavigationBar: _buildBottomBar(chapter),
-                );
-            },
-        );
-    }
-    
-    Widget _buildSettingsPanel() {
-        return Container(
-            padding: EdgeInsets.all(16),
-            decoration: BoxDecoration(
-                color: Theme.of(context).cardColor,
-                boxShadow: [
-                    BoxShadow(color: Colors.black12, blurRadius: 4),
-                ],
-            ),
-            child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                    Row(
-                        children: [
-                            Text('Font Size: ${_fontSize.toInt()}'),
-                            Expanded(
-                                child: Slider(
-                                    value: _fontSize,
-                                    min: 12,
-                                    max: 28,
-                                    onChanged: (value) {
-                                        setState(() {
-                                            _fontSize = value;
-                                        });
-                                    },
-                                ),
-                            ),
-                        ],
-                    ),
-                ],
-            ),
-        );
-    }
-    
-    Widget _buildBottomBar(chapter) {
-        return Container(
-            padding: EdgeInsets.all(16),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                    IconButton(
-                        icon: Icon(Icons.arrow_back),
-                        onPressed: chapter.hasPrevious
-                            ? () => _loadChapter(chapter.previousChapterId)
-                            : null,
-                    ),
-                    Text('Chapter ${chapter.chapterNumber}'),
-                    IconButton(
-                        icon: Icon(Icons.arrow_forward),
-                        onPressed: chapter.hasNext
-                            ? () => _loadChapter(chapter.nextChapterId)
-                            : null,
-                    ),
-                ],
-            ),
-        );
-    }
-    
-    void _loadChapter(String chapterId) {
-        context.read<NovelProvider>().loadChapter(chapterId);
-        _scrollController.animateTo(
-            0,
-            duration: Duration(milliseconds: 300),
-            curve: Curves.easeInOut,
-        );
-    }
-}</code></pre>
-
-        <h2>六、部署方案</h2>
+        <h2>六、部署方案（单体架构）</h2>
 
         <h3>6.1 Oracle Cloud部署</h3>
 
@@ -1999,14 +1847,14 @@ class _ReaderScreenState extends State<ReaderScreen> {
 
 操作系统：Ubuntu 22.04 LTS</code></pre>
 
-        <h4>6.1.2 Docker部署</h4>
-        <pre><code># docker-compose.yml
+        <h4>6.1.2 Docker部署（简化版）</h4>
+        <pre><code># docker-compose.yml（单体架构）
 version: '3.8'
 
 services:
-    # Go API服务
-    api:
-        build: ./api
+    # Go单体应用
+    app:
+        build: .
         ports:
             - "8080:8080"
         environment:
@@ -2035,7 +1883,7 @@ services:
             - ./nginx.conf:/etc/nginx/nginx.conf
             - ./ssl:/etc/nginx/ssl
         depends_on:
-            - api
+            - app
             - admin
         restart: always
     
@@ -2061,7 +1909,7 @@ volumes:
     postgres_data:
     redis_data:</code></pre>
 
-        <h3>6.2 CI/CD流程</h3>
+        <h3>6.2 CI/CD流程（简化版）</h3>
 
         <h4>6.2.1 GitHub Actions配置</h4>
         <pre><code>name: Deploy Novel Platform
@@ -2082,11 +1930,10 @@ jobs:
               with:
                   go-version: '1.21'
             
-            - name: Build Go API
+            - name: Build Go App
               run: |
-                  cd api
                   go mod download
-                  go build -o novel-api cmd/api/main.go
+                  go build -o novel-app cmd/server/main.go
             
             - name: Set up Node.js
               uses: actions/setup-node@v3
@@ -2120,9 +1967,9 @@ jobs:
                       cd /opt/novel-platform
                       docker-compose pull
                       docker-compose up -d
-                      docker-compose exec -T api python manage.py migrate</code></pre>
+                      docker-compose exec -T app ./novel-app migrate</code></pre>
 
-        <h2>七、成本分析（最终优化版）</h2>
+        <h2>七、成本分析（单体架构优化版）</h2>
 
         <h3>7.1 基础设施成本</h3>
         <table>
@@ -2206,7 +2053,7 @@ jobs:
             </tbody>
         </table>
 
-        <h3>7.3 总成本（优化后）</h3>
+        <h3>7.3 总成本（单体架构）</h3>
         <div class="highlight">
             <ul>
                 <li>基础设施：$1/月</li>
@@ -2216,7 +2063,7 @@ jobs:
             </ul>
         </div>
 
-        <h2>八、开发时间表</h2>
+        <h2>八、开发时间表（单体架构）</h2>
 
         <h3>8.1 详细时间表（8周完成）</h3>
 
@@ -2231,8 +2078,8 @@ jobs:
             <tbody>
                 <tr>
                     <td><strong>Week 1-2</strong></td>
-                    <td>Go后端开发</td>
-                    <td>API服务、数据库、AI生成服务</td>
+                    <td>Go单体后端开发</td>
+                    <td>HTTP服务、数据库、AI生成服务</td>
                 </tr>
                 <tr>
                     <td><strong>Week 3-4</strong></td>
@@ -2260,14 +2107,17 @@ jobs:
         <h2>九、总结</h2>
 
         <div class="important">
-            <h3>🎯 核心优势</h3>
+            <h3>🎯 核心优势（单体架构）</h3>
             <ol>
+                <li><strong>架构简单</strong>：单体应用，易于开发和维护</li>
                 <li><strong>成本极低</strong>：$601/月（基础设施$1 + AI生成$600）</li>
                 <li><strong>完全自动化</strong>：0人工干预，锋子24/7自动执行</li>
                 <li><strong>技术栈成熟</strong>：Go + React + Flutter，稳定可靠</li>
                 <li><strong>直接生成英文</strong>：无需翻译，质量更高</li>
                 <li><strong>快速上线</strong>：8周完成MVP</li>
                 <li><strong>高度可扩展</strong>：支持每日1000+章节</li>
+                <li><strong>易于调试</strong>：统一日志和错误处理</li>
+                <li><strong>部署简单</strong>：一个二进制文件搞定</li>
             </ol>
         </div>
 
@@ -2276,7 +2126,7 @@ jobs:
             <ol>
                 <li>创建Supabase项目（10分钟）</li>
                 <li>申请Oracle Cloud服务器（30分钟）</li>
-                <li>搭建Go后端框架（2小时）</li>
+                <li>搭建Go单体后端框架（2小时）</li>
                 <li>配置OpenClaw定时任务（30分钟）</li>
                 <li>创建第一个英文小说模板（1小时）</li>
                 <li>锋子生成10章测试内容（30分钟）</li>
@@ -2285,9 +2135,10 @@ jobs:
 
         <p style="margin-top: 40px; color: #999; font-size: 14px;">
             <em>创建时间：2026-03-02</em><br>
-            <em>文档版本：v4.0（详细技术方案：Go + React + Flutter）</em><br>
+            <em>文档版本：v5.0（单体架构版：Go + React + Flutter）</em><br>
             <em>AI助手：锋子</em><br>
-            <em>技术栈：Go后端 + React AntDesign管理后台 + Flutter Android App</em><br>
+            <em>架构类型：单体架构（简单、快速、易维护）</em><br>
+            <em>技术栈：Go单体后端 + React AntDesign管理后台 + Flutter Android App</em><br>
             <em>总成本：$601/月（优化后）</em>
         </p>
     </article>
