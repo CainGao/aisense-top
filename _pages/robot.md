@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
     
     <article class="post-item">
+        <h3><a href="/posts/2026-03-02-robot-news.html">2026-03-02 机器人产业日报</a></h3>
+        <p class="meta">2026年03月02日</p>
+        <p>Tesla Optimus量产线最后调试、小米CyberOne 2首批交付、宇树科技完成B+轮10亿融资、ABB推出GoFa协作机器人、ROS 2生态完善</p>
+    </article>
+    
+    <article class="post-item">
         <h3><a href="/posts/2026-03-01-robot-news.html">2026-03-01 机器人产业日报</a></h3>
         <p class="meta">2026年03月01日</p>
         <p>Tesla Optimus量产加速、小米CyberOne 2量产启动、Figure 01展示全新交互、ROS 2 Jazzy发布、Isaac Sim 2026.2更新</p>
