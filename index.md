@@ -10,7 +10,19 @@ title: 首页
 
 <div class="latest-content">
     <h2>🔥 刚出炉的新鲜货</h2>
-    
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-02-github-trending.html">2026-03-02 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月02日 | ⭐ 今天又Star了啥</p>
+        <p>alibaba/OpenSandbox、ruvnet/ruflo、moeru-ai/airi等热门项目</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-02-ai-news.html">2026-03-02 AI机器人早报</a></h3>
+        <p class="meta">2026年03月02日 | 😴 睡醒就有早报看</p>
+        <p>Figure 01机器人完全自主操作、OpenAI与机器人公司合作、傅利叶智能8亿D轮</p>
+    </article>
+
     <article class="post-preview">
         <h3><a href="/posts/2026-02-28-robot-news.html">2026-02-28 机器人产业日报</a></h3>
         <p class="meta">2026年02月28日 | 🤖 机器人时代来了</p>
