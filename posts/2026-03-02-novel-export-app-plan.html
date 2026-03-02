@@ -287,254 +287,401 @@
             <p><strong>结论：对于小说出海MVP项目，单体架构是最优选择！</strong></p>
         </div>
 
-        <h2>二、数据库设计（PostgreSQL）</h2>
+        <h2>二、数据库设计（PostgreSQL + Google SQL风格）</h2>
+
+        <div class="tech-stack">
+            <h3>🎯 Google SQL风格指南规范</h3>
+            <ul>
+                <li><strong>关键字大写：</strong> SELECT, FROM, WHERE, CREATE, TABLE, INDEX等</li>
+                <li><strong>表名单数：</strong> user_account（不是user_accounts）</li>
+                <li><strong>字段名驼峰：</strong> userName（不是user_name）</li>
+                <li><strong>子句分行：</strong> 每个子句单独一行</li>
+                <li><strong>使用AS别名：</strong> 表和列都使用AS</li>
+                <li><strong>注释规范：</strong> 使用COMMENT ON语法</li>
+            </ul>
+        </div>
 
         <h3>2.1 核心表结构</h3>
 
-        <h4>2.1.1 用户表（users）</h4>
-        <pre><code>CREATE TABLE users (
+        <h4>2.1.1 用户表（userAccount）</h4>
+        <pre><code>-- 用户账户表
+CREATE TABLE userAccount (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     email VARCHAR(255) UNIQUE NOT NULL,
-    username VARCHAR(100) UNIQUE,
-    password_hash VARCHAR(255) NOT NULL,
-    avatar_url TEXT,
+    userName VARCHAR(100) UNIQUE,
+    passwordHash VARCHAR(255) NOT NULL,
+    avatarUrl TEXT,
     
     -- 订阅信息
-    subscription_status VARCHAR(20) DEFAULT 'free', -- free, active, expired
-    subscription_start_date TIMESTAMP,
-    subscription_end_date TIMESTAMP,
+    subscriptionStatus VARCHAR(20) DEFAULT 'free',
+    subscriptionStartDate TIMESTAMP,
+    subscriptionEndDate TIMESTAMP,
     
     -- 余额
     balance DECIMAL(10,2) DEFAULT 0.00,
     
     -- 统计
-    total_reading_time INTEGER DEFAULT 0, -- 总阅读时长（分钟）
-    total_words_read INTEGER DEFAULT 0, -- 总阅读字数
+    totalReadingTime INTEGER DEFAULT 0,
+    totalWordsRead INTEGER DEFAULT 0,
     
     -- 时间戳
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    last_login_at TIMESTAMP,
-    
-    -- 索引
-    INDEX idx_users_email (email),
-    INDEX idx_users_username (username),
-    INDEX idx_users_subscription (subscription_status, subscription_end_date)
-);</code></pre>
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    lastLoginAt TIMESTAMP
+);
 
-        <h4>2.1.2 小说表（novels）</h4>
-        <pre><code>CREATE TABLE novels (
+-- 添加表注释
+COMMENT ON TABLE userAccount IS '用户账户表';
+
+-- 添加字段注释
+COMMENT ON COLUMN userAccount.id IS '用户唯一标识符';
+COMMENT ON COLUMN userAccount.email IS '用户邮箱地址';
+COMMENT ON COLUMN userAccount.userName IS '用户名';
+COMMENT ON COLUMN userAccount.passwordHash IS '密码哈希值';
+COMMENT ON COLUMN userAccount.avatarUrl IS '头像URL';
+COMMENT ON COLUMN userAccount.subscriptionStatus IS '订阅状态：free免费 active有效 expired过期';
+COMMENT ON COLUMN userAccount.subscriptionStartDate IS '订阅开始时间';
+COMMENT ON COLUMN userAccount.subscriptionEndDate IS '订阅结束时间';
+COMMENT ON COLUMN userAccount.balance IS '账户余额（美元）';
+COMMENT ON COLUMN userAccount.totalReadingTime IS '总阅读时长（分钟）';
+COMMENT ON COLUMN userAccount.totalWordsRead IS '总阅读字数';
+COMMENT ON COLUMN userAccount.createdAt IS '创建时间';
+COMMENT ON COLUMN userAccount.updatedAt IS '更新时间';
+COMMENT ON COLUMN userAccount.lastLoginAt IS '最后登录时间';
+
+-- 创建索引
+CREATE INDEX idx_userAccount_email ON userAccount(email);
+CREATE INDEX idx_userAccount_userName ON userAccount(userName);
+CREATE INDEX idx_userAccount_subscription ON userAccount(subscriptionStatus, subscriptionEndDate);</code></pre>
+
+        <h4>2.1.2 小说表（novel）</h4>
+        <pre><code>-- 小说表
+CREATE TABLE novel (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     
     -- 基本信息
     title VARCHAR(255) NOT NULL,
     author VARCHAR(100) DEFAULT 'AI',
-    category VARCHAR(50) NOT NULL, -- Fantasy, Romance, Sci-Fi, etc.
-    tags TEXT[], -- 英文标签数组
+    category VARCHAR(50) NOT NULL,
+    tags TEXT[],
     
     -- 描述
     description TEXT,
-    cover_url TEXT,
+    coverUrl TEXT,
     
     -- 状态
-    status VARCHAR(20) DEFAULT 'ongoing', -- ongoing, completed, paused
+    status VARCHAR(20) DEFAULT 'ongoing',
     
     -- 统计
-    total_chapters INTEGER DEFAULT 0,
-    total_words INTEGER DEFAULT 0,
-    view_count INTEGER DEFAULT 0,
-    read_count INTEGER DEFAULT 0,
-    favorite_count INTEGER DEFAULT 0,
+    totalChapters INTEGER DEFAULT 0,
+    totalWords INTEGER DEFAULT 0,
+    viewCount INTEGER DEFAULT 0,
+    readCount INTEGER DEFAULT 0,
+    favoriteCount INTEGER DEFAULT 0,
     
     -- 评分
     rating DECIMAL(3,2) DEFAULT 0.00,
-    rating_count INTEGER DEFAULT 0,
+    ratingCount INTEGER DEFAULT 0,
     
     -- 价格设置
-    free_chapters INTEGER DEFAULT 20, -- 免费章节数
-    price_per_chapter DECIMAL(10,2) DEFAULT 0.05, -- 每章价格
-    subscription_price DECIMAL(10,2) DEFAULT 9.99, -- 包月价格
+    freeChapters INTEGER DEFAULT 20,
+    pricePerChapter DECIMAL(10,2) DEFAULT 0.05,
+    subscriptionPrice DECIMAL(10,2) DEFAULT 9.99,
     
     -- AI生成配置
-    update_frequency VARCHAR(20) DEFAULT 'daily', -- daily, weekly, monthly
-    chapters_per_day INTEGER DEFAULT 3,
-    start_date TIMESTAMP,
-    end_date TIMESTAMP,
+    updateFrequency VARCHAR(20) DEFAULT 'daily',
+    chaptersPerDay INTEGER DEFAULT 3,
+    startDate TIMESTAMP,
+    endDate TIMESTAMP,
     
     -- 模板配置
-    template_id UUID,
-    generation_config JSONB, -- AI生成配置
+    templateId UUID,
+    generationConfig JSONB,
     
     -- 时间戳
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    last_chapter_at TIMESTAMP,
-    
-    -- 索引
-    INDEX idx_novels_category (category),
-    INDEX idx_novels_status (status),
-    INDEX idx_novels_rating (rating DESC),
-    INDEX idx_novels_view_count (view_count DESC),
-    INDEX idx_novels_created_at (created_at DESC),
-    INDEX idx_novels_tags (tags) USING GIN
-);</code></pre>
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    lastChapterAt TIMESTAMP
+);
 
-        <h4>2.1.3 章节表（chapters）</h4>
-        <pre><code>CREATE TABLE chapters (
+-- 添加表注释
+COMMENT ON TABLE novel IS '小说表';
+
+-- 添加字段注释
+COMMENT ON COLUMN novel.id IS '小说唯一标识符';
+COMMENT ON COLUMN novel.title IS '小说标题';
+COMMENT ON COLUMN novel.author IS '作者名称';
+COMMENT ON COLUMN novel.category IS '小说类别：Fantasy Romance Sci-Fi Action Mystery Horror Comedy';
+COMMENT ON COLUMN novel.tags IS '标签数组';
+COMMENT ON COLUMN novel.description IS '小说描述';
+COMMENT ON COLUMN novel.coverUrl IS '封面图片URL';
+COMMENT ON COLUMN novel.status IS '状态：ongoing连载中 completed已完结 paused暂停';
+COMMENT ON COLUMN novel.totalChapters IS '总章节数';
+COMMENT ON COLUMN novel.totalWords IS '总字数';
+COMMENT ON COLUMN novel.viewCount IS '浏览次数';
+COMMENT ON COLUMN novel.readCount IS '阅读次数';
+COMMENT ON COLUMN novel.favoriteCount IS '收藏次数';
+COMMENT ON COLUMN novel.rating IS '评分（0-5分）';
+COMMENT ON COLUMN novel.ratingCount IS '评分人数';
+COMMENT ON COLUMN novel.freeChapters IS '免费章节数';
+COMMENT ON COLUMN novel.pricePerChapter IS '每章价格（美元）';
+COMMENT ON COLUMN novel.subscriptionPrice IS '包月价格（美元）';
+COMMENT ON COLUMN novel.updateFrequency IS '更新频率：daily每天 weekly每周 monthly每月';
+COMMENT ON COLUMN novel.chaptersPerDay IS '每日更新章节数';
+COMMENT ON COLUMN novel.startDate IS '开始时间';
+COMMENT ON COLUMN novel.endDate IS '结束时间';
+COMMENT ON COLUMN novel.templateId IS '小说模板ID';
+COMMENT ON COLUMN novel.generationConfig IS 'AI生成配置（JSON）';
+COMMENT ON COLUMN novel.createdAt IS '创建时间';
+COMMENT ON COLUMN novel.updatedAt IS '更新时间';
+COMMENT ON COLUMN novel.lastChapterAt IS '最后章节更新时间';
+
+-- 创建索引
+CREATE INDEX idx_novel_category ON novel(category);
+CREATE INDEX idx_novel_status ON novel(status);
+CREATE INDEX idx_novel_rating ON novel(rating DESC);
+CREATE INDEX idx_novel_viewCount ON novel(viewCount DESC);
+CREATE INDEX idx_novel_createdAt ON novel(createdAt DESC);
+CREATE INDEX idx_novel_tags ON novel USING GIN(tags);</code></pre>
+
+        <h4>2.1.3 章节表（chapter）</h4>
+        <pre><code>-- 章节表
+CREATE TABLE chapter (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    novel_id UUID NOT NULL REFERENCES novels(id) ON DELETE CASCADE,
+    novelId UUID NOT NULL REFERENCES novel(id) ON DELETE CASCADE,
     
     -- 章节信息
-    chapter_number INTEGER NOT NULL,
+    chapterNumber INTEGER NOT NULL,
     title VARCHAR(255) NOT NULL,
     content TEXT NOT NULL,
-    word_count INTEGER,
+    wordCount INTEGER,
     
     -- 定价
-    is_free BOOLEAN DEFAULT false,
+    isFree BOOLEAN DEFAULT false,
     price DECIMAL(10,2) DEFAULT 0.05,
     
     -- 统计
-    view_count INTEGER DEFAULT 0,
+    viewCount INTEGER DEFAULT 0,
     
     -- AI生成状态
-    generation_status VARCHAR(20) DEFAULT 'pending', -- pending, generating, completed, failed
-    generation_task_id UUID,
+    generationStatus VARCHAR(20) DEFAULT 'pending',
+    generationTaskId UUID,
     
     -- 时间戳
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    published_at TIMESTAMP,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    publishedAt TIMESTAMP,
     
     -- 唯一约束
-    UNIQUE(novel_id, chapter_number),
-    
-    -- 索引
-    INDEX idx_chapters_novel_id (novel_id),
-    INDEX idx_chapters_number (novel_id, chapter_number),
-    INDEX idx_chapters_generation_status (generation_status)
-);</code></pre>
+    UNIQUE(novelId, chapterNumber)
+);
 
-        <h4>2.1.4 用户阅读记录表（user_reading_history）</h4>
-        <pre><code>CREATE TABLE user_reading_history (
+-- 添加表注释
+COMMENT ON TABLE chapter IS '章节表';
+
+-- 添加字段注释
+COMMENT ON COLUMN chapter.id IS '章节唯一标识符';
+COMMENT ON COLUMN chapter.novelId IS '所属小说ID';
+COMMENT ON COLUMN chapter.chapterNumber IS '章节编号';
+COMMENT ON COLUMN chapter.title IS '章节标题';
+COMMENT ON COLUMN chapter.content IS '章节内容';
+COMMENT ON COLUMN chapter.wordCount IS '字数';
+COMMENT ON COLUMN chapter.isFree IS '是否免费';
+COMMENT ON COLUMN chapter.price IS '价格（美元）';
+COMMENT ON COLUMN chapter.viewCount IS '浏览次数';
+COMMENT ON COLUMN chapter.generationStatus IS '生成状态：pending待生成 generating生成中 completed已完成 failed失败';
+COMMENT ON COLUMN chapter.generationTaskId IS '生成任务ID';
+COMMENT ON COLUMN chapter.createdAt IS '创建时间';
+COMMENT ON COLUMN chapter.publishedAt IS '发布时间';
+
+-- 创建索引
+CREATE INDEX idx_chapter_novelId ON chapter(novelId);
+CREATE INDEX idx_chapter_number ON chapter(novelId, chapterNumber);
+CREATE INDEX idx_chapter_generationStatus ON chapter(generationStatus);</code></pre>
+
+        <h4>2.1.4 用户阅读记录表（userReadingHistory）</h4>
+        <pre><code>-- 用户阅读记录表
+CREATE TABLE userReadingHistory (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-    novel_id UUID NOT NULL REFERENCES novels(id) ON DELETE CASCADE,
+    userId UUID NOT NULL REFERENCES userAccount(id) ON DELETE CASCADE,
+    novelId UUID NOT NULL REFERENCES novel(id) ON DELETE CASCADE,
     
     -- 阅读进度
-    current_chapter INTEGER DEFAULT 1,
-    current_position INTEGER DEFAULT 0, -- 章节内位置
+    currentChapter INTEGER DEFAULT 1,
+    currentPosition INTEGER DEFAULT 0,
     
     -- 统计
-    total_reading_time INTEGER DEFAULT 0, -- 本次阅读时长（秒）
+    totalReadingTime INTEGER DEFAULT 0,
     
     -- 时间戳
-    last_read_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    lastReadAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     
     -- 唯一约束
-    UNIQUE(user_id, novel_id),
-    
-    -- 索引
-    INDEX idx_reading_history_user (user_id, last_read_at DESC),
-    INDEX idx_reading_history_novel (novel_id)
-);</code></pre>
+    UNIQUE(userId, novelId)
+);
 
-        <h4>2.1.5 用户收藏表（user_favorites）</h4>
-        <pre><code>CREATE TABLE user_favorites (
+-- 添加表注释
+COMMENT ON TABLE userReadingHistory IS '用户阅读记录表';
+
+-- 添加字段注释
+COMMENT ON COLUMN userReadingHistory.id IS '记录唯一标识符';
+COMMENT ON COLUMN userReadingHistory.userId IS '用户ID';
+COMMENT ON COLUMN userReadingHistory.novelId IS '小说ID';
+COMMENT ON COLUMN userReadingHistory.currentChapter IS '当前阅读章节';
+COMMENT ON COLUMN userReadingHistory.currentPosition IS '章节内阅读位置（字符偏移）';
+COMMENT ON COLUMN userReadingHistory.totalReadingTime IS '本次阅读时长（秒）';
+COMMENT ON COLUMN userReadingHistory.lastReadAt IS '最后阅读时间';
+COMMENT ON COLUMN userReadingHistory.createdAt IS '创建时间';
+
+-- 创建索引
+CREATE INDEX idx_userReadingHistory_user ON userReadingHistory(userId, lastReadAt DESC);
+CREATE INDEX idx_userReadingHistory_novel ON userReadingHistory(novelId);</code></pre>
+
+        <h4>2.1.5 用户收藏表（userFavorite）</h4>
+        <pre><code>-- 用户收藏表
+CREATE TABLE userFavorite (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-    novel_id UUID NOT NULL REFERENCES novels(id) ON DELETE CASCADE,
+    userId UUID NOT NULL REFERENCES userAccount(id) ON DELETE CASCADE,
+    novelId UUID NOT NULL REFERENCES novel(id) ON DELETE CASCADE,
     
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     
     -- 唯一约束
-    UNIQUE(user_id, novel_id),
-    
-    -- 索引
-    INDEX idx_favorites_user (user_id, created_at DESC)
-);</code></pre>
+    UNIQUE(userId, novelId)
+);
 
-        <h4>2.1.6 订单表（orders）</h4>
-        <pre><code>CREATE TABLE orders (
+-- 添加表注释
+COMMENT ON TABLE userFavorite IS '用户收藏表';
+
+-- 添加字段注释
+COMMENT ON COLUMN userFavorite.id IS '收藏记录唯一标识符';
+COMMENT ON COLUMN userFavorite.userId IS '用户ID';
+COMMENT ON COLUMN userFavorite.novelId IS '小说ID';
+COMMENT ON COLUMN userFavorite.createdAt IS '收藏时间';
+
+-- 创建索引
+CREATE INDEX idx_userFavorite_user ON userFavorite(userId, createdAt DESC);</code></pre>
+
+        <h4>2.1.6 订单表（orderInfo）</h4>
+        <pre><code>-- 订单表
+CREATE TABLE orderInfo (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID NOT NULL REFERENCES users(id),
+    userId UUID NOT NULL REFERENCES userAccount(id),
     
     -- 订单信息
-    order_type VARCHAR(20) NOT NULL, -- chapter, subscription
-    order_no VARCHAR(100) UNIQUE NOT NULL,
+    orderType VARCHAR(20) NOT NULL,
+    orderNo VARCHAR(100) UNIQUE NOT NULL,
     
     -- 商品信息
-    novel_id UUID REFERENCES novels(id),
-    chapter_id UUID REFERENCES chapters(id),
+    novelId UUID REFERENCES novel(id),
+    chapterId UUID REFERENCES chapter(id),
     
     -- 金额
     amount DECIMAL(10,2) NOT NULL,
     currency VARCHAR(10) DEFAULT 'USD',
     
     -- 状态
-    status VARCHAR(20) DEFAULT 'pending', -- pending, paid, failed, refunded
+    status VARCHAR(20) DEFAULT 'pending',
     
     -- 支付信息
-    payment_method VARCHAR(50), -- paypal, stripe
-    payment_id VARCHAR(255), -- 第三方支付ID
+    paymentMethod VARCHAR(50),
+    paymentId VARCHAR(255),
     
     -- 时间戳
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    paid_at TIMESTAMP,
-    refunded_at TIMESTAMP,
-    
-    -- 索引
-    INDEX idx_orders_user (user_id, created_at DESC),
-    INDEX idx_orders_status (status),
-    INDEX idx_orders_order_no (order_no)
-);</code></pre>
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    paidAt TIMESTAMP,
+    refundedAt TIMESTAMP
+);
 
-        <h4>2.1.7 AI生成任务表（generation_tasks）</h4>
-        <pre><code>CREATE TABLE generation_tasks (
+-- 添加表注释
+COMMENT ON TABLE orderInfo IS '订单表';
+
+-- 添加字段注释
+COMMENT ON COLUMN orderInfo.id IS '订单唯一标识符';
+COMMENT ON COLUMN orderInfo.userId IS '用户ID';
+COMMENT ON COLUMN orderInfo.orderType IS '订单类型：chapter章节购买 subscription订阅';
+COMMENT ON COLUMN orderInfo.orderNo IS '订单编号';
+COMMENT ON COLUMN orderInfo.novelId IS '小说ID';
+COMMENT ON COLUMN orderInfo.chapterId IS '章节ID';
+COMMENT ON COLUMN orderInfo.amount IS '订单金额';
+COMMENT ON COLUMN orderInfo.currency IS '货币类型';
+COMMENT ON COLUMN orderInfo.status IS '订单状态：pending待支付 paid已支付 failed失败 refunded已退款';
+COMMENT ON COLUMN orderInfo.paymentMethod IS '支付方式：paypal stripe';
+COMMENT ON COLUMN orderInfo.paymentId IS '第三方支付ID';
+COMMENT ON COLUMN orderInfo.createdAt IS '创建时间';
+COMMENT ON COLUMN orderInfo.paidAt IS '支付时间';
+COMMENT ON COLUMN orderInfo.refundedAt IS '退款时间';
+
+-- 创建索引
+CREATE INDEX idx_orderInfo_user ON orderInfo(userId, createdAt DESC);
+CREATE INDEX idx_orderInfo_status ON orderInfo(status);
+CREATE INDEX idx_orderInfo_orderNo ON orderInfo(orderNo);</code></pre>
+
+        <h4>2.1.7 AI生成任务表（generationTask）</h4>
+        <pre><code>-- AI生成任务表
+CREATE TABLE generationTask (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    novel_id UUID NOT NULL REFERENCES novels(id),
+    novelId UUID NOT NULL REFERENCES novel(id),
     
     -- 任务信息
-    task_type VARCHAR(50) NOT NULL, -- generate_chapter, translate, etc.
-    status VARCHAR(20) DEFAULT 'pending', -- pending, running, completed, failed
+    taskType VARCHAR(50) NOT NULL,
+    status VARCHAR(20) DEFAULT 'pending',
     
     -- 配置
     config JSONB,
     
     -- 结果
     result JSONB,
-    error_message TEXT,
+    errorMessage TEXT,
     
     -- 重试
-    retry_count INTEGER DEFAULT 0,
-    max_retries INTEGER DEFAULT 3,
+    retryCount INTEGER DEFAULT 0,
+    maxRetries INTEGER DEFAULT 3,
     
     -- 时间戳
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    started_at TIMESTAMP,
-    completed_at TIMESTAMP,
-    
-    -- 索引
-    INDEX idx_tasks_status (status, created_at),
-    INDEX idx_tasks_novel (novel_id)
-);</code></pre>
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    startedAt TIMESTAMP,
+    completedAt TIMESTAMP
+);
 
-        <h4>2.1.8 定时任务日志表（cron_logs）</h4>
-        <pre><code>CREATE TABLE cron_logs (
+-- 添加表注释
+COMMENT ON TABLE generationTask IS 'AI生成任务表';
+
+-- 添加字段注释
+COMMENT ON COLUMN generationTask.id IS '任务唯一标识符';
+COMMENT ON COLUMN generationTask.novelId IS '小说ID';
+COMMENT ON COLUMN generationTask.taskType IS '任务类型：generateChapter生成章节 translate翻译';
+COMMENT ON COLUMN generationTask.status IS '任务状态：pending待执行 running执行中 completed已完成 failed失败';
+COMMENT ON COLUMN generationTask.config IS '任务配置（JSON）';
+COMMENT ON COLUMN generationTask.result IS '执行结果（JSON）';
+COMMENT ON COLUMN generationTask.errorMessage IS '错误信息';
+COMMENT ON COLUMN generationTask.retryCount IS '已重试次数';
+COMMENT ON COLUMN generationTask.maxRetries IS '最大重试次数';
+COMMENT ON COLUMN generationTask.createdAt IS '创建时间';
+COMMENT ON COLUMN generationTask.startedAt IS '开始时间';
+COMMENT ON COLUMN generationTask.completedAt IS '完成时间';
+
+-- 创建索引
+CREATE INDEX idx_generationTask_status ON generationTask(status, createdAt);
+CREATE INDEX idx_generationTask_novel ON generationTask(novelId);</code></pre>
+
+        <h4>2.1.8 定时任务日志表（cronLog）</h4>
+        <pre><code>-- 定时任务日志表
+CREATE TABLE cronLog (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     
     -- 任务信息
-    task_name VARCHAR(100) NOT NULL,
-    task_type VARCHAR(50) NOT NULL,
+    taskName VARCHAR(100) NOT NULL,
+    taskType VARCHAR(50) NOT NULL,
     
     -- 执行信息
-    execution_time TIMESTAMP NOT NULL,
-    duration_ms INTEGER,
-    status VARCHAR(20) NOT NULL, -- success, failed, partial
+    executionTime TIMESTAMP NOT NULL,
+    durationMs INTEGER,
+    status VARCHAR(20) NOT NULL,
     
     -- 统计
-    novels_processed INTEGER DEFAULT 0,
-    chapters_generated INTEGER DEFAULT 0,
+    novelsProcessed INTEGER DEFAULT 0,
+    chaptersGenerated INTEGER DEFAULT 0,
     
     -- 错误信息
     errors TEXT[],
@@ -542,23 +689,44 @@
     -- 报告
     report TEXT,
     
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    
-    -- 索引
-    INDEX idx_cron_logs_time (execution_time DESC),
-    INDEX idx_cron_logs_task (task_name, execution_time DESC)
-);</code></pre>
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-        <h3>2.2 数据库索引优化</h3>
+-- 添加表注释
+COMMENT ON TABLE cronLog IS '定时任务日志表';
+
+-- 添加字段注释
+COMMENT ON COLUMN cronLog.id IS '日志唯一标识符';
+COMMENT ON COLUMN cronLog.taskName IS '任务名称';
+COMMENT ON COLUMN cronLog.taskType IS '任务类型：dailyGeneration每日生成 dailyReport每日报告';
+COMMENT ON COLUMN cronLog.executionTime IS '执行时间';
+COMMENT ON COLUMN cronLog.durationMs IS '执行时长（毫秒）';
+COMMENT ON COLUMN cronLog.status IS '执行状态：success成功 failed失败 partial部分成功';
+COMMENT ON COLUMN cronLog.novelsProcessed IS '处理的小说数量';
+COMMENT ON COLUMN cronLog.chaptersGenerated IS '生成的章节数量';
+COMMENT ON COLUMN cronLog.errors IS '错误信息数组';
+COMMENT ON COLUMN cronLog.report IS '执行报告';
+COMMENT ON COLUMN cronLog.createdAt IS '创建时间';
+
+-- 创建索引
+CREATE INDEX idx_cronLog_time ON cronLog(executionTime DESC);
+CREATE INDEX idx_cronLog_task ON cronLog(taskName, executionTime DESC);</code></pre>
+
+        <h3>2.2 数据库索引优化（Google风格）</h3>
 
         <pre><code>-- 复合索引优化
-CREATE INDEX idx_novels_category_status ON novels(category, status);
-CREATE INDEX idx_chapters_novel_free ON chapters(novel_id, is_free);
-CREATE INDEX idx_orders_user_status ON orders(user_id, status);
+CREATE INDEX idx_novel_category_status ON novel(category, status);
+CREATE INDEX idx_chapter_novel_free ON chapter(novelId, isFree);
+CREATE INDEX idx_orderInfo_user_status ON orderInfo(userId, status);
 
--- 全文搜索索引
-CREATE INDEX idx_novels_title_search ON novels USING gin(to_tsvector('english', title));
-CREATE INDEX idx_novels_desc_search ON novels USING gin(to_tsvector('english', description));</code></pre>
+-- 全文搜索索引（PostgreSQL）
+CREATE INDEX idx_novel_title_search ON novel USING gin(to_tsvector('english', title));
+CREATE INDEX idx_novel_desc_search ON novel USING gin(to_tsvector('english', description));
+
+-- 性能优化索引
+CREATE INDEX idx_chapter_novel_number ON chapter(novelId, chapterNumber DESC);
+CREATE INDEX idx_userReadingHistory_user_novel ON userReadingHistory(userId, novelId);
+CREATE INDEX idx_generationTask_status_created ON generationTask(status, createdAt DESC);</code></pre>
 
         <h2>三、Go后端开发（单体架构）</h2>
 
