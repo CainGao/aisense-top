@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
     
     <article class="post-item">
+        <h3><a href="/posts/2026-03-04-robot-news.html">2026-03-04 机器人产业日报</a></h3>
+        <p class="meta">2026年03月04日</p>
+        <p>Tesla AI Day倒计时2天、小米CyberOne 2门店部署启动、宇树H1获电力巡检订单、中国Q1工业机器人产量创新高、协作机器人出货量增长42%</p>
+    </article>
+    
+    <article class="post-item">
         <h3><a href="/posts/2026-03-03-robot-news.html">2026-03-03 机器人产业日报</a></h3>
         <p class="meta">2026年03月03日</p>
         <p>Tesla AI Day将发布量产版Optimus、Figure AI获Amazon大单、小米CyberOne 2拓展零售场景、ROS 2生态持续完善、协作机器人市场增长38%</p>
