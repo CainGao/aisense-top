@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
     
     <article class="post-item">
+        <h3><a href="/posts/2026-03-06-robot-news.html">2026-03-06 机器人产业日报</a></h3>
+        <p class="meta">2026年03月06日</p>
+        <p>Tesla AI Day今日举行Optimus量产版首发、中国机器人展第2天、小米CyberOne 2零售场景落地、宇树H1获国家电网5亿订单、优必选Walker S2工业案例发布</p>
+    </article>
+    
+    <article class="post-item">
         <h3><a href="/posts/2026-03-05-robot-news.html">2026-03-05 机器人产业日报</a></h3>
         <p class="meta">2026年03月05日</p>
         <p>中国机器人展今日开幕、Tesla AI Day倒计时1天、Unitree G1雪地行走、NASA毅力号自主定位、丰田工厂部署自主机器人、Humanoid发布KinetIQ AI框架</p>
