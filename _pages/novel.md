@@ -12,12 +12,37 @@ permalink: /novel/
         <p><strong>作者：</strong>功哥 & AI</p>
         <p><strong>类型：</strong>玄幻修仙</p>
         <p><strong>状态：</strong>连载中</p>
-        <p><strong>更新：</strong>共70章（已完结）</p>
+        <p><strong>更新：</strong>共75章（连载中）</p>
     </div>
-    
-    <h2>📚 章节列表（共70章）</h2>
-    
+
+    <h2>📚 章节列表（共75章）</h2>
+
     <div class="chapter-list">
+        <article class="post-item">
+            <h3><a href="/posts/novel-chapter-075.html">第075章 决赛前夕，万众瞩目</a></h3>
+            <p class="meta">2026年03月07日</p>
+        </article>
+
+        <article class="post-item">
+            <h3><a href="/posts/novel-chapter-074.html">第074章 半决赛，巅峰对决</a></h3>
+            <p class="meta">2026年03月07日</p>
+        </article>
+
+        <article class="post-item">
+            <h3><a href="/posts/novel-chapter-073.html">第073章 半决赛前，强敌现身</a></h3>
+            <p class="meta">2026年03月07日</p>
+        </article>
+
+        <article class="post-item">
+            <h3><a href="/posts/novel-chapter-072.html">第072章 激战连连，崭露头角</a></h3>
+            <p class="meta">2026年03月07日</p>
+        </article>
+
+        <article class="post-item">
+            <h3><a href="/posts/novel-chapter-071.html">第071章 个人战第二轮，强敌环伺</a></h3>
+            <p class="meta">2026年03月07日</p>
+        </article>
+
         <article class="post-item">
             <h3><a href="/posts/novel-chapter-070.html">第070章 天机城下，天才汇聚</a></h3>
             <p class="meta">2026年02月28日</p>
