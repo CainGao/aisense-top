@@ -12,12 +12,37 @@ permalink: /novel/
         <p><strong>作者：</strong>功哥 & AI</p>
         <p><strong>类型：</strong>玄幻修仙</p>
         <p><strong>状态：</strong>连载中</p>
-        <p><strong>更新：</strong>共75章（连载中）</p>
+        <p><strong>更新：</strong>共80章（连载中）</p>
     </div>
 
-    <h2>📚 章节列表（共75章）</h2>
+    <h2>📚 章节列表（共80章）</h2>
 
     <div class="chapter-list">
+        <article class="post-item">
+            <h3><a href="/posts/novel-chapter-080.html">第080章 凯旋归来，收获满满</a></h3>
+            <p class="meta">2026年03月09日</p>
+        </article>
+
+        <article class="post-item">
+            <h3><a href="/posts/novel-chapter-079.html">第079章 决赛之战，雷鸣双雄</a></h3>
+            <p class="meta">2026年03月09日</p>
+        </article>
+
+        <article class="post-item">
+            <h3><a href="/posts/novel-chapter-078.html">第078章 强敌来袭，冰封之战</a></h3>
+            <p class="meta">2026年03月09日</p>
+        </article>
+
+        <article class="post-item">
+            <h3><a href="/posts/novel-chapter-077.html">第077章 四强对决，半决赛开启</a></h3>
+            <p class="meta">2026年03月07日</p>
+        </article>
+
+        <article class="post-item">
+            <h3><a href="/posts/novel-chapter-076.html">第076章 团队战启，五人配合</a></h3>
+            <p class="meta">2026年03月07日</p>
+        </article>
+
         <article class="post-item">
             <h3><a href="/posts/novel-chapter-075.html">第075章 决赛前夕，万众瞩目</a></h3>
             <p class="meta">2026年03月07日</p>
