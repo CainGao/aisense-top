@@ -9,6 +9,12 @@ permalink: /github-trending/
     <p>深度解析开源项目，发现技术趋势</p>
     
     <article class="post-item">
+        <h2><a href="/posts/2026-03-10-github-trending.html">2026-03-10 GitHub热榜分析</a></h2>
+        <p class="meta">2026年03月10日</p>
+        <p>GPT-5 Pro登顶、Claude 4.5发布、LLaMA 4 Ultra、Mixtral 3、AI Agent框架持续火热</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-04-github-trending.html">2026-03-04 GitHub热榜分析</a></h2>
         <p class="meta">2026年03月04日</p>
         <p>OpenClaw登顶GitHub历史第一、英伟达推LPU芯片、Rust重写WiFi感知项目、AI Agent框架持续火热</p>
