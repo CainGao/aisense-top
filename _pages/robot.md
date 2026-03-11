@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
     
     <article class="post-item">
+        <h3><a href="/posts/2026-03-11-robot-news.html">2026-03-11 机器人产业日报</a></h3>
+        <p class="meta">2026年03月11日</p>
+        <p>Tesla Optimus V3原型机亮相倒计时、宇树H1工业场景突破、小米CyberOne 2规模化部署、协作机器人市场增长42%、ROS 2生态持续完善</p>
+    </article>
+    
+    <article class="post-item">
         <h3><a href="/posts/2026-03-09-robot-news.html">2026-03-09 机器人产业日报</a></h3>
         <p class="meta">2026年03月09日</p>
         <p>埃斯顿港股上市、Tesla Optimus V3即将展示、宇树科技冲刺科创板、Isaac Sim生态完善、服务机器人市场快速增长</p>
