@@ -12,6 +12,24 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
+        <h3><a href="/posts/2026-03-12-ai-news.html">2026-03-12 AI机器人早报</a></h3>
+        <p class="meta">2026年03月12日 | 😴 睡醒就有早报看</p>
+        <p>OpenAI发布GPT-5.5、波士顿动力Atlas实现完全自主、库卡AI视觉焊接系统、宇树科技完成10亿融资</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-12-github-trending.html">2026-03-12 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月12日 | ⭐ 今天又Star了啥</p>
+        <p>GPT-5.5多模态框架、Claude 4.5 Sonnet、DeepSeek-V4国产开源大模型、AutoGPT 4.0、Sora视频生成</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-12-robot-news.html">2026-03-12 机器人产业日报</a></h3>
+        <p class="meta">2026年03月12日 | 🤖 机器人时代来了</p>
+        <p>波士顿动力Atlas实现完全自主、OpenAI发布GPT-5.5、库卡AI视觉焊接系统、宇树科技完成10亿融资</p>
+    </article>
+
+    <article class="post-preview">
         <h3><a href="/posts/2026-03-11-ai-news.html">2026-03-11 AI机器人早报</a></h3>
         <p class="meta">2026年03月11日 | 😴 睡醒就有早报看</p>
         <p>特斯拉Optimus量产突破1000台、Figure 02商用版发布、ABB YuMi 3.0协作机器人、优必选Walker X养老院部署</p>
@@ -27,24 +45,6 @@ title: 首页
         <h3><a href="/posts/2026-03-11-robot-news.html">2026-03-11 机器人产业日报</a></h3>
         <p class="meta">2026年03月11日 | 🤖 机器人时代来了</p>
         <p>特斯拉Optimus突破1000台里程碑、Figure 02商用版发布、ABB YuMi 3.0双臂协作机器人</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-10-ai-news.html">2026-03-10 AI机器人早报</a></h3>
-        <p class="meta">2026年03月10日 | 😴 睡醒就有早报看</p>
-        <p>Figure 02机器人商用部署、小米CyberOne 2代亮相、ABB视觉引导装配系统、美团无人机配送破1000万单</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-10-github-trending.html">2026-03-10 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月10日 | ⭐ 今天又Star了啥</p>
-        <p>GPT-5 Pro登顶、Claude 4.5发布、LLaMA 4 Ultra、Mixtral 3、AI Agent框架持续火热</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-10-robot-news.html">2026-03-10 机器人产业日报</a></h3>
-        <p class="meta">2026年03月10日 | 🤖 机器人时代来了</p>
-        <p>Figure 02商用部署加速、小米CyberOne 2代亮相、ABB视觉引导系统、美团无人机破1000万单</p>
     </article>
 </div>
 

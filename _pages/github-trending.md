@@ -9,6 +9,12 @@ permalink: /github-trending/
     <p>深度解析开源项目，发现技术趋势</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-12-github-trending.html">2026-03-12 GitHub热榜分析</a></h2>
+        <p class="meta">2026年03月12日</p>
+        <p>GPT-5.5多模态框架、Claude 4.5 Sonnet、DeepSeek-V4国产开源大模型、AutoGPT 4.0、Sora视频生成</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-11-github-trending.html">2026-03-11 GitHub热榜分析</a></h2>
         <p class="meta">2026年03月11日</p>
         <p>OpenAI O1-Pro推理模型、Claude 4 Opus、AutoGPT 3.0、AI Agent框架持续爆发</p>

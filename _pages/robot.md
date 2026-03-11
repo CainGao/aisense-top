@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
     
     <article class="post-item">
+        <h3><a href="/posts/2026-03-12-robot-news.html">2026-03-12 机器人产业日报</a></h3>
+        <p class="meta">2026年03月12日</p>
+        <p>波士顿动力Atlas实现完全自主、OpenAI发布GPT-5.5、库卡AI视觉焊接系统、宇树科技完成10亿融资、优必选Walker X Pro医疗版</p>
+    </article>
+    
+    <article class="post-item">
         <h3><a href="/posts/2026-03-11-robot-news.html">2026-03-11 机器人产业日报</a></h3>
         <p class="meta">2026年03月11日</p>
         <p>Tesla Optimus V3原型机亮相倒计时、特斯拉Optimus突破1000台、Figure 02商用版发布、ABB YuMi 3.0、宇树H1工业场景突破</p>
