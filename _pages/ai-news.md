@@ -7,7 +7,13 @@ permalink: /ai-news/
 <div class="category-list">
     <h1>😴 睡醒就有早报看</h1>
     <p>每日更新，掌握机器人行业最新动态</p>
-    
+
+    <article class="post-item">
+        <h2><a href="/posts/2026-03-11-ai-news.html">2026-03-11 AI机器人早报</a></h2>
+        <p class="meta">2026年03月11日</p>
+        <p>特斯拉Optimus量产突破1000台、Figure 02商用版发布、ABB YuMi 3.0协作机器人、优必选Walker X养老院部署</p>
+    </article>
+
     <article class="post-item">
         <h2><a href="/posts/2026-03-10-ai-news.html">2026-03-10 AI机器人早报</a></h2>
         <p class="meta">2026年03月10日</p>

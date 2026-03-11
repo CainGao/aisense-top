@@ -12,57 +12,39 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-04-ai-news.html">2026-03-04 AI机器人早报</a></h3>
-        <p class="meta">2026年03月04日 | 😴 睡醒就有早报看</p>
-        <p>苹果祭出地表最强AI PC、GPT-5.4意外泄露、阿里开源Qwen3.5、宇树机器人进化、茅台投资机器人公司</p>
+        <h3><a href="/posts/2026-03-11-ai-news.html">2026-03-11 AI机器人早报</a></h3>
+        <p class="meta">2026年03月11日 | 😴 睡醒就有早报看</p>
+        <p>特斯拉Optimus量产突破1000台、Figure 02商用版发布、ABB YuMi 3.0协作机器人、优必选Walker X养老院部署</p>
     </article>
 
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-04-github-trending.html">2026-03-04 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月04日 | ⭐ 今天又Star了啥</p>
-        <p>OpenClaw登顶GitHub历史第一、英伟达推LPU芯片、Rust重写WiFi感知项目、AI Agent框架持续火热</p>
+        <h3><a href="/posts/2026-03-11-github-trending.html">2026-03-11 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月11日 | ⭐ 今天又Star了啥</p>
+        <p>OpenAI O1-Pro推理模型、Claude 4 Opus、AutoGPT 3.0、AI Agent框架持续爆发</p>
     </article>
 
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-04-robot-news.html">2026-03-04 机器人产业日报</a></h3>
-        <p class="meta">2026年03月04日 | 🤖 机器人时代来了</p>
-        <p>Tesla AI Day倒计时2天、小米CyberOne 2门店部署、宇树H1获电力巡检订单、中国Q1工业机器人产量创新高</p>
+        <h3><a href="/posts/2026-03-11-robot-news.html">2026-03-11 机器人产业日报</a></h3>
+        <p class="meta">2026年03月11日 | 🤖 机器人时代来了</p>
+        <p>特斯拉Optimus突破1000台里程碑、Figure 02商用版发布、ABB YuMi 3.0双臂协作机器人</p>
     </article>
 
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-02-github-trending.html">2026-03-02 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月02日 | ⭐ 今天又Star了啥</p>
-        <p>alibaba/OpenSandbox、ruvnet/ruflo、moeru-ai/airi等热门项目</p>
+        <h3><a href="/posts/2026-03-10-ai-news.html">2026-03-10 AI机器人早报</a></h3>
+        <p class="meta">2026年03月10日 | 😴 睡醒就有早报看</p>
+        <p>Figure 02机器人商用部署、小米CyberOne 2代亮相、ABB视觉引导装配系统、美团无人机配送破1000万单</p>
     </article>
 
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-02-ai-news.html">2026-03-02 AI机器人早报</a></h3>
-        <p class="meta">2026年03月02日 | 😴 睡醒就有早报看</p>
-        <p>Figure 01机器人完全自主操作、OpenAI与机器人公司合作、傅利叶智能8亿D轮</p>
+        <h3><a href="/posts/2026-03-10-github-trending.html">2026-03-10 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月10日 | ⭐ 今天又Star了啥</p>
+        <p>GPT-5 Pro登顶、Claude 4.5发布、LLaMA 4 Ultra、Mixtral 3、AI Agent框架持续火热</p>
     </article>
-    
+
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-01-github-trending.html">2026-03-01 GitHub热榜分析</a></h3>
-        <p class="meta">2026年02月29日 | ⭐ 今天又Star了啥</p>
-        <p>Google Gemini Ultra、Claude 3.5、OpenAI Sora</p>
-    </article>
-    
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-01-ai-news.html">2026-03-01 AI机器人早报</a></h3>
-        <p class="meta">2026年02月29日 | 😴 睡醒就有早报看</p>
-        <p>特斯拉Optimus工厂部署、小米CyberOne 2发布、库卡AI视觉系统</p>
-    </article>
-    
-    <article class="post-preview">
-        <h3><a href="/posts/2026-02-28-openclaw-complete-guide.html">OpenClaw完整部署指南</a></h3>
-        <p class="meta">2026年02月28日 | 🦞 我的AI管家</p>
-        <p>6500字完整指南：安装配置、飞书钉钉集成、定时任务、MCP协议</p>
-    </article>
-    
-    <article class="post-preview">
-        <h3><a href="/posts/2026-02-27-one-person-company-guide.html">AI一人公司完全指南</a></h3>
-        <p class="meta">2026年02月27日 | 🍜 一个人如何混饭吃</p>
-        <p>从0到$10k MRR的完整路径，10大成功模式</p>
+        <h3><a href="/posts/2026-03-10-robot-news.html">2026-03-10 机器人产业日报</a></h3>
+        <p class="meta">2026年03月10日 | 🤖 机器人时代来了</p>
+        <p>Figure 02商用部署加速、小米CyberOne 2代亮相、ABB视觉引导系统、美团无人机破1000万单</p>
     </article>
 </div>
 

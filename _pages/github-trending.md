@@ -7,7 +7,13 @@ permalink: /github-trending/
 <div class="category-list">
     <h1>⭐ 今天又Star了啥</h1>
     <p>深度解析开源项目，发现技术趋势</p>
-    
+
+    <article class="post-item">
+        <h2><a href="/posts/2026-03-11-github-trending.html">2026-03-11 GitHub热榜分析</a></h2>
+        <p class="meta">2026年03月11日</p>
+        <p>OpenAI O1-Pro推理模型、Claude 4 Opus、AutoGPT 3.0、AI Agent框架持续爆发</p>
+    </article>
+
     <article class="post-item">
         <h2><a href="/posts/2026-03-10-github-trending.html">2026-03-10 GitHub热榜分析</a></h2>
         <p class="meta">2026年03月10日</p>

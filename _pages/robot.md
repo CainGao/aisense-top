@@ -24,7 +24,13 @@ permalink: /robot/
     <article class="post-item">
         <h3><a href="/posts/2026-03-11-robot-news.html">2026-03-11 机器人产业日报</a></h3>
         <p class="meta">2026年03月11日</p>
-        <p>Tesla Optimus V3原型机亮相倒计时、宇树H1工业场景突破、小米CyberOne 2规模化部署、协作机器人市场增长42%、ROS 2生态持续完善</p>
+        <p>Tesla Optimus V3原型机亮相倒计时、特斯拉Optimus突破1000台、Figure 02商用版发布、ABB YuMi 3.0、宇树H1工业场景突破</p>
+    </article>
+    
+    <article class="post-item">
+        <h3><a href="/posts/2026-03-10-robot-news.html">2026-03-10 机器人产业日报</a></h3>
+        <p class="meta">2026年03月10日</p>
+        <p>Figure 02商用部署加速、小米CyberOne 2代亮相、ABB视觉引导系统、美团无人机破1000万单</p>
     </article>
     
     <article class="post-item">
