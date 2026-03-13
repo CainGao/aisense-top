@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
     
     <article class="post-item">
+        <h3><a href="/posts/2026-03-14-robot-news.html">2026-03-14 机器人产业日报</a></h3>
+        <p class="meta">2026年03月14日</p>
+        <p>资讯抓取系统维护中、人形机器人量产加速、工业机器人AI化升级、服务机器人市场扩展</p>
+    </article>
+    
+    <article class="post-item">
         <h3><a href="/posts/2026-03-13-robot-news.html">2026-03-13 机器人产业日报</a></h3>
         <p class="meta">2026年03月13日</p>
         <p>特斯拉Optimus工厂部署突破1000台、波士顿动力Atlas实现完全自主、Figure 02商用版发布、库卡AI视觉焊接系统、宇树科技完成10亿融资</p>

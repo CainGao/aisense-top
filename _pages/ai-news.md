@@ -9,6 +9,12 @@ permalink: /ai-news/
     <p>每日更新，掌握机器人行业最新动态</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-14-ai-news.html">2026-03-14 AI机器人早报</a></h2>
+        <p class="meta">2026年03月14日</p>
+        <p>资讯抓取系统维护中、AI Agent生态持续进化、人形机器人量产加速、开源大模型竞争加剧</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-13-ai-news.html">2026-03-13 AI机器人早报</a></h2>
         <p class="meta">2026年03月13日</p>
         <p>OpenAI发布GPT-5.5、波士顿动力Atlas实现完全自主、特斯拉Optimus工厂部署突破1000台、库卡AI视觉焊接系统</p>

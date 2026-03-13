@@ -9,6 +9,12 @@ permalink: /github-trending/
     <p>深度解析开源项目，发现技术趋势</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-14-github-trending.html">2026-03-14 GitHub热榜分析</a></h2>
+        <p class="meta">2026年03月14日</p>
+        <p>系统维护中、AI Agent框架持续热门、大模型推理工具、多模态AI项目</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-13-github-trending.html">2026-03-13 GitHub热榜分析</a></h2>
         <p class="meta">2026年03月13日</p>
         <p>OpenAI GPT-5.5 SDK、Anthropic Claude 4 SDK、Google Gemini Pro SDK、Meta Llama 4、Microsoft AutoGen、OpenClaw</p>
