@@ -1,12 +1,574 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2026-01-31T21:00:00Z",
-    "total_news": 0,
+    "last_updated": "2026-03-13T09:22:21.254424",
+    "total_news": 17,
     "unique_news": 0,
     "duplicate_news": 0,
     "merged_news": 0,
     "low_value_news": 0
   },
-  "news": {}
+  "news": {
+    "c69a5bc5022bdde97a7ea77290ca6ffb": {
+      "id": "c69a5bc5022bdde97a7ea77290ca6ffb",
+      "title": "【記事更新】　個人事業主・フリーランスの税務申告　漫画家の確定申告は専門家に任せたほうが得？経費・青色申告まで徹底解説",
+      "url": "https://ai-front.com/archives/1647",
+      "sources": [
+        {
+          "name": "AI 前线",
+          "url": "https://www.ai-front.com",
+          "published": "Thu, 05 Mar 2026 02:00:00 +0000",
+          "summary": "【記事更新】 個人事業主・フリーランスの税務申告 漫画家の確定申告は専門家に任せたほうが得？経費・青色申告まで徹底解説 弊社ホームページをご覧いただきありがとうございます。 個人事業主・フリーランスの税務申告の記事を更新 [&#8230;] The post 【記事更新】 個人事業主・フリーランスの税務申告 漫画家の確定申告は専門家に任せたほうが得？経費・青色申告まで徹底解説 first appeared on 名古屋の税理士 ｜税理士法人アイフロント."
+        }
+      ],
+      "value": {
+        "score": 85,
+        "scores": {
+          "source_score": 40,
+          "title_score": 25,
+          "content_score": 15,
+          "time_score": 5
+        },
+        "priority": 5,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:09.046814",
+      "last_seen": "2026-03-13T09:22:09.046820",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "f0850127acd027a6d1ecec311562793f": {
+      "id": "f0850127acd027a6d1ecec311562793f",
+      "title": "【記事更新】　さくら相続支援協会　相続税の納付方法とは？クレジットカードも使用可能か",
+      "url": "https://ai-front.com/archives/1622",
+      "sources": [
+        {
+          "name": "AI 前线",
+          "url": "https://www.ai-front.com",
+          "published": "Tue, 03 Mar 2026 01:30:00 +0000",
+          "summary": "【記事更新】 さくら相続支援協会 相続税の納付方法とは？クレジットカードも使用可能か 弊社ホームページをご覧いただきありがとうございます。 さくら相続支援協会の記事を更新しましたので、こちらもぜひご覧ください。 今回は「 [&#8230;] The post 【記事更新】 さくら相続支援協会 相続税の納付方法とは？クレジットカードも使用可能か first appeared on 名古屋の税理士 ｜税理士法人アイフロント."
+        }
+      ],
+      "value": {
+        "score": 85,
+        "scores": {
+          "source_score": 40,
+          "title_score": 25,
+          "content_score": 15,
+          "time_score": 5
+        },
+        "priority": 5,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:09.046920",
+      "last_seen": "2026-03-13T09:22:09.046922",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "29df59bd34646c6801e7be25fa82d0b0": {
+      "id": "29df59bd34646c6801e7be25fa82d0b0",
+      "title": "2月のあれこれ",
+      "url": "https://ai-front.com/archives/1650",
+      "sources": [
+        {
+          "name": "AI 前线",
+          "url": "https://www.ai-front.com",
+          "published": "Sat, 28 Feb 2026 01:00:00 +0000",
+          "summary": "2月のあれこれ みなさま、弊社ホームページをご覧いただきありがとうございます。 2月！繁忙期突入です。 今月は積雪になるほどの寒さがあったり 春めいた暖かさもあって 寒暖差に体調を崩さないようにしたいものですね。 雪が降 [&#8230;] The post 2月のあれこれ first appeared on 名古屋の税理士 ｜税理士法人アイフロント."
+        }
+      ],
+      "value": {
+        "score": 60,
+        "scores": {
+          "source_score": 40,
+          "title_score": 5,
+          "content_score": 10,
+          "time_score": 5
+        },
+        "priority": 3,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:09.046999",
+      "last_seen": "2026-03-13T09:22:09.047001",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "cf28dfe5660976cbbd63e8565b52d38d": {
+      "id": "cf28dfe5660976cbbd63e8565b52d38d",
+      "title": "【記事更新】　個人事業主・フリーランスの税務申告　Webデザイナーの確定申告をわかりやすく解説",
+      "url": "https://ai-front.com/archives/1645",
+      "sources": [
+        {
+          "name": "AI 前线",
+          "url": "https://www.ai-front.com",
+          "published": "Thu, 19 Feb 2026 02:00:00 +0000",
+          "summary": "【記事更新】 個人事業主・フリーランスの税務申告 Webデザイナーの確定申告をわかりやすく解説 弊社ホームページをご覧いただきありがとうございます。 個人事業主・フリーランスの税務申告の記事を更新しましたので、こちらもぜ [&#8230;] The post 【記事更新】 個人事業主・フリーランスの税務申告 Webデザイナーの確定申告をわかりやすく解説 first appeared on 名古屋の税理士 ｜税理士法人アイフロント."
+        }
+      ],
+      "value": {
+        "score": 85,
+        "scores": {
+          "source_score": 40,
+          "title_score": 25,
+          "content_score": 15,
+          "time_score": 5
+        },
+        "priority": 5,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:09.047075",
+      "last_seen": "2026-03-13T09:22:09.047076",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "b473d69856ae450cc96b19a3663f16ba": {
+      "id": "b473d69856ae450cc96b19a3663f16ba",
+      "title": "【記事更新】　さくら相続支援協会　老人ホーム入居後の親の家は小規模宅地等の特例が使える？",
+      "url": "https://ai-front.com/archives/1620",
+      "sources": [
+        {
+          "name": "AI 前线",
+          "url": "https://www.ai-front.com",
+          "published": "Tue, 17 Feb 2026 01:30:00 +0000",
+          "summary": "【記事更新】 さくら相続支援協会 老人ホーム入居後の親の家は小規模宅地等の特例が使える？ 弊社ホームページをご覧いただきありがとうございます。 さくら相続支援協会の記事を更新しましたので、こちらもぜひご覧ください。 今回 [&#8230;] The post 【記事更新】 さくら相続支援協会 老人ホーム入居後の親の家は小規模宅地等の特例が使える？ first appeared on 名古屋の税理士 ｜税理士法人アイフロント."
+        }
+      ],
+      "value": {
+        "score": 85,
+        "scores": {
+          "source_score": 40,
+          "title_score": 25,
+          "content_score": 15,
+          "time_score": 5
+        },
+        "priority": 5,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:09.047148",
+      "last_seen": "2026-03-13T09:22:09.047149",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "4b85a2601a4bea9171a739eca428f59f": {
+      "id": "4b85a2601a4bea9171a739eca428f59f",
+      "title": "【記事更新】　個人事業主・フリーランスの税務申告　フリーランスエンジニアの確定申告ガイド｜初心者でも失敗しない基礎知識と節税術",
+      "url": "https://ai-front.com/archives/1639",
+      "sources": [
+        {
+          "name": "AI 前线",
+          "url": "https://www.ai-front.com",
+          "published": "Thu, 05 Feb 2026 02:00:00 +0000",
+          "summary": "【記事更新】 個人事業主・フリーランスの税務申告 フリーランスエンジニアの確定申告ガイド｜初心者でも失敗しない基礎知識と節税術 弊社ホームページをご覧いただきありがとうございます。 個人事業主・フリーランスの税務申告の記 [&#8230;] The post 【記事更新】 個人事業主・フリーランスの税務申告 フリーランスエンジニアの確定申告ガイド｜初心者でも失敗しない基礎知識と節税術 first appeared on 名古屋の税理士 ｜税理士法人アイフロント."
+        }
+      ],
+      "value": {
+        "score": 85,
+        "scores": {
+          "source_score": 40,
+          "title_score": 25,
+          "content_score": 15,
+          "time_score": 5
+        },
+        "priority": 5,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:09.047221",
+      "last_seen": "2026-03-13T09:22:09.047222",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "ca00014677102a8d1c4e05db0cda654b": {
+      "id": "ca00014677102a8d1c4e05db0cda654b",
+      "title": "【記事更新】　さくら相続支援協会　個人事業主の相続で必要な手続きを解説！事業用資産はどうなる？",
+      "url": "https://ai-front.com/archives/1618",
+      "sources": [
+        {
+          "name": "AI 前线",
+          "url": "https://www.ai-front.com",
+          "published": "Mon, 02 Feb 2026 01:30:00 +0000",
+          "summary": "【記事更新】 さくら相続支援協会 個人事業主の相続で必要な手続きを解説！事業用資産はどうなる？ 弊社ホームページをご覧いただきありがとうございます。 さくら相続支援協会の記事を更新しましたので、こちらもぜひご覧ください。 [&#8230;] The post 【記事更新】 さくら相続支援協会 個人事業主の相続で必要な手続きを解説！事業用資産はどうなる？ first appeared on 名古屋の税理士 ｜税理士法人アイフロント."
+        }
+      ],
+      "value": {
+        "score": 85,
+        "scores": {
+          "source_score": 40,
+          "title_score": 25,
+          "content_score": 15,
+          "time_score": 5
+        },
+        "priority": 5,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:09.047291",
+      "last_seen": "2026-03-13T09:22:09.047292",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "4307343d4c805fa66d4095d980b57ef1": {
+      "id": "4307343d4c805fa66d4095d980b57ef1",
+      "title": "1月のあれこれ",
+      "url": "https://ai-front.com/archives/1636",
+      "sources": [
+        {
+          "name": "AI 前线",
+          "url": "https://www.ai-front.com",
+          "published": "Fri, 30 Jan 2026 01:00:00 +0000",
+          "summary": "1月のあれこれ みなさま、弊社ホームページをご覧いただきありがとうございます。 本年も1月が経って、皆様いかがお過ごしでしょうか？ ちょこちょこ風邪をひいている人もいるので、十分な休息を！と思っています。 今月は下旬に強 [&#8230;] The post 1月のあれこれ first appeared on 名古屋の税理士 ｜税理士法人アイフロント."
+        }
+      ],
+      "value": {
+        "score": 60,
+        "scores": {
+          "source_score": 40,
+          "title_score": 5,
+          "content_score": 10,
+          "time_score": 5
+        },
+        "priority": 3,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:09.047378",
+      "last_seen": "2026-03-13T09:22:09.047379",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "894b4acd093c66f6c6db0b5a7420582e": {
+      "id": "894b4acd093c66f6c6db0b5a7420582e",
+      "title": "【記事更新】　さくら相続支援協会　相続税の障害者控除について：要件や注意点をやさしく解説",
+      "url": "https://ai-front.com/archives/1616",
+      "sources": [
+        {
+          "name": "AI 前线",
+          "url": "https://www.ai-front.com",
+          "published": "Mon, 19 Jan 2026 01:30:00 +0000",
+          "summary": "【記事更新】 さくら相続支援協会 相続税の障害者控除について：要件や注意点をやさしく解説 弊社ホームページをご覧いただきありがとうございます。 さくら相続支援協会の記事を更新しましたので、こちらもぜひご覧ください。 今回 [&#8230;] The post 【記事更新】 さくら相続支援協会 相続税の障害者控除について：要件や注意点をやさしく解説 first appeared on 名古屋の税理士 ｜税理士法人アイフロント."
+        }
+      ],
+      "value": {
+        "score": 85,
+        "scores": {
+          "source_score": 40,
+          "title_score": 25,
+          "content_score": 15,
+          "time_score": 5
+        },
+        "priority": 5,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:09.047449",
+      "last_seen": "2026-03-13T09:22:09.047451",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "561681d29ca4da3b8cc72ad89ae30704": {
+      "id": "561681d29ca4da3b8cc72ad89ae30704",
+      "title": "【記事更新】　さくら相続支援協会　実家を相続するとかかる税金とは？利用できる特例も紹介",
+      "url": "https://ai-front.com/archives/1614",
+      "sources": [
+        {
+          "name": "AI 前线",
+          "url": "https://www.ai-front.com",
+          "published": "Sat, 03 Jan 2026 01:30:00 +0000",
+          "summary": "【記事更新】 さくら相続支援協会 実家を相続するとかかる税金とは？利用できる特例も紹介 弊社ホームページをご覧いただきありがとうございます。 さくら相続支援協会の記事を更新しましたので、こちらもぜひご覧ください。 今回は [&#8230;] The post 【記事更新】 さくら相続支援協会 実家を相続するとかかる税金とは？利用できる特例も紹介 first appeared on 名古屋の税理士 ｜税理士法人アイフロント."
+        }
+      ],
+      "value": {
+        "score": 85,
+        "scores": {
+          "source_score": 40,
+          "title_score": 25,
+          "content_score": 15,
+          "time_score": 5
+        },
+        "priority": 5,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:09.047518",
+      "last_seen": "2026-03-13T09:22:09.047520",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "2eb074a704b4ccd690d839bf6c845029": {
+      "id": "2eb074a704b4ccd690d839bf6c845029",
+      "title": "对话VAST曹炎培：2秒才是3D生成本该有的速度",
+      "url": "https://www.qbitai.com/2026/03/386717.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Thu, 12 Mar 2026 12:09:09 +0000",
+          "summary": "AI 3D的2.0范式来了"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:19.514836",
+      "last_seen": "2026-03-13T09:22:19.514843",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "34bc347ce876bcde686e7dcd39b144e9": {
+      "id": "34bc347ce876bcde686e7dcd39b144e9",
+      "title": "全网首份「龙虾」安全部署指南来了！360出品",
+      "url": "https://www.qbitai.com/2026/03/386707.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Thu, 12 Mar 2026 09:54:02 +0000",
+          "summary": "养龙虾，需谨慎"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:19.515135",
+      "last_seen": "2026-03-13T09:22:19.515138",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "8d0434c962b895a601bee99b2012fbda": {
+      "id": "8d0434c962b895a601bee99b2012fbda",
+      "title": "养虾人Token自由！千亿Token+百万奖金等你来拿，0门槛冲就完了",
+      "url": "https://www.qbitai.com/2026/03/386669.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Thu, 12 Mar 2026 09:35:21 +0000",
+          "summary": "龙虾大舞台，想来你就来"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:19.515306",
+      "last_seen": "2026-03-13T09:22:19.515309",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "e44d16c1f9073019658e2febfa34a950": {
+      "id": "e44d16c1f9073019658e2febfa34a950",
+      "title": "卡帕西：编程从写文件变成管龙虾！IDE不会凉但得换个用法",
+      "url": "https://www.qbitai.com/2026/03/386668.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Thu, 12 Mar 2026 09:33:41 +0000",
+          "summary": "新一代IDE是Agent管理中心"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:19.515443",
+      "last_seen": "2026-03-13T09:22:19.515446",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "99027a3318734a32fb400ee42c5bac89": {
+      "id": "99027a3318734a32fb400ee42c5bac89",
+      "title": "爱诗科技完成3亿美元C轮融资，鼎晖领投，开启“实时交互”视频生成新纪元",
+      "url": "https://www.qbitai.com/2026/03/386664.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Thu, 12 Mar 2026 07:18:15 +0000",
+          "summary": "暂无摘要"
+        }
+      ],
+      "value": {
+        "score": 60,
+        "scores": {
+          "source_score": 30,
+          "title_score": 25,
+          "content_score": 0,
+          "time_score": 5
+        },
+        "priority": 3,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:19.515575",
+      "last_seen": "2026-03-13T09:22:19.515578",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "6a97cfbccae7afc6185d4555ec230561": {
+      "id": "6a97cfbccae7afc6185d4555ec230561",
+      "title": "马斯克官宣数字AI员工！世界首富也来养龙虾，测试阶段员工把它当真人",
+      "url": "https://www.qbitai.com/2026/03/386615.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Thu, 12 Mar 2026 05:37:08 +0000",
+          "summary": "数字擎天柱官宣，巨硬项目却被曝已停摆"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:19.515828",
+      "last_seen": "2026-03-13T09:22:19.515830",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "19534e14af520150c2bc521ce6fb2348": {
+      "id": "19534e14af520150c2bc521ce6fb2348",
+      "title": "真·养虾！3步让龙虾边聊边进化，不用GPU不用数据集就能强化学习",
+      "url": "https://www.qbitai.com/2026/03/386601.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Thu, 12 Mar 2026 05:14:14 +0000",
+          "summary": "还能自动生成技能"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-13T09:22:19.515947",
+      "last_seen": "2026-03-13T09:22:19.515950",
+      "seen_count": 1,
+      "status": "new"
+    }
+  }
 }

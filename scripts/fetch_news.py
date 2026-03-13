@@ -22,7 +22,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('/Users/caingao/aisense-top/logs/fetch_news.log'),
+        logging.FileHandler('/Users/cain_1/ROOT/openclaw/Projects/aisense-top/logs/fetch_news.log'),
         logging.StreamHandler(sys.stdout)
     ]
 )
@@ -35,7 +35,7 @@ class IntelligentNewsFetcher:
     def __init__(self):
         """初始化"""
         self.sources = self.load_sources()
-        self.base_dir = '/Users/caingao/aisense-top'
+        self.base_dir = '/Users/cain_1/ROOT/openclaw/Projects/aisense-top'
         self.news_dir = os.path.join(self.base_dir, 'news')
         self.database_file = os.path.join(self.base_dir, 'database', 'news_database.json')
         self.today = datetime.now().strftime('%Y-%m-%d')
@@ -178,6 +178,11 @@ class IntelligentNewsFetcher:
 
         返回: (是否重复, 去重类型)
         """
+        # 安全检查：确保必需字段存在
+        if 'url' not in news_item or 'title' not in news_item:
+            logger.warning(f"新闻条目缺少必需字段: {list(news_item.keys())}")
+            return False, 'missing_fields'
+        
         # 第一级：基于链接去重
         link_hash = self.calculate_hash(news_item['url'])
         if link_hash in self.database['news']:
@@ -402,17 +407,23 @@ class IntelligentNewsFetcher:
             return None
 
         # 3. 高价值，添加到数据库
-        news_id = self.calculate_hash(news_item['url'] + news_item['title'])
+        # 安全获取 url 字段
+        news_url = news_item.get('url', news_item.get('link', ''))
+        if not news_url:
+            logger.warning(f"新闻条目缺少 URL：{news_item.get('title', 'Unknown')}")
+            return None
+            
+        news_id = self.calculate_hash(news_url + news_item['title'])
 
         news_record = {
             'id': news_id,
             'title': news_item['title'],
-            'url': news_item['url'],
+            'url': news_url,
             'sources': [{
                 'name': source['name'],
                 'url': source['url'],
                 'published': news_item.get('published', ''),
-                'summary': self.extract_summary(news_item.get('description', ''))
+                'summary': self.extract_summary(news_item.get('description', ''), 500)
             }],
             'value': {
                 'score': total_score,
@@ -510,7 +521,8 @@ class IntelligentNewsFetcher:
             for entry in entries:
                 news_item = {
                     'title': entry.get('title', ''),
-                    'link': entry.get('link', ''),
+                    'url': entry.get('link', ''),  # 将 link 映射为 url
+                    'link': entry.get('link', ''),  # 保留 link 字段
                     'description': entry.get('description', ''),
                     'published': entry.get('published', ''),
                     'author': entry.get('author', ''),

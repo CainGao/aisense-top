@@ -8,7 +8,7 @@
 set -e
 
 # 项目目录
-PROJECT_DIR="/Users/caingao/aisense-top"
+PROJECT_DIR="/Users/cain_1/ROOT/openclaw/Projects/aisense-top"
 cd "$PROJECT_DIR"
 
 # 日志文件
@@ -58,7 +58,7 @@ log "Python 依赖检查完成"
 log "开始智能抓取资讯..."
 
 cd "$PROJECT_DIR/scripts"
-python3 feth_news.py || {
+python3 fetch_news.py || {
     log "错误：智能资讯抓取失败"
     exit 1
 }
