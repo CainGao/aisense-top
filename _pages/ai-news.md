@@ -9,6 +9,12 @@ permalink: /ai-news/
     <p>每日更新，掌握机器人行业最新动态</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-15-ai-news.html">2026-03-15 AI机器人早报</a></h2>
+        <p class="meta">2026年03月15日</p>
+        <p>Gemini重塑谷歌地图、B站OpenClaw社会实验、360智能红包系统、AI编辑部实践</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-14-ai-news.html">2026-03-14 AI机器人早报</a></h2>
         <p class="meta">2026年03月14日</p>
         <p>资讯抓取系统维护中、AI Agent生态持续进化、人形机器人量产加速、开源大模型竞争加剧</p>

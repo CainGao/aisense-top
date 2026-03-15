@@ -12,6 +12,12 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
+        <h3><a href="/posts/2026-03-15-ai-news.html">2026-03-15 AI机器人早报</a></h3>
+        <p class="meta">2026年03月15日 | 😴 睡醒就有早报看</p>
+        <p>Gemini重塑谷歌地图、B站OpenClaw社会实验、360智能红包系统、AI编辑部实践</p>
+    </article>
+
+    <article class="post-preview">
         <h3><a href="/posts/2026-03-14-ai-news.html">2026-03-14 AI机器人早报</a></h3>
         <p class="meta">2026年03月14日 | 😴 睡醒就有早报看</p>
         <p>资讯抓取系统维护中、AI Agent生态持续进化、人形机器人量产加速、开源大模型竞争加剧</p>
