@@ -1,8 +1,8 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2026-03-15T20:26:05.060357",
-    "total_news": 32,
+    "last_updated": "2026-03-15T21:30:21.651174",
+    "total_news": 36,
     "unique_news": 0,
     "duplicate_news": 0,
     "merged_news": 0,
@@ -1063,6 +1063,50 @@
       "first_seen": "2026-03-15T20:26:03.064904",
       "last_seen": "2026-03-15T20:26:03.064907",
       "seen_count": 1,
+      "status": "new"
+    },
+    "0b76aa6bef25eb0e0ce32cca725ae737": {
+      "id": "0b76aa6bef25eb0e0ce32cca725ae737",
+      "title": "Gemini重塑谷歌地图！一句话搞定出行攻略，网友：垂直应用全完蛋",
+      "url": "https://www.qbitai.com/2026/03/387867.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "first_seen": "2026-03-15T21:30:21.651142",
+      "status": "new"
+    },
+    "a1d4798e63700865e079a39315ac7747": {
+      "id": "a1d4798e63700865e079a39315ac7747",
+      "title": "AI能代替人干活吗？B站联合6位UP主用OpenClaw直播做了次社会实验",
+      "url": "https://www.qbitai.com/2026/03/387843.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "first_seen": "2026-03-15T21:30:21.651147",
+      "status": "new"
+    },
+    "20b70f493cc1d2282b3d9e0edb1e20e5": {
+      "id": "20b70f493cc1d2282b3d9e0edb1e20e5",
+      "title": "龙虾版支付宝来了！睡觉都在帮你抢红包",
+      "url": "https://www.qbitai.com/2026/03/387768.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "first_seen": "2026-03-15T21:30:21.651150",
+      "status": "new"
+    },
+    "ce08482a77a9d2c99c3c14211876a073": {
+      "id": "ce08482a77a9d2c99c3c14211876a073",
+      "title": "我用10块钱的「熟虾」，搞了个AI编辑部！",
+      "url": "https://www.qbitai.com/2026/03/387116.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "first_seen": "2026-03-15T21:30:21.651154",
       "status": "new"
     }
   }

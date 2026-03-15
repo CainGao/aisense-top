@@ -1,0 +1,49 @@
+{
+  "crawl_time": "2026-03-15T21:30:21.592225",
+  "total_articles": 4,
+  "articles": [
+    {
+      "title": "Gemini重塑谷歌地图！一句话搞定出行攻略，网友：垂直应用全完蛋",
+      "url": "https://www.qbitai.com/2026/03/387867.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "crawl_time": "2026-03-15T21:30:21.592056"
+    },
+    {
+      "title": "AI能代替人干活吗？B站联合6位UP主用OpenClaw直播做了次社会实验",
+      "url": "https://www.qbitai.com/2026/03/387843.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "crawl_time": "2026-03-15T21:30:21.592056"
+    },
+    {
+      "title": "龙虾版支付宝来了！睡觉都在帮你抢红包",
+      "url": "https://www.qbitai.com/2026/03/387768.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "crawl_time": "2026-03-15T21:30:21.592056"
+    },
+    {
+      "title": "我用10块钱的「熟虾」，搞了个AI编辑部！",
+      "url": "https://www.qbitai.com/2026/03/387116.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "crawl_time": "2026-03-15T21:30:21.592056"
+    }
+  ],
+  "source_stats": [
+    {
+      "source": "量子位",
+      "count": 4,
+      "status": "success"
+    }
+  ]
+}
