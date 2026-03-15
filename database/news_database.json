@@ -1,8 +1,8 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2026-03-13T09:22:21.254424",
-    "total_news": 17,
+    "last_updated": "2026-03-15T20:26:05.060357",
+    "total_news": 32,
     "unique_news": 0,
     "duplicate_news": 0,
     "merged_news": 0,
@@ -37,8 +37,8 @@
           "Programming"
         ]
       },
-      "first_seen": "2026-03-13T09:22:09.046814",
-      "last_seen": "2026-03-13T09:22:09.046820",
+      "first_seen": "2026-03-15T20:25:47.799388",
+      "last_seen": "2026-03-15T20:25:47.799392",
       "seen_count": 1,
       "status": "new"
     },
@@ -70,8 +70,8 @@
           "Programming"
         ]
       },
-      "first_seen": "2026-03-13T09:22:09.046920",
-      "last_seen": "2026-03-13T09:22:09.046922",
+      "first_seen": "2026-03-15T20:25:47.799539",
+      "last_seen": "2026-03-15T20:25:47.799541",
       "seen_count": 1,
       "status": "new"
     },
@@ -103,8 +103,8 @@
           "Programming"
         ]
       },
-      "first_seen": "2026-03-13T09:22:09.046999",
-      "last_seen": "2026-03-13T09:22:09.047001",
+      "first_seen": "2026-03-15T20:25:47.799645",
+      "last_seen": "2026-03-15T20:25:47.799646",
       "seen_count": 1,
       "status": "new"
     },
@@ -136,8 +136,8 @@
           "Programming"
         ]
       },
-      "first_seen": "2026-03-13T09:22:09.047075",
-      "last_seen": "2026-03-13T09:22:09.047076",
+      "first_seen": "2026-03-15T20:25:47.799742",
+      "last_seen": "2026-03-15T20:25:47.799744",
       "seen_count": 1,
       "status": "new"
     },
@@ -169,8 +169,8 @@
           "Programming"
         ]
       },
-      "first_seen": "2026-03-13T09:22:09.047148",
-      "last_seen": "2026-03-13T09:22:09.047149",
+      "first_seen": "2026-03-15T20:25:47.799834",
+      "last_seen": "2026-03-15T20:25:47.799836",
       "seen_count": 1,
       "status": "new"
     },
@@ -202,8 +202,8 @@
           "Programming"
         ]
       },
-      "first_seen": "2026-03-13T09:22:09.047221",
-      "last_seen": "2026-03-13T09:22:09.047222",
+      "first_seen": "2026-03-15T20:25:47.799922",
+      "last_seen": "2026-03-15T20:25:47.799924",
       "seen_count": 1,
       "status": "new"
     },
@@ -235,8 +235,8 @@
           "Programming"
         ]
       },
-      "first_seen": "2026-03-13T09:22:09.047291",
-      "last_seen": "2026-03-13T09:22:09.047292",
+      "first_seen": "2026-03-15T20:25:47.800008",
+      "last_seen": "2026-03-15T20:25:47.800009",
       "seen_count": 1,
       "status": "new"
     },
@@ -268,8 +268,8 @@
           "Programming"
         ]
       },
-      "first_seen": "2026-03-13T09:22:09.047378",
-      "last_seen": "2026-03-13T09:22:09.047379",
+      "first_seen": "2026-03-15T20:25:47.800095",
+      "last_seen": "2026-03-15T20:25:47.800096",
       "seen_count": 1,
       "status": "new"
     },
@@ -301,8 +301,8 @@
           "Programming"
         ]
       },
-      "first_seen": "2026-03-13T09:22:09.047449",
-      "last_seen": "2026-03-13T09:22:09.047451",
+      "first_seen": "2026-03-15T20:25:47.800177",
+      "last_seen": "2026-03-15T20:25:47.800179",
       "seen_count": 1,
       "status": "new"
     },
@@ -334,8 +334,8 @@
           "Programming"
         ]
       },
-      "first_seen": "2026-03-13T09:22:09.047518",
-      "last_seen": "2026-03-13T09:22:09.047520",
+      "first_seen": "2026-03-15T20:25:47.800272",
+      "last_seen": "2026-03-15T20:25:47.800274",
       "seen_count": 1,
       "status": "new"
     },
@@ -567,6 +567,501 @@
       },
       "first_seen": "2026-03-13T09:22:19.515947",
       "last_seen": "2026-03-13T09:22:19.515950",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "5d09c3c1c84f71457df7a4ef0a4bbda5": {
+      "id": "5d09c3c1c84f71457df7a4ef0a4bbda5",
+      "title": "阿里云发布手机“一键养虾”产品JVS Claw：3分钟实现养虾自由",
+      "url": "https://www.qbitai.com/2026/03/387750.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Fri, 13 Mar 2026 11:30:05 +0000",
+          "summary": "暂无摘要"
+        }
+      ],
+      "value": {
+        "score": 60,
+        "scores": {
+          "source_score": 30,
+          "title_score": 25,
+          "content_score": 0,
+          "time_score": 5
+        },
+        "priority": 3,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-15T20:26:03.065018",
+      "last_seen": "2026-03-15T20:26:03.065021",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "8a6012176ee0601e07a02127d5e0dc79": {
+      "id": "8a6012176ee0601e07a02127d5e0dc79",
+      "title": "刚刚，腾讯电脑“龙虾管家”重磅上线",
+      "url": "https://www.qbitai.com/2026/03/387739.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Fri, 13 Mar 2026 11:08:47 +0000",
+          "summary": "暂无摘要"
+        }
+      ],
+      "value": {
+        "score": 60,
+        "scores": {
+          "source_score": 30,
+          "title_score": 25,
+          "content_score": 0,
+          "time_score": 5
+        },
+        "priority": 3,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-14T06:01:32.161972",
+      "last_seen": "2026-03-14T06:01:32.161974",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "ff2d2b9b32defe33577f2a7c4d5d4110": {
+      "id": "ff2d2b9b32defe33577f2a7c4d5d4110",
+      "title": "吃够了全自动的龙虾，我决定把AI的方向盘抢回来",
+      "url": "https://www.qbitai.com/2026/03/387405.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Fri, 13 Mar 2026 08:59:46 +0000",
+          "summary": "全球首个可操控AI平台清华哈佛造"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-14T06:01:32.162364",
+      "last_seen": "2026-03-14T06:01:32.162366",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "0c858062e55bae57614f5c1e3507ff82": {
+      "id": "0c858062e55bae57614f5c1e3507ff82",
+      "title": "马斯克从Cursor挖走两位天才少年",
+      "url": "https://www.qbitai.com/2026/03/387242.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Fri, 13 Mar 2026 07:51:08 +0000",
+          "summary": "xAI好像一座围城"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-14T06:01:32.162482",
+      "last_seen": "2026-03-14T06:01:32.162484",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "c0fe7de38daf9a176b724a4692a4ae45": {
+      "id": "c0fe7de38daf9a176b724a4692a4ae45",
+      "title": "我用10块钱的「熟虾」，搞了个AI编辑部！",
+      "url": "https://www.qbitai.com/2026/03/387116.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Fri, 13 Mar 2026 06:54:55 +0000",
+          "summary": "在网页上就能直接用"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-14T06:01:32.162629",
+      "last_seen": "2026-03-14T06:01:32.162631",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "d1aa49907bef8477ead166508826d56f": {
+      "id": "d1aa49907bef8477ead166508826d56f",
+      "title": "统计学最高荣誉回归华人！苏炜杰：AI需要一门新的数学语言",
+      "url": "https://www.qbitai.com/2026/03/387102.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Fri, 13 Mar 2026 06:02:22 +0000",
+          "summary": "像「剥洋葱」一样优化AI黑盒"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-14T06:01:32.162744",
+      "last_seen": "2026-03-14T06:01:32.162746",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "79bddeb09f4f9910eb0467110479adef": {
+      "id": "79bddeb09f4f9910eb0467110479adef",
+      "title": "华人博士4个月干出具身独角兽！斯坦福家务机器人再融11亿，开建中国团队",
+      "url": "https://www.qbitai.com/2026/03/387072.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Fri, 13 Mar 2026 05:59:51 +0000",
+          "summary": "2026，不再只做demo"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-14T06:01:32.162863",
+      "last_seen": "2026-03-14T06:01:32.162865",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "af1cbbe8665ce9cddfdb0ac5567745a1": {
+      "id": "af1cbbe8665ce9cddfdb0ac5567745a1",
+      "title": "科技CEO用ChatGPT+基因数据定制癌症疫苗！肿瘤缩小50%",
+      "url": "https://www.qbitai.com/2026/03/387935.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Sun, 15 Mar 2026 06:06:09 +0000",
+          "summary": "AI救了我的狗！从奄奄一息到满公园追兔子"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-15T20:26:03.063822",
+      "last_seen": "2026-03-15T20:26:03.063827",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "0a6fb527ad3802b54e526be995ca56ad": {
+      "id": "0a6fb527ad3802b54e526be995ca56ad",
+      "title": "360发布安全龙虾系列产品：以模治模构建智能体安全体系",
+      "url": "https://www.qbitai.com/2026/03/387921.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Sat, 14 Mar 2026 13:32:22 +0000",
+          "summary": "暂无摘要"
+        }
+      ],
+      "value": {
+        "score": 60,
+        "scores": {
+          "source_score": 30,
+          "title_score": 25,
+          "content_score": 0,
+          "time_score": 5
+        },
+        "priority": 3,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-15T20:26:03.063981",
+      "last_seen": "2026-03-15T20:26:03.063984",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "25b8a0d17af6dca3b1b7329064ab9894": {
+      "id": "25b8a0d17af6dca3b1b7329064ab9894",
+      "title": "Gemini重塑谷歌地图！一句话搞定出行攻略，网友：垂直应用全完蛋",
+      "url": "https://www.qbitai.com/2026/03/387867.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Sat, 14 Mar 2026 10:48:10 +0000",
+          "summary": "以后出门有个谷歌地图就够了"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-15T20:26:03.064246",
+      "last_seen": "2026-03-15T20:26:03.064248",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "d3d65c5671a4250fa5d0aaa1fe5e4360": {
+      "id": "d3d65c5671a4250fa5d0aaa1fe5e4360",
+      "title": "不仿真不VLA不遥操：它石智航重磅发布“能干活的通用具身大模型 ”AWE3.0",
+      "url": "https://www.qbitai.com/2026/03/387860.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Sat, 14 Mar 2026 10:32:09 +0000",
+          "summary": "暂无摘要"
+        }
+      ],
+      "value": {
+        "score": 60,
+        "scores": {
+          "source_score": 30,
+          "title_score": 25,
+          "content_score": 0,
+          "time_score": 5
+        },
+        "priority": 3,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-15T20:26:03.064378",
+      "last_seen": "2026-03-15T20:26:03.064380",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "18cac874375b9ed8ce5c1314976aa77f": {
+      "id": "18cac874375b9ed8ce5c1314976aa77f",
+      "title": "AI能代替人干活吗？B站联合6位UP主用OpenClaw直播做了次社会实验",
+      "url": "https://www.qbitai.com/2026/03/387843.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Sat, 14 Mar 2026 08:56:16 +0000",
+          "summary": "当程序员开发App、商业带货、打游戏"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-15T20:26:03.064523",
+      "last_seen": "2026-03-15T20:26:03.064525",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "5c24507e4fdc81cf97c456ab4ad690fa": {
+      "id": "5c24507e4fdc81cf97c456ab4ad690fa",
+      "title": "量子位专访陶哲轩：我为什么现在创办一个AI x Science组织",
+      "url": "https://www.qbitai.com/2026/03/387832.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Sat, 14 Mar 2026 06:34:18 +0000",
+          "summary": "未来可能会有10000个陶哲轩"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-15T20:26:03.064670",
+      "last_seen": "2026-03-15T20:26:03.064672",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "91e5c4f70e4cad4226d8d6a99ad76c58": {
+      "id": "91e5c4f70e4cad4226d8d6a99ad76c58",
+      "title": "拜拜了SWE-Bench！Cursor刚发了个AI Coding评测基准，难哭Claude",
+      "url": "https://www.qbitai.com/2026/03/387756.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Sat, 14 Mar 2026 06:25:48 +0000",
+          "summary": "专门评价Cursor中不同模型谁更“智能体”"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-15T20:26:03.064786",
+      "last_seen": "2026-03-15T20:26:03.064788",
+      "seen_count": 1,
+      "status": "new"
+    },
+    "8b5752a834983d16d3456010e8d27163": {
+      "id": "8b5752a834983d16d3456010e8d27163",
+      "title": "龙虾版支付宝来了！睡觉都在帮你抢红包",
+      "url": "https://www.qbitai.com/2026/03/387768.html",
+      "sources": [
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com",
+          "published": "Sat, 14 Mar 2026 05:30:07 +0000",
+          "summary": "前蚂蚁团队打造"
+        }
+      ],
+      "value": {
+        "score": 50,
+        "scores": {
+          "source_score": 30,
+          "title_score": 10,
+          "content_score": 5,
+          "time_score": 5
+        },
+        "priority": 2,
+        "category": [
+          "AI Technology",
+          "E-commerce",
+          "Media",
+          "Programming"
+        ]
+      },
+      "first_seen": "2026-03-15T20:26:03.064904",
+      "last_seen": "2026-03-15T20:26:03.064907",
       "seen_count": 1,
       "status": "new"
     }
