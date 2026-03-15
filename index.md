@@ -12,6 +12,24 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
+        <h3><a href="/posts/2026-03-16-ai-news.html">2026-03-16 AI机器人早报</a></h3>
+        <p class="meta">2026年03月16日 | 😴 睡醒就有早报看</p>
+        <p>AI Agent生态持续进化、OpenViking引领上下文管理新范式、Claude Code最佳实践、人形机器人规模化生产突破</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-16-github-trending.html">2026-03-16 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月16日 | ⭐ 今天又Star了啥</p>
+        <p>AI Agent框架占50%、superpowers登顶、OpenViking上下文管理、MiroFish群体智能引擎</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-16-robot-news.html">2026-03-16 机器人产业日报</a></h3>
+        <p class="meta">2026年03月16日 | 🤖 机器人时代来了</p>
+        <p>人形机器人规模化生产突破、Tesla Optimus破1000台、Boston Dynamics Atlas完全自主、Figure 02商用版发布</p>
+    </article>
+
+    <article class="post-preview">
         <h3><a href="/posts/2026-03-15-ai-news.html">2026-03-15 AI机器人早报</a></h3>
         <p class="meta">2026年03月15日 | 😴 睡醒就有早报看</p>
         <p>Gemini重塑谷歌地图、B站OpenClaw社会实验、360智能红包系统、AI编辑部实践</p>
@@ -47,11 +65,6 @@ title: 首页
         <p>OpenAI GPT-5.5 SDK、Anthropic Claude 4 SDK、Google Gemini Pro SDK、Meta Llama 4、Microsoft AutoGen</p>
     </article>
 
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-13-robot-news.html">2026-03-13 机器人产业日报</a></h3>
-        <p class="meta">2026年03月13日 | 🤖 机器人时代来了</p>
-        <p>特斯拉Optimus工厂部署突破1000台、波士顿动力Atlas实现完全自主、Figure 02商用版发布、库卡AI视觉焊接系统</p>
-    </article>
 </div>
 
 <div class="categories">
