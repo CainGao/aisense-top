@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
 
     <article class="post-item">
+        <h3><a href="/posts/2026-03-17-robot-news.html">2026-03-17 机器人产业日报</a></h3>
+        <p class="meta">2026年03月17日</p>
+        <p>模块化腿式机器人技术突破、四足农业机器人投入实用、火星探测器自主驾驶提升、AI监管与安全受关注、军用无人机技术融合</p>
+    </article>
+
+    <article class="post-item">
         <h3><a href="/posts/2026-03-16-robot-news.html">2026-03-16 机器人产业日报</a></h3>
         <p class="meta">2026年03月16日</p>
         <p>人形机器人规模化生产突破、Tesla Optimus破1000台、Boston Dynamics Atlas完全自主、Figure 02商用版发布、宇树科技10亿融资</p>

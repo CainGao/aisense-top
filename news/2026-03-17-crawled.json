@@ -1,0 +1,49 @@
+{
+  "crawl_time": "2026-03-17T06:01:34.630628",
+  "total_articles": 4,
+  "articles": [
+    {
+      "title": "315曝光的“AI投毒”原理：GEO这样操控大模型推荐",
+      "url": "https://www.qbitai.com/2026/03/388387.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "crawl_time": "2026-03-17T06:01:34.630411"
+    },
+    {
+      "title": "一手实测首个龙虾模型：长路径任务不失误，一人包揽全栈开发",
+      "url": "https://www.qbitai.com/2026/03/388352.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "crawl_time": "2026-03-17T06:01:34.630411"
+    },
+    {
+      "title": "不卷速度卷验证，陈天桥MiroMind精准预测15天后黄金价格",
+      "url": "https://www.qbitai.com/2026/03/387990.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "crawl_time": "2026-03-17T06:01:34.630411"
+    },
+    {
+      "title": "Gemini重塑谷歌地图！一句话搞定出行攻略，网友：垂直应用全完蛋",
+      "url": "https://www.qbitai.com/2026/03/387867.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "crawl_time": "2026-03-17T06:01:34.630411"
+    }
+  ],
+  "source_stats": [
+    {
+      "source": "量子位",
+      "count": 4,
+      "status": "success"
+    }
+  ]
+}

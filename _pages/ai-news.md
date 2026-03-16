@@ -9,6 +9,12 @@ permalink: /ai-news/
     <p>每日更新，掌握机器人行业最新动态</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-17-ai-news.html">2026-03-17 AI机器人早报</a></h2>
+        <p class="meta">2026年03月17日</p>
+        <p>315曝光AI投毒原理、首个龙虾模型实测、MiroMind精准预测黄金价格、Gemini重塑谷歌地图、模块化腿式机器人突破</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-16-ai-news.html">2026-03-16 AI机器人早报</a></h2>
         <p class="meta">2026年03月16日</p>
         <p>AI Agent生态持续进化、OpenViking引领上下文管理新范式、Claude Code最佳实践、人形机器人规模化生产突破</p>

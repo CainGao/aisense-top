@@ -12,6 +12,24 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
+        <h3><a href="/posts/2026-03-17-ai-news.html">2026-03-17 AI机器人早报</a></h3>
+        <p class="meta">2026年03月17日 | 😴 睡醒就有早报看</p>
+        <p>315曝光AI投毒原理、首个龙虾模型实测、MiroMind精准预测黄金价格、Gemini重塑谷歌地图、模块化腿式机器人突破</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-17-github-trending.html">2026-03-17 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月17日 | ⭐ 今天又Star了啥</p>
+        <p>AI Agent生态持续火热、OpenViking继续领先、MiroFish群体智能、learn-claude-code轻量化开发</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-17-robot-news.html">2026-03-17 机器人产业日报</a></h3>
+        <p class="meta">2026年03月17日 | 🤖 机器人时代来了</p>
+        <p>模块化腿式机器人技术突破、四足农业机器人投入实用、火星探测器自主驾驶提升、AI监管与安全受关注</p>
+    </article>
+
+    <article class="post-preview">
         <h3><a href="/posts/2026-03-16-ai-news.html">2026-03-16 AI机器人早报</a></h3>
         <p class="meta">2026年03月16日 | 😴 睡醒就有早报看</p>
         <p>AI Agent生态持续进化、OpenViking引领上下文管理新范式、Claude Code最佳实践、人形机器人规模化生产突破</p>
@@ -27,42 +45,6 @@ title: 首页
         <h3><a href="/posts/2026-03-16-robot-news.html">2026-03-16 机器人产业日报</a></h3>
         <p class="meta">2026年03月16日 | 🤖 机器人时代来了</p>
         <p>人形机器人规模化生产突破、Tesla Optimus破1000台、Boston Dynamics Atlas完全自主、Figure 02商用版发布</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-15-ai-news.html">2026-03-15 AI机器人早报</a></h3>
-        <p class="meta">2026年03月15日 | 😴 睡醒就有早报看</p>
-        <p>Gemini重塑谷歌地图、B站OpenClaw社会实验、360智能红包系统、AI编辑部实践</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-14-ai-news.html">2026-03-14 AI机器人早报</a></h3>
-        <p class="meta">2026年03月14日 | 😴 睡醒就有早报看</p>
-        <p>资讯抓取系统维护中、AI Agent生态持续进化、人形机器人量产加速、开源大模型竞争加剧</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-14-github-trending.html">2026-03-14 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月14日 | ⭐ 今天又Star了啥</p>
-        <p>系统维护中、AI Agent框架持续热门、大模型推理工具、多模态AI项目</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-14-robot-news.html">2026-03-14 机器人产业日报</a></h3>
-        <p class="meta">2026年03月14日 | 🤖 机器人时代来了</p>
-        <p>资讯抓取系统维护中、人形机器人量产加速、工业机器人AI化升级、服务机器人市场扩展</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-13-ai-news.html">2026-03-13 AI机器人早报</a></h3>
-        <p class="meta">2026年03月13日 | 😴 睡醒就有早报看</p>
-        <p>OpenAI发布GPT-5.5、波士顿动力Atlas实现完全自主、特斯拉Optimus工厂部署突破1000台、库卡AI视觉焊接系统</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-13-github-trending.html">2026-03-13 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月13日 | ⭐ 今天又Star了啥</p>
-        <p>OpenAI GPT-5.5 SDK、Anthropic Claude 4 SDK、Google Gemini Pro SDK、Meta Llama 4、Microsoft AutoGen</p>
     </article>
 
 </div>

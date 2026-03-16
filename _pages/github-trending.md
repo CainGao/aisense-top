@@ -9,6 +9,12 @@ permalink: /github-trending/
     <p>深度解析开源项目，发现技术趋势</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-17-github-trending.html">2026-03-17 GitHub热榜分析</a></h2>
+        <p class="meta">2026年03月17日</p>
+        <p>AI Agent生态持续火热、OpenViking继续领先、MiroFish群体智能、learn-claude-code轻量化开发、Lightpanda无头浏览器</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-16-github-trending.html">2026-03-16 GitHub热榜分析</a></h2>
         <p class="meta">2026年03月16日</p>
         <p>AI Agent框架占50%、superpowers登顶、OpenViking上下文管理、MiroFish群体智能引擎</p>
