@@ -9,6 +9,18 @@ permalink: /ai-news/
     <p>每日更新，掌握机器人行业最新动态</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-19-ai-news.html">2026-03-19 AI机器人早报</a></h2>
+        <p class="meta">2026年03月19日</p>
+        <p>系统维护升级中，暂无最新资讯，请稍后访问</p>
+    </article>
+
+    <article class="post-item">
+        <h2><a href="/posts/2026-03-18-ai-news.html">2026-03-18 AI机器人早报</a></h2>
+        <p class="meta">2026年03月18日</p>
+        <p>Perplexity放弃MCP转向API、Meta收购AI Agent社交平台Moltbook、OpenClaw与龙虾热探讨、AI Agent生态持续演进</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-17-ai-news.html">2026-03-17 AI机器人早报</a></h2>
         <p class="meta">2026年03月17日</p>
         <p>315曝光AI投毒原理、首个龙虾模型实测、MiroMind精准预测黄金价格、Gemini重塑谷歌地图、模块化腿式机器人突破</p>

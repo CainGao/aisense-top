@@ -12,39 +12,39 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-17-ai-news.html">2026-03-17 AI机器人早报</a></h3>
-        <p class="meta">2026年03月17日 | 😴 睡醒就有早报看</p>
-        <p>315曝光AI投毒原理、首个龙虾模型实测、MiroMind精准预测黄金价格、Gemini重塑谷歌地图、模块化腿式机器人突破</p>
+        <h3><a href="/posts/2026-03-19-ai-news.html">2026-03-19 AI机器人早报</a></h3>
+        <p class="meta">2026年03月19日 | 😴 睡醒就有早报看</p>
+        <p>系统维护升级中，暂无最新资讯，请稍后访问</p>
     </article>
 
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-17-github-trending.html">2026-03-17 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月17日 | ⭐ 今天又Star了啥</p>
-        <p>AI Agent生态持续火热、OpenViking继续领先、MiroFish群体智能、learn-claude-code轻量化开发</p>
+        <h3><a href="/posts/2026-03-19-github-trending.html">2026-03-19 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月19日 | ⭐ 今天又Star了啥</p>
+        <p>系统维护升级中，暂无最新分析，请稍后访问</p>
     </article>
 
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-17-robot-news.html">2026-03-17 机器人产业日报</a></h3>
-        <p class="meta">2026年03月17日 | 🤖 机器人时代来了</p>
-        <p>模块化腿式机器人技术突破、四足农业机器人投入实用、火星探测器自主驾驶提升、AI监管与安全受关注</p>
+        <h3><a href="/posts/2026-03-19-robot-news.html">2026-03-19 机器人产业日报</a></h3>
+        <p class="meta">2026年03月19日 | 🤖 机器人时代来了</p>
+        <p>系统维护升级中，暂无最新资讯，请稍后访问</p>
     </article>
 
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-16-ai-news.html">2026-03-16 AI机器人早报</a></h3>
-        <p class="meta">2026年03月16日 | 😴 睡醒就有早报看</p>
-        <p>AI Agent生态持续进化、OpenViking引领上下文管理新范式、Claude Code最佳实践、人形机器人规模化生产突破</p>
+        <h3><a href="/posts/2026-03-18-ai-news.html">2026-03-18 AI机器人早报</a></h3>
+        <p class="meta">2026年03月18日 | 😴 睡醒就有早报看</p>
+        <p>Perplexity放弃MCP转向API、Meta收购AI Agent社交平台Moltbook、OpenClaw与龙虾热探讨、AI Agent生态持续演进</p>
     </article>
 
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-16-github-trending.html">2026-03-16 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月16日 | ⭐ 今天又Star了啥</p>
-        <p>AI Agent框架占50%、superpowers登顶、OpenViking上下文管理、MiroFish群体智能引擎</p>
+        <h3><a href="/posts/2026-03-18-github-trending.html">2026-03-18 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月18日 | ⭐ 今天又Star了啥</p>
+        <p>AI Agent框架持续火热、MCP协议项目受关注、机器人开源项目增长、大语言模型工具丰富、自动化工具涌现</p>
     </article>
 
     <article class="post-preview">
-        <h3><a href="/posts/2026-03-16-robot-news.html">2026-03-16 机器人产业日报</a></h3>
-        <p class="meta">2026年03月16日 | 🤖 机器人时代来了</p>
-        <p>人形机器人规模化生产突破、Tesla Optimus破1000台、Boston Dynamics Atlas完全自主、Figure 02商用版发布</p>
+        <h3><a href="/posts/2026-03-18-robot-news.html">2026-03-18 机器人产业日报</a></h3>
+        <p class="meta">2026年03月18日 | 🤖 机器人时代来了</p>
+        <p>AI Agent生态演进影响机器人行业、人形机器人量产加速、工业机器人AI化升级、服务机器人应用场景拓展、配送机器人商业化加速</p>
     </article>
 
 </div>
