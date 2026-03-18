@@ -1,8 +1,8 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2026-03-15T21:30:21.651174",
-    "total_news": 36,
+    "last_updated": "2026-03-18T08:06:43.667006",
+    "total_news": 40,
     "unique_news": 0,
     "duplicate_news": 0,
     "merged_news": 0,
@@ -1107,6 +1107,50 @@
       "author": "量子位",
       "source_name": "量子位",
       "first_seen": "2026-03-15T21:30:21.651154",
+      "status": "new"
+    },
+    "f56f2aa6a7fe842f0f50ed71df9c12d8": {
+      "id": "f56f2aa6a7fe842f0f50ed71df9c12d8",
+      "title": "百度龙虾全家桶火速上桌！出手就是全球最大搜索skill",
+      "url": "https://www.qbitai.com/2026/03/388672.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "first_seen": "2026-03-18T08:06:43.666967",
+      "status": "new"
+    },
+    "ba8890e4dda33ae0e2ffbd2d660ce502": {
+      "id": "ba8890e4dda33ae0e2ffbd2d660ce502",
+      "title": "Kimi新架构让马斯克叹服！17岁高中生作者一战成名",
+      "url": "https://www.qbitai.com/2026/03/388493.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "first_seen": "2026-03-18T08:06:43.666972",
+      "status": "new"
+    },
+    "edf272f4045271a40d76c5a53d99cc83": {
+      "id": "edf272f4045271a40d76c5a53d99cc83",
+      "title": "315曝光的“AI投毒”原理：GEO这样操控大模型推荐",
+      "url": "https://www.qbitai.com/2026/03/388387.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "first_seen": "2026-03-18T08:06:43.666976",
+      "status": "new"
+    },
+    "6274d4e745bdde619a6cc6128bb44f06": {
+      "id": "6274d4e745bdde619a6cc6128bb44f06",
+      "title": "一手实测首个龙虾模型：长路径任务不失误，一人包揽全栈开发",
+      "url": "https://www.qbitai.com/2026/03/388352.html",
+      "summary": "",
+      "published": "",
+      "author": "量子位",
+      "source_name": "量子位",
+      "first_seen": "2026-03-18T08:06:43.666981",
       "status": "new"
     }
   }
