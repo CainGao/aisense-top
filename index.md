@@ -12,6 +12,24 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
+        <h3><a href="/posts/2026-03-20-ai-news.html">2026-03-20 AI机器人早报</a></h3>
+        <p class="meta">2026年03月20日 | 😴 睡醒就有早报看</p>
+        <p>AI Agent生态持续演进、开源大模型竞争加剧、人形机器人量产加速、工业机器人AI化升级</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-20-github-trending.html">2026-03-20 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月20日 | ⭐ 今天又Star了啥</p>
+        <p>AI Agent框架持续热门、MCP协议项目受关注、大语言模型工具丰富、自动化工具持续涌现</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-20-robot-news.html">2026-03-20 机器人产业日报</a></h3>
+        <p class="meta">2026年03月20日 | 🤖 机器人时代来了</p>
+        <p>人形机器人量产持续加速、工业机器人AI化升级、服务机器人应用场景拓展、协作机器人市场增长</p>
+    </article>
+
+    <article class="post-preview">
         <h3><a href="/posts/2026-03-19-ai-news.html">2026-03-19 AI机器人早报</a></h3>
         <p class="meta">2026年03月19日 | 😴 睡醒就有早报看</p>
         <p>系统维护升级中，暂无最新资讯，请稍后访问</p>
@@ -27,24 +45,6 @@ title: 首页
         <h3><a href="/posts/2026-03-19-robot-news.html">2026-03-19 机器人产业日报</a></h3>
         <p class="meta">2026年03月19日 | 🤖 机器人时代来了</p>
         <p>系统维护升级中，暂无最新资讯，请稍后访问</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-18-ai-news.html">2026-03-18 AI机器人早报</a></h3>
-        <p class="meta">2026年03月18日 | 😴 睡醒就有早报看</p>
-        <p>Perplexity放弃MCP转向API、Meta收购AI Agent社交平台Moltbook、OpenClaw与龙虾热探讨、AI Agent生态持续演进</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-18-github-trending.html">2026-03-18 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月18日 | ⭐ 今天又Star了啥</p>
-        <p>AI Agent框架持续火热、MCP协议项目受关注、机器人开源项目增长、大语言模型工具丰富、自动化工具涌现</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-18-robot-news.html">2026-03-18 机器人产业日报</a></h3>
-        <p class="meta">2026年03月18日 | 🤖 机器人时代来了</p>
-        <p>AI Agent生态演进影响机器人行业、人形机器人量产加速、工业机器人AI化升级、服务机器人应用场景拓展、配送机器人商业化加速</p>
     </article>
 
 </div>
