@@ -9,6 +9,12 @@ permalink: /github-trending/
     <p>深度解析开源项目，发现技术趋势</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-21-github-trending.html">2026-03-21 GitHub热榜分析</a></h2>
+        <p class="meta">2026年03月21日</p>
+        <p>多模态AI工具持续热门、Agent框架生态完善、机器人开源项目增长、开发工具链持续优化</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-20-github-trending.html">2026-03-20 GitHub热榜分析</a></h2>
         <p class="meta">2026年03月20日</p>
         <p>AI Agent框架持续热门、MCP协议项目受关注、大语言模型工具丰富、自动化工具持续涌现</p>
