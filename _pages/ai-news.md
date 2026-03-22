@@ -9,6 +9,12 @@ permalink: /ai-news/
     <p>每日更新，掌握机器人行业最新动态</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-23-ai-news.html">2026-03-23 AI机器人早报</a></h2>
+        <p class="meta">2026年03月23日</p>
+        <p>多模态AI能力突破、开源生态持续演进、AI Agent商业化加速、机器人操作系统标准化</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-22-ai-news.html">2026-03-22 AI机器人早报</a></h2>
         <p class="meta">2026年03月22日</p>
         <p>开源大模型性能突破、AI Agent工具链标准化、机器人仿真平台升级、长上下文能力普及</p>

@@ -12,6 +12,24 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
+        <h3><a href="/posts/2026-03-23-ai-news.html">2026-03-23 AI机器人早报</a></h3>
+        <p class="meta">2026年03月23日 | 😴 睡醒就有早报看</p>
+        <p>多模态AI能力突破、开源生态持续演进、AI Agent商业化加速、机器人操作系统标准化</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-23-github-trending.html">2026-03-23 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月23日 | ⭐ 今天又Star了啥</p>
+        <p>多模态AI工具热门、AI Agent框架持续增长、开源模型微调工具涌现、机器人开发框架升级</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-23-robot-news.html">2026-03-23 机器人产业日报</a></h3>
+        <p class="meta">2026年03月23日 | 🤖 机器人时代来了</p>
+        <p>人形机器人商业化提速、工业机器人智能化升级、服务机器人场景拓展、协作机器人市场增长</p>
+    </article>
+
+    <article class="post-preview">
         <h3><a href="/posts/2026-03-22-ai-news.html">2026-03-22 AI机器人早报</a></h3>
         <p class="meta">2026年03月22日 | 😴 睡醒就有早报看</p>
         <p>开源大模型性能突破、AI Agent工具链标准化、机器人仿真平台升级、长上下文能力普及</p>
@@ -27,24 +45,6 @@ title: 首页
         <h3><a href="/posts/2026-03-22-robot-news.html">2026-03-22 机器人产业日报</a></h3>
         <p class="meta">2026年03月22日 | 🤖 机器人时代来了</p>
         <p>人形机器人规模化落地、工业机器人AI化升级、服务机器人成本下降、协作机器人市场扩张</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-21-ai-news.html">2026-03-21 AI机器人早报</a></h3>
-        <p class="meta">2026年03月21日 | 😴 睡醒就有早报看</p>
-        <p>AI Agent多模态能力突破、开源生态加速融合、具身智能商业化提速、机器人操作系统演进</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-21-github-trending.html">2026-03-21 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月21日 | ⭐ 今天又Star了啥</p>
-        <p>多模态AI工具持续热门、Agent框架生态完善、机器人开源项目增长、开发工具链持续优化</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-21-robot-news.html">2026-03-21 机器人产业日报</a></h3>
-        <p class="meta">2026年03月21日 | 🤖 机器人时代来了</p>
-        <p>具身智能商业化加速、人形机器人成本优化、工业机器人柔性升级、服务机器人场景拓展</p>
     </article>
 
 </div>
