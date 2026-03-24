@@ -12,6 +12,24 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
+        <h3><a href="/posts/2026-03-25-ai-news.html">2026-03-25 AI机器人早报</a></h3>
+        <p class="meta">2026年03月25日 | 😴 睡醒就有早报看</p>
+        <p>开源大模型性能逼近闭源、AI Agent编排平台成熟、具身智能仿真环境标准化、机器人操作系统生态完善</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-25-github-trending.html">2026-03-25 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月25日 | ⭐ 今天又Star了啥</p>
+        <p>开源大模型热度飙升、AI Agent编排工具成熟、仿真平台标准化、机器人开发框架完善</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-25-robot-news.html">2026-03-25 机器人产业日报</a></h3>
+        <p class="meta">2026年03月25日 | 🤖 机器人时代来了</p>
+        <p>机器人操作系统生态完善、工业机器人智能化升级、服务机器人交互能力增强、协作机器人应用拓展</p>
+    </article>
+
+    <article class="post-preview">
         <h3><a href="/posts/2026-03-24-ai-news.html">2026-03-24 AI机器人早报</a></h3>
         <p class="meta">2026年03月24日 | 😴 睡醒就有早报看</p>
         <p>大模型推理成本持续下降、AI编程助手能力跃升、具身智能商业化加速、机器人感知系统升级</p>
@@ -27,24 +45,6 @@ title: 首页
         <h3><a href="/posts/2026-03-24-robot-news.html">2026-03-24 机器人产业日报</a></h3>
         <p class="meta">2026年03月24日 | 🤖 机器人时代来了</p>
         <p>感知系统技术突破、柔性制造加速普及、服务机器人成本下降、协作机器人市场扩张</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-23-ai-news.html">2026-03-23 AI机器人早报</a></h3>
-        <p class="meta">2026年03月23日 | 😴 睡醒就有早报看</p>
-        <p>多模态AI能力突破、开源生态持续演进、AI Agent商业化加速、机器人操作系统标准化</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-23-github-trending.html">2026-03-23 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月23日 | ⭐ 今天又Star了啥</p>
-        <p>多模态AI工具热门、AI Agent框架持续增长、开源模型微调工具涌现、机器人开发框架升级</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-23-robot-news.html">2026-03-23 机器人产业日报</a></h3>
-        <p class="meta">2026年03月23日 | 🤖 机器人时代来了</p>
-        <p>人形机器人商业化提速、工业机器人智能化升级、服务机器人场景拓展、协作机器人市场增长</p>
     </article>
 
 </div>
