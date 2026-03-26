@@ -9,6 +9,12 @@ permalink: /github-trending/
     <p>深度解析开源项目，发现技术趋势</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-27-github-trending.html">2026-03-27 GitHub热榜分析</a></h2>
+        <p class="meta">2026年03月27日</p>
+        <p>AI Agent框架主导热榜、字节跳动Deer-Flow 48k stars、WiFi感知技术突破、开源CRM挑战商业产品</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-26-github-trending.html">2026-03-26 GitHub热榜分析</a></h2>
         <p class="meta">2026年03月26日</p>
         <p>AI编程工具热度攀升、机器人仿真框架受关注、大模型推理优化涌现、Agent编排工具成熟</p>

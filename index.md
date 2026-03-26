@@ -12,6 +12,24 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
+        <h3><a href="/posts/2026-03-27-ai-news.html">2026-03-27 AI机器人早报</a></h3>
+        <p class="meta">2026年03月27日 | 😴 睡醒就有早报看</p>
+        <p>xAI创始团队离职潮、中国AI音乐全球领先、字节跳动开源SuperAgent框架、WiFi人体姿态估计技术突破</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-27-github-trending.html">2026-03-27 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月27日 | ⭐ 今天又Star了啥</p>
+        <p>AI Agent框架主导热榜、字节跳动Deer-Flow 48k stars、WiFi感知技术突破、开源CRM挑战商业产品</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-27-robot-news.html">2026-03-27 机器人产业日报</a></h3>
+        <p class="meta">2026年03月27日 | 🤖 机器人时代来了</p>
+        <p>WiFi人体感知技术突破、AI Agent工具链成熟、金融机器人应用加速、文档处理机器人升级</p>
+    </article>
+
+    <article class="post-preview">
         <h3><a href="/posts/2026-03-26-ai-news.html">2026-03-26 AI机器人早报</a></h3>
         <p class="meta">2026年03月26日 | 😴 睡醒就有早报看</p>
         <p>英伟达Vera Rubin架构发布、OpenAI收购Astral、网球机器人技术突破、四足机器人巡检方案成熟</p>
@@ -27,24 +45,6 @@ title: 首页
         <h3><a href="/posts/2026-03-26-robot-news.html">2026-03-26 机器人产业日报</a></h3>
         <p class="meta">2026年03月26日 | 🤖 机器人时代来了</p>
         <p>四足机器人巡检方案商业化、模块化腿式机器人突破、网球机器人精准控制、英伟达Vera Rubin赋能机器人算力</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-25-ai-news.html">2026-03-25 AI机器人早报</a></h3>
-        <p class="meta">2026年03月25日 | 😴 睡醒就有早报看</p>
-        <p>开源大模型性能逼近闭源、AI Agent编排平台成熟、具身智能仿真环境标准化、机器人操作系统生态完善</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-25-github-trending.html">2026-03-25 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月25日 | ⭐ 今天又Star了啥</p>
-        <p>开源大模型热度飙升、AI Agent编排工具成熟、仿真平台标准化、机器人开发框架完善</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-25-robot-news.html">2026-03-25 机器人产业日报</a></h3>
-        <p class="meta">2026年03月25日 | 🤖 机器人时代来了</p>
-        <p>机器人操作系统生态完善、工业机器人智能化升级、服务机器人交互能力增强、协作机器人应用拓展</p>
     </article>
 
 </div>

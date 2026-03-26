@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
 
     <article class="post-item">
+        <h3><a href="/posts/2026-03-27-robot-news.html">2026-03-27 机器人产业日报</a></h3>
+        <p class="meta">2026年03月27日</p>
+        <p>WiFi人体感知技术突破、AI Agent工具链成熟、金融机器人应用加速、文档处理机器人升级</p>
+    </article>
+
+    <article class="post-item">
         <h3><a href="/posts/2026-03-26-robot-news.html">2026-03-26 机器人产业日报</a></h3>
         <p class="meta">2026年03月26日</p>
         <p>四足机器人巡检方案商业化、模块化腿式机器人突破、网球机器人精准控制、英伟达Vera Rubin赋能机器人算力</p>

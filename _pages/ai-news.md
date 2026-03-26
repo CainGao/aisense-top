@@ -9,6 +9,12 @@ permalink: /ai-news/
     <p>每日更新，掌握机器人行业最新动态</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-27-ai-news.html">2026-03-27 AI机器人早报</a></h2>
+        <p class="meta">2026年03月27日</p>
+        <p>xAI创始团队离职潮、中国AI音乐全球领先、字节跳动开源SuperAgent框架、WiFi人体姿态估计技术突破</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-26-ai-news.html">2026-03-26 AI机器人早报</a></h2>
         <p class="meta">2026年03月26日</p>
         <p>英伟达Vera Rubin架构发布、OpenAI收购Astral、网球机器人技术突破、四足机器人巡检方案成熟</p>
