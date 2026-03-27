@@ -22,6 +22,11 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
 
     <article class="post-item">
+        <h3><a href="/posts/2026-03-28-robot-news.html">2026-03-28 机器人产业日报</a></h3>
+        <p class="meta">2026年03月28日</p>
+        <p>人形机器人商业化突破、工业机器人智能化升级、服务机器人应用拓展、机器人投资热潮持续、AI+机器人融合加速</p>
+    </article>
+
         <h3><a href="/posts/2026-03-27-robot-news.html">2026-03-27 机器人产业日报</a></h3>
         <p class="meta">2026年03月27日</p>
         <p>WiFi人体感知技术突破、AI Agent工具链成熟、金融机器人应用加速、文档处理机器人升级</p>
