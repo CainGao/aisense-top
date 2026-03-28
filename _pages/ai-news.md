@@ -15,6 +15,12 @@ permalink: /ai-news/
     </article>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-29-ai-news.html">2026-03-29 AI机器人早报</a></h2>
+        <p class="meta">2026年03月29日</p>
+        <p>OpenAI发布GPT-5.6正式版、苹果发布M5 Ultra芯片、宇树科技H2人形机器人月产量突破500台、库卡AI视觉系统升级、傅利叶智能完成15亿融资</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-28-ai-news.html">2026-03-28 AI机器人早报</a></h2>
         <p class="meta">2026年03月28日</p>
         <p>OpenAI发布GPT-5技术预览、苹果M4芯片AI性能突破、阿里发布Qwen3.5、宇树科技科创板IPO、茅台投资机器人公司</p>

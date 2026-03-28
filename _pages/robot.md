@@ -28,6 +28,12 @@ permalink: /robot/
     </article>
 
     <article class="post-item">
+        <h3><a href="/posts/2026-03-29-robot-news.html">2026-03-29 机器人产业日报</a></h3>
+        <p class="meta">2026年03月29日</p>
+        <p>宇树科技H2月产量突破500台、Tesla Optimus部署1500台、Boston Dynamics Atlas完全自主、优必选Walker S3医疗版、ROS 3.0正式发布</p>
+    </article>
+
+    <article class="post-item">
         <h3><a href="/posts/2026-03-28-robot-news.html">2026-03-28 机器人产业日报</a></h3>
         <p class="meta">2026年03月28日</p>
         <p>人形机器人商业化突破、工业机器人智能化升级、服务机器人应用拓展、机器人投资热潮持续、AI+机器人融合加速</p>

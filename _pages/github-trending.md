@@ -15,6 +15,12 @@ permalink: /github-trending/
     </article>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-29-github-trending.html">2026-03-29 GitHub热榜分析</a></h2>
+        <p class="meta">2026年03月29日</p>
+        <p>OpenAI GPT-5.6 SDK登顶、Claude Code Pro发布、AutoGen 4.0多Agent协作、Llama 4 Ultra开源、OpenClaw Agent MCP协议</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-28-github-trending.html">2026-03-28 GitHub热榜分析</a></h2>
         <p class="meta">2026年03月28日</p>
         <p>AI框架生态繁荣、开源硬件突破、LLMOps成熟、多模态AI涌现、区块链+AI融合、自动化测试革命</p>
