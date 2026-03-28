@@ -9,6 +9,12 @@ permalink: /github-trending/
     <p>深度解析开源项目，发现技术趋势</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-29-github-trending.html">2026-03-29 GitHub热榜分析</a></h2>
+        <p class="meta">2026年03月29日</p>
+        <p>AI编程助手霸榜、OpenAI Codex 5.0、Claude 5 Code、微软AutoGen 3.0、NVIDIA Omniverse AI、Meta Llama 4</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-28-github-trending.html">2026-03-28 GitHub热榜分析</a></h2>
         <p class="meta">2026年03月28日</p>
         <p>AI框架生态繁荣、开源硬件突破、LLMOps成熟、多模态AI涌现、区块链+AI融合、自动化测试革命</p>
