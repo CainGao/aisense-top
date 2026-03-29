@@ -12,6 +12,24 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
+        <h3><a href="/posts/2026-03-30-ai-news.html">2026-03-30 AI机器人早报</a></h3>
+        <p class="meta">2026年03月30日 | 😴 睡醒就有早报看</p>
+        <p>特斯拉发布Optimus Gen 3人形机器人视频、宇树科技H2月产量突破800台、Google发布Gemini Ultra 2.0、库卡AI视觉2.0系统、傅利叶智能完成15亿融资</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-30-github-trending.html">2026-03-30 GitHub热榜分析</a></h3>
+        <p class="meta">2026年03月30日 | ⭐ 今天又Star了啥</p>
+        <p>OpenDevin AI编程助手登顶、LangFlow可视化工作流、vLLM高效推理框架、Ollama本地模型运行、多智能体框架崛起</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-03-30-robot-news.html">2026-03-30 机器人产业日报</a></h3>
+        <p class="meta">2026年03月30日 | 🤖 机器人时代来了</p>
+        <p>特斯拉Optimus Gen 3量产计划公布、宇树H2月产突破800台、傅利叶智能15亿C轮、波士顿动力Atlas新功能、发那科CRX-25i协作机器人</p>
+    </article>
+
+    <article class="post-preview">
         <h3><a href="/posts/2026-03-29-ai-news.html">2026-03-29 AI机器人早报</a></h3>
         <p class="meta">2026年03月29日 | 😴 睡醒就有早报看</p>
         <p>OpenAI发布GPT-5.6正式版、苹果M5 Ultra芯片发布、宇树科技H2量产突破500台、库卡AI视觉系统升级、傅利叶智能15亿融资</p>
@@ -27,24 +45,6 @@ title: 首页
         <h3><a href="/posts/2026-03-29-robot-news.html">2026-03-29 机器人产业日报</a></h3>
         <p class="meta">2026年03月29日 | 🤖 机器人时代来了</p>
         <p>宇树科技H2月产突破500台、库卡AI视觉系统首发、Boston Dynamics Atlas完全自主、发那科CRX-25发布、傅利叶智能15亿融资</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-28-ai-news.html">2026-03-28 AI机器人早报</a></h3>
-        <p class="meta">2026年03月28日 | 😴 睡醒就有早报看</p>
-        <p>OpenAI发布GPT-5技术预览、苹果M4芯片AI性能突破、阿里发布Qwen3.5、宇树科技科创板IPO、茅台投资机器人公司</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-28-github-trending.html">2026-03-28 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月28日 | ⭐ 今天又Star了啥</p>
-        <p>AI框架生态繁荣、开源硬件突破、LLMOps成熟、多模态AI涌现、区块链+AI融合、自动化测试革命</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-28-robot-news.html">2026-03-28 机器人产业日报</a></h3>
-        <p class="meta">2026年03月28日 | 🤖 机器人时代来了</p>
-        <p>人形机器人商业化突破、工业机器人智能化升级、服务机器人应用拓展、机器人投资热潮持续、AI+机器人融合加速</p>
     </article>
 
 </div>
