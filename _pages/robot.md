@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
 
     <article class="post-item">
+        <h3><a href="/posts/2026-03-31-robot-news.html">2026-03-31 机器人产业日报</a></h3>
+        <p class="meta">2026年03月31日</p>
+        <p>特斯拉Optimus工厂部署突破1500台、宇树H2月产量突破1200台、傅利叶智能20亿融资、OpenAI GPT-6发布、库卡AI视觉系统</p>
+    </article>
+
+    <article class="post-item">
         <h3><a href="/posts/2026-03-30-robot-news.html">2026-03-30 机器人产业日报</a></h3>
         <p class="meta">2026年03月30日</p>
         <p>特斯拉Optimus Gen 3量产计划公布、宇树H2月产突破800台、傅利叶智能15亿C轮、波士顿动力Atlas新功能、发那科CRX-25i协作机器人</p>

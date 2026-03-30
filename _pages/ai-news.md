@@ -9,6 +9,12 @@ permalink: /ai-news/
     <p>每日更新，掌握机器人行业最新动态</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-03-31-ai-news.html">2026-03-31 AI机器人早报</a></h2>
+        <p class="meta">2026年03月31日</p>
+        <p>OpenAI发布GPT-6预览版、特斯拉Optimus工厂部署突破1500台、宇树科技H2月产量突破1200台、库卡AI视觉系统、傅利叶智能完成20亿融资</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-03-30-ai-news.html">2026-03-30 AI机器人早报</a></h2>
         <p class="meta">2026年03月30日</p>
         <p>特斯拉发布Optimus Gen 3人形机器人视频、宇树科技H2月产量突破800台、Google发布Gemini Ultra 2.0、库卡AI视觉2.0系统、傅利叶智能完成15亿融资</p>
