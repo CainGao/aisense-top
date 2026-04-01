@@ -9,6 +9,12 @@ permalink: /ai-news/
     <p>每日更新，掌握机器人行业最新动态</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-04-02-ai-news.html">2026-04-02 AI机器人早报</a></h2>
+        <p class="meta">2026年04月02日</p>
+        <p>OpenAI正式发布GPT-6正式版、特斯拉Optimus工厂产能突破2500台/月、宇树科技H3 Pro批量交付客户、傅利叶智能完成30亿D轮融资、Google发布Gemini Ultra 2.1</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-04-01-ai-news.html">2026-04-01 AI机器人早报</a></h2>
         <p class="meta">2026年04月01日</p>
         <p>Anthropic发布Claude 4.5预览版、OpenAI宣布GPT-6正式版将在下月发布、特斯拉Optimus工厂产能突破2000台/月、宇树科技发布H3 Pro四足机器人、傅利叶智能完成25亿C轮融资</p>

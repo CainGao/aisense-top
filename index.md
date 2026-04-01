@@ -12,6 +12,24 @@ title: 首页
     <h2>🔥 刚出炉的新鲜货</h2>
 
     <article class="post-preview">
+        <h3><a href="/posts/2026-04-02-ai-news.html">2026-04-02 AI机器人早报</a></h3>
+        <p class="meta">2026年04月02日 | 😴 睡醒就有早报看</p>
+        <p>OpenAI正式发布GPT-6正式版、特斯拉Optimus工厂产能突破2500台/月、宇树科技H3 Pro批量交付客户、傅利叶智能完成30亿D轮融资、Google发布Gemini Ultra 2.1</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-04-02-github-trending.html">2026-04-02 GitHub热榜分析</a></h3>
+        <p class="meta">2026年04月02日 | ⭐ 今天又Star了啥</p>
+        <p>AutoGen 5.0多智能体协作框架登顶、OpenDevin 2.0 AI编程助手、LangFlow 3.0可视化平台、QuantumFlow量子计算模拟器、vLLM 3.0高效推理框架</p>
+    </article>
+
+    <article class="post-preview">
+        <h3><a href="/posts/2026-04-02-robot-news.html">2026-04-02 机器人产业日报</a></h3>
+        <p class="meta">2026年04月02日 | 🤖 机器人时代来了</p>
+        <p>特斯拉Optimus Gen 3发布时间确定、特斯拉Optimus工厂产能突破2500台/月、宇树科技H3 Pro批量交付客户、傅利叶智能完成30亿D轮融资、新松机器人与华为达成战略合作</p>
+    </article>
+
+    <article class="post-preview">
         <h3><a href="/posts/2026-04-01-ai-news.html">2026-04-01 AI机器人早报</a></h3>
         <p class="meta">2026年04月01日 | 😴 睡醒就有早报看</p>
         <p>Anthropic发布Claude 4.5预览版、OpenAI宣布GPT-6正式版将在下月发布、特斯拉Optimus工厂产能突破2000台/月、宇树科技发布H3 Pro四足机器人、傅利叶智能完成25亿C轮融资</p>
@@ -27,24 +45,6 @@ title: 首页
         <h3><a href="/posts/2026-04-01-robot-news.html">2026-04-01 机器人产业日报</a></h3>
         <p class="meta">2026年04月01日 | 🤖 机器人时代来了</p>
         <p>特斯拉Optimus Gen 3发布时间确定、特斯拉Optimus工厂产能突破2000台/月、宇树科技H3 Pro批量交付客户、傅利叶智能欧洲研发中心成立、新松机器人与华为达成战略合作</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-31-ai-news.html">2026-03-31 AI机器人早报</a></h3>
-        <p class="meta">2026年03月31日 | 😴 睡醒就有早报看</p>
-        <p>OpenAI发布GPT-6预览版、特斯拉Optimus工厂部署突破1500台、宇树科技H2月产量突破1200台、库卡AI视觉系统、傅利叶智能完成20亿融资</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-31-github-trending.html">2026-03-31 GitHub热榜分析</a></h3>
-        <p class="meta">2026年03月31日 | ⭐ 今天又Star了啥</p>
-        <p>OpenDevin突破10万Star、LangFlow可视化工作流、vLLM高效推理框架、Ollama本地模型运行、多智能体框架崛起</p>
-    </article>
-
-    <article class="post-preview">
-        <h3><a href="/posts/2026-03-31-robot-news.html">2026-03-31 机器人产业日报</a></h3>
-        <p class="meta">2026年03月31日 | 🤖 机器人时代来了</p>
-        <p>特斯拉Optimus工厂部署突破1500台、宇树H2月产量突破1200台、傅利叶智能20亿融资、OpenAI GPT-6发布、库卡AI视觉系统</p>
     </article>
 </div>
 

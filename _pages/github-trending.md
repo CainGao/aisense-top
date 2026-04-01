@@ -9,6 +9,12 @@ permalink: /github-trending/
     <p>深度解析开源项目，发现技术趋势</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-04-02-github-trending.html">2026-04-02 GitHub热榜分析</a></h2>
+        <p class="meta">2026年04月02日</p>
+        <p>AutoGen 5.0多智能体协作框架登顶、OpenDevin 2.0 AI编程助手、LangFlow 3.0可视化平台、QuantumFlow量子计算模拟器、vLLM 3.0高效推理框架</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-04-01-github-trending.html">2026-04-01 GitHub热榜分析</a></h2>
         <p class="meta">2026年04月01日</p>
         <p>MetaGen AI代码生成框架登顶、OpenAgent多智能体协作框架、QuantumFlow量子计算模拟器、RoboCraft游戏机器人框架、DataVizPro数据可视化工具</p>

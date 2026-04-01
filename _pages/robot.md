@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
 
     <article class="post-item">
+        <h3><a href="/posts/2026-04-02-robot-news.html">2026-04-02 机器人产业日报</a></h3>
+        <p class="meta">2026年04月02日</p>
+        <p>特斯拉Optimus Gen 3发布时间确定、特斯拉Optimus工厂产能突破2500台/月、宇树科技H3 Pro批量交付客户、傅利叶智能完成30亿D轮融资、新松机器人与华为达成战略合作</p>
+    </article>
+
+    <article class="post-item">
         <h3><a href="/posts/2026-04-01-robot-news.html">2026-04-01 机器人产业日报</a></h3>
         <p class="meta">2026年04月01日</p>
         <p>特斯拉Optimus Gen 3发布时间确定、特斯拉Optimus工厂产能突破2000台/月、宇树科技H3 Pro批量交付客户、傅利叶智能欧洲研发中心成立、新松机器人与华为达成战略合作</p>
