@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
 
     <article class="post-item">
+        <h3><a href="/posts/2026-04-03-robot-news.html">2026-04-03 机器人产业日报</a></h3>
+        <p class="meta">2026年04月03日</p>
+        <p>苹果AI PC战略发布开启本地大模型时代、特斯拉Optimus生产线升级完成月产能达200台、华为发布鸿蒙机器人OS 2.0、小米CyberOne进入智能工厂场景、优必选海外市场突破</p>
+    </article>
+
+    <article class="post-item">
         <h3><a href="/posts/2026-04-02-robot-news.html">2026-04-02 机器人产业日报</a></h3>
         <p class="meta">2026年04月02日</p>
         <p>特斯拉Optimus Gen 3发布时间确定、特斯拉Optimus工厂产能突破2500台/月、宇树科技H3 Pro批量交付客户、傅利叶智能完成30亿D轮融资、新松机器人与华为达成战略合作</p>
