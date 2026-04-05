@@ -22,6 +22,12 @@ permalink: /robot/
     <h2>📰 最新资讯</h2>
 
     <article class="post-item">
+        <h3><a href="/posts/2026-04-06-robot-news.html">2026-04-06 机器人产业日报</a></h3>
+        <p class="meta">2026年04月06日</p>
+        <p>OpenAI发布GPT-6预览版开启机器人智能新纪元、特斯拉Optimus工厂产能突破4000台/月、宇树科技H3 Pro月产量突破3000台、小米CyberOne 3.0价格降至12万元、傅利叶智能完成50亿元F轮融资</p>
+    </article>
+
+    <article class="post-item">
         <h3><a href="/posts/2026-04-05-robot-news.html">2026-04-05 机器人产业日报</a></h3>
         <p class="meta">2026年04月05日</p>
         <p>OpenAI发布GPT-5.5正式版开启机器人AI新时代、特斯拉Optimus工厂量产突破3000台/月、宇树科技H3 Pro月产量突破2000台、小米CyberOne 3.0价格降至15万元、傅利叶智能完成40亿元E轮融资</p>

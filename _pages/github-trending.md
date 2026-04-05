@@ -9,6 +9,12 @@ permalink: /github-trending/
     <p>深度解析开源项目，发现技术趋势</p>
 
     <article class="post-item">
+        <h2><a href="/posts/2026-04-06-github-trending.html">2026-04-06 GitHub热榜分析</a></h2>
+        <p class="meta">2026年04月06日</p>
+        <p>openai/gpt-6-sdk登上热榜第一、meta/autogen-7.0多智能体协作框架、huggingface/transformers-6.0更新支持GPT-6、langchainai/langflow-5.0可视化平台、robotics-simulation/gazebo-12仿真平台</p>
+    </article>
+
+    <article class="post-item">
         <h2><a href="/posts/2026-04-05-github-trending.html">2026-04-05 GitHub热榜分析</a></h2>
         <p class="meta">2026年04月05日</p>
         <p>openai/gpt-5.5-sdk登上热榜第一、meta/autogen-6.0多智能体协作框架、huggingface/transformers-5.0更新支持GPT-5.5、langchainai/langflow-4.0可视化平台、robotics-simulation/gazebo-11仿真平台</p>
