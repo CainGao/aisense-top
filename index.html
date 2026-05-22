@@ -1,32 +1,53 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Sense - 发现最好的AI工具，掌握最前沿AI资讯</title>
-    <meta name="description" content="AI Sense 是中文AI工具导航平台，每日精选热门AI工具与AI资讯。覆盖AI对话、图像生成、视频创作、编程助手等10大分类，500+精选工具。">
-    <meta name="keywords" content="AI工具,AI导航,AI工具推荐,人工智能,ChatGPT,Claude,Midjourney,Sora,AI资讯">
+    <title>AI Sense - Discover the Best AI Tools | Daily Updated AI Directory</title>
+    <meta name="description" content="AI Sense is the leading AI tools directory. Discover, compare, and choose the best AI tools for your workflow. Updated daily with 500+ curated tools across 10 categories.">
+    <meta name="keywords" content="AI tools,best AI tools,AI tools directory,AI tools 2026,ChatGPT,Claude,Midjourney,Sora,Cursor,AI news,AI tools list">
     <link rel="canonical" href="https://aisense.top/">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
-    <!-- Open Graph -->
-    <meta property="og:title" content="AI Sense - 发现最好的AI工具">
-    <meta property="og:description" content="中文AI工具导航平台，每日精选热门AI工具与资讯">
+    <meta property="og:title" content="AI Sense - Discover the Best AI Tools">
+    <meta property="og:description" content="The leading AI tools directory. 500+ curated tools, updated daily.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aisense.top/">
-    <!-- JSON-LD -->
+    <meta property="og:site_name" content="AI Sense">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Sense - Discover the Best AI Tools">
+    <meta name="twitter:description" content="The leading AI tools directory. 500+ curated tools, updated daily.">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "AI Sense",
       "url": "https://aisense.top/",
-      "description": "中文AI工具导航平台，每日精选热门AI工具与AI资讯",
+      "description": "The leading AI tools directory. Discover, compare, and choose the best AI tools.",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://aisense.top/?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Top AI Tools 2026",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "item": {"@type": "SoftwareApplication", "name": "ChatGPT", "url": "https://chat.openai.com/", "applicationCategory": "AI Assistant"}},
+        {"@type": "ListItem", "position": 2, "item": {"@type": "SoftwareApplication", "name": "Claude", "url": "https://claude.ai/", "applicationCategory": "AI Assistant"}},
+        {"@type": "ListItem", "position": 3, "item": {"@type": "SoftwareApplication", "name": "Midjourney", "url": "https://www.midjourney.com/", "applicationCategory": "Image Generation"}},
+        {"@type": "ListItem", "position": 4, "item": {"@type": "SoftwareApplication", "name": "Runway", "url": "https://runwayml.com/", "applicationCategory": "Video Generation"}},
+        {"@type": "ListItem", "position": 5, "item": {"@type": "SoftwareApplication", "name": "Perplexity", "url": "https://www.perplexity.ai/", "applicationCategory": "AI Search"}},
+        {"@type": "ListItem", "position": 6, "item": {"@type": "SoftwareApplication", "name": "Cursor", "url": "https://cursor.sh/", "applicationCategory": "Coding Assistant"}},
+        {"@type": "ListItem", "position": 7, "item": {"@type": "SoftwareApplication", "name": "Synthesia", "url": "https://www.synthesia.io/", "applicationCategory": "Video Generation"}},
+        {"@type": "ListItem", "position": 8, "item": {"@type": "SoftwareApplication", "name": "Suno", "url": "https://suno.com/", "applicationCategory": "Music Generation"}},
+        {"@type": "ListItem", "position": 9, "item": {"@type": "SoftwareApplication", "name": "HeyGen", "url": "https://www.heygen.com/", "applicationCategory": "AI Avatars"}},
+        {"@type": "ListItem", "position": 10, "item": {"@type": "SoftwareApplication", "name": "Leonardo AI", "url": "https://leonardo.ai/", "applicationCategory": "Image Generation"}}
+      ]
     }
     </script>
 </head>
@@ -41,10 +62,10 @@
                 <span class="logo-text">AI Sense</span>
             </a>
             <nav class="nav">
-                <a href="#tools" class="nav-link">🔥 热门工具</a>
-                <a href="#categories" class="nav-link">📂 分类</a>
-                <a href="/posts/" class="nav-link">📰 AI日报</a>
-                <a href="#about" class="nav-link">关于</a>
+                <a href="#tools" class="nav-link">🔥 Top Tools</a>
+                <a href="#categories" class="nav-link">📂 Categories</a>
+                <a href="/posts/" class="nav-link">📰 AI News</a>
+                <a href="#about" class="nav-link">About</a>
             </nav>
         </div>
     </div>
@@ -53,11 +74,11 @@
 <!-- Hero -->
 <section class="hero">
     <div class="container">
-        <h1>发现最好的 AI 工具</h1>
-        <p>每日精选 AI 工具推荐与前沿资讯，让每个人都能驾驭 AI 的力量</p>
+        <h1>Discover the Best AI Tools</h1>
+        <p>Your daily curated directory of 500+ AI tools. Find the perfect tool for any task — updated every day.</p>
         <div class="search-box">
             <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" placeholder="搜索 AI 工具，如 ChatGPT、Midjourney、Cursor..." oninput="filterTools()">
+            <input type="text" id="searchInput" placeholder="Search AI tools — ChatGPT, Midjourney, Cursor, Sora..." oninput="filterTools()">
         </div>
     </div>
 </section>
@@ -67,15 +88,15 @@
     <div class="stats-bar">
         <div class="stat-item">
             <div class="stat-num">500+</div>
-            <div class="stat-label">精选工具</div>
+            <div class="stat-label">Curated Tools</div>
         </div>
         <div class="stat-item">
             <div class="stat-num">10</div>
-            <div class="stat-label">工具分类</div>
+            <div class="stat-label">Categories</div>
         </div>
         <div class="stat-item">
-            <div class="stat-num">每日</div>
-            <div class="stat-label">更新频率</div>
+            <div class="stat-num">Daily</div>
+            <div class="stat-label">Updates</div>
         </div>
     </div>
 </div>
@@ -84,129 +105,129 @@
 <section class="section" id="tools">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">🔥 热门 AI 工具 TOP 10</h2>
-            <span class="stat-label">📅 2026年5月22日 更新</span>
+            <h2 class="section-title">🔥 Top 10 AI Tools</h2>
+            <span class="stat-label">📅 Updated May 22, 2026</span>
         </div>
         <div class="tool-grid" id="toolGrid">
 
-            <a href="https://chat.openai.com/" target="_blank" class="tool-card" data-name="ChatGPT" data-cat="对话">
+            <a href="https://chat.openai.com/" target="_blank" rel="noopener" class="tool-card" data-name="ChatGPT" data-cat="assistant">
                 <div class="tool-card-top">
                     <div class="tool-icon green">💬</div>
                     <div class="tool-info">
                         <div class="tool-name">ChatGPT</div>
-                        <div class="tool-rank">🏆 #1</div>
+                        <div class="tool-rank">🏆 #1 AI Assistant</div>
                     </div>
                 </div>
-                <div class="tool-desc">OpenAI 旗舰AI对话助手，全球最流行的AI工具，支持GPT-4o、代码解释器、联网搜索、文件分析。</div>
-                <div class="tool-tags"><span class="tag">AI对话</span><span class="tag free">免费</span></div>
+                <div class="tool-desc">OpenAI's flagship AI assistant. 1B+ users worldwide. GPT-4o, code interpreter, web search, file analysis — the most versatile AI tool available.</div>
+                <div class="tool-tags"><span class="tag">AI Assistant</span><span class="tag free">Free</span></div>
             </a>
 
-            <a href="https://claude.ai/" target="_blank" class="tool-card" data-name="Claude" data-cat="对话">
+            <a href="https://claude.ai/" target="_blank" rel="noopener" class="tool-card" data-name="Claude" data-cat="assistant">
                 <div class="tool-card-top">
                     <div class="tool-icon purple">🧠</div>
                     <div class="tool-info">
                         <div class="tool-name">Claude</div>
-                        <div class="tool-rank">🏆 #2</div>
+                        <div class="tool-rank">🏆 #2 AI Assistant</div>
                     </div>
                 </div>
-                <div class="tool-desc">Anthropic 的AI助手，超强长文本处理（200K上下文），擅长写作、分析和编程，安全可靠。</div>
-                <div class="tool-tags"><span class="tag">AI对话</span><span class="tag free">免费</span></div>
+                <div class="tool-desc">Anthropic's AI assistant with 200K context window. Exceptional at writing, analysis, and coding. Known for safety and nuanced reasoning.</div>
+                <div class="tool-tags"><span class="tag">AI Assistant</span><span class="tag free">Free</span></div>
             </a>
 
-            <a href="https://www.midjourney.com/" target="_blank" class="tool-card" data-name="Midjourney" data-cat="图像">
+            <a href="https://www.midjourney.com/" target="_blank" rel="noopener" class="tool-card" data-name="Midjourney" data-cat="image">
                 <div class="tool-card-top">
                     <div class="tool-icon pink">🎨</div>
                     <div class="tool-info">
                         <div class="tool-name">Midjourney</div>
-                        <div class="tool-rank">🏆 #3</div>
+                        <div class="tool-rank">🏆 #3 Image Generation</div>
                     </div>
                 </div>
-                <div class="tool-desc">顶级AI图像生成工具，以艺术风格著称，V7版本支持真实感照片级生成，创作者首选。</div>
-                <div class="tool-tags"><span class="tag">图像生成</span><span class="tag paid">付费</span></div>
+                <div class="tool-desc">The gold standard for AI image generation. V7 delivers photorealistic quality with artistic flair. The go-to choice for creators and designers.</div>
+                <div class="tool-tags"><span class="tag">Image Generation</span><span class="tag paid">Paid</span></div>
             </a>
 
-            <a href="https://runwayml.com/" target="_blank" class="tool-card" data-name="Runway" data-cat="视频">
+            <a href="https://runwayml.com/" target="_blank" rel="noopener" class="tool-card" data-name="Runway" data-cat="video">
                 <div class="tool-card-top">
                     <div class="tool-icon blue">🎥</div>
                     <div class="tool-info">
                         <div class="tool-name">Runway</div>
-                        <div class="tool-rank">🏆 #4</div>
+                        <div class="tool-rank">🏆 #4 Video Generation</div>
                     </div>
                 </div>
-                <div class="tool-desc">Gen-3 Alpha视频生成模型，从文字/图片直接生成高质量视频，创作者首选视频AI工具。</div>
-                <div class="tool-tags"><span class="tag">视频生成</span><span class="tag">Freemium</span></div>
+                <div class="tool-desc">Gen-3 Alpha video generation model. Create high-quality videos from text or images. The creator's choice for AI-powered video production.</div>
+                <div class="tool-tags"><span class="tag">Video Generation</span><span class="tag">Freemium</span></div>
             </a>
 
-            <a href="https://www.perplexity.ai/" target="_blank" class="tool-card" data-name="Perplexity" data-cat="搜索">
+            <a href="https://www.perplexity.ai/" target="_blank" rel="noopener" class="tool-card" data-name="Perplexity" data-cat="search">
                 <div class="tool-card-top">
                     <div class="tool-icon green">🔍</div>
                     <div class="tool-info">
                         <div class="tool-name">Perplexity</div>
-                        <div class="tool-rank">🏆 #5</div>
+                        <div class="tool-rank">🏆 #5 AI Search</div>
                     </div>
                 </div>
-                <div class="tool-desc">AI搜索引擎，实时联网回答问题并附上来源引用，比传统搜索引擎更精准、更高效。</div>
-                <div class="tool-tags"><span class="tag">AI搜索</span><span class="tag free">免费</span></div>
+                <div class="tool-desc">AI-powered search engine that answers questions with real-time sources and citations. More accurate and efficient than traditional search.</div>
+                <div class="tool-tags"><span class="tag">AI Search</span><span class="tag free">Free</span></div>
             </a>
 
-            <a href="https://cursor.sh/" target="_blank" class="tool-card" data-name="Cursor" data-cat="编程">
+            <a href="https://cursor.sh/" target="_blank" rel="noopener" class="tool-card" data-name="Cursor" data-cat="coding">
                 <div class="tool-card-top">
                     <div class="tool-icon purple">💻</div>
                     <div class="tool-info">
                         <div class="tool-name">Cursor</div>
-                        <div class="tool-rank">🏆 #6</div>
+                        <div class="tool-rank">🏆 #6 Coding</div>
                     </div>
                 </div>
-                <div class="tool-desc">AI驱动的代码编辑器，基于VS Code，内置AI代码补全和对话，开发效率提升10倍。</div>
-                <div class="tool-tags"><span class="tag">编程助手</span><span class="tag">Freemium</span></div>
+                <div class="tool-desc">AI-native code editor built on VS Code. Inline AI completions, chat-to-code, and intelligent refactoring. 10x your development speed.</div>
+                <div class="tool-tags"><span class="tag">Coding Assistant</span><span class="tag">Freemium</span></div>
             </a>
 
-            <a href="https://www.synthesia.io/" target="_blank" class="tool-card" data-name="Synthesia" data-cat="视频">
+            <a href="https://www.synthesia.io/" target="_blank" rel="noopener" class="tool-card" data-name="Synthesia" data-cat="video">
                 <div class="tool-card-top">
                     <div class="tool-icon orange">🎬</div>
                     <div class="tool-info">
                         <div class="tool-name">Synthesia</div>
-                        <div class="tool-rank">🏆 #7</div>
+                        <div class="tool-rank">🏆 #7 Video Generation</div>
                     </div>
                 </div>
-                <div class="tool-desc">AI视频生成平台，支持200+数字人角色，无需拍摄即可创建专业视频内容。</div>
-                <div class="tool-tags"><span class="tag">视频生成</span><span class="tag paid">付费</span></div>
+                <div class="tool-desc">AI video generation platform with 200+ realistic avatars. Create professional video content without filming — perfect for training and marketing.</div>
+                <div class="tool-tags"><span class="tag">Video Generation</span><span class="tag paid">Paid</span></div>
             </a>
 
-            <a href="https://suno.com/" target="_blank" class="tool-card" data-name="Suno" data-cat="音频">
+            <a href="https://suno.com/" target="_blank" rel="noopener" class="tool-card" data-name="Suno" data-cat="audio">
                 <div class="tool-card-top">
                     <div class="tool-icon red">🎵</div>
                     <div class="tool-info">
                         <div class="tool-name">Suno</div>
-                        <div class="tool-rank">🏆 #8</div>
+                        <div class="tool-rank">🏆 #8 Music Generation</div>
                     </div>
                 </div>
-                <div class="tool-desc">AI音乐生成平台，输入文字描述即可生成完整歌曲，支持多种风格和语言。</div>
-                <div class="tool-tags"><span class="tag">音频生成</span><span class="tag">Freemium</span></div>
+                <div class="tool-desc">Generate complete songs from text descriptions. Supports multiple genres, languages, and styles. The easiest way to create AI-powered music.</div>
+                <div class="tool-tags"><span class="tag">Music Generation</span><span class="tag">Freemium</span></div>
             </a>
 
-            <a href="https://www.heygen.com/" target="_blank" class="tool-card" data-name="HeyGen" data-cat="视频">
+            <a href="https://www.heygen.com/" target="_blank" rel="noopener" class="tool-card" data-name="HeyGen" data-cat="video">
                 <div class="tool-card-top">
                     <div class="tool-icon blue">🗣️</div>
                     <div class="tool-info">
                         <div class="tool-name">HeyGen</div>
-                        <div class="tool-rank">🏆 #9</div>
+                        <div class="tool-rank">🏆 #9 AI Avatars</div>
                     </div>
                 </div>
-                <div class="tool-desc">AI数字人视频制作平台，一键翻译视频口型，支持40+语言自动配音和翻译。</div>
-                <div class="tool-tags"><span class="tag">数字人</span><span class="tag">Freemium</span></div>
+                <div class="tool-desc">AI avatar video platform with one-click lip-sync translation. Supports 40+ languages for automatic dubbing and voice cloning.</div>
+                <div class="tool-tags"><span class="tag">AI Avatars</span><span class="tag">Freemium</span></div>
             </a>
 
-            <a href="https://leonardo.ai/" target="_blank" class="tool-card" data-name="Leonardo AI" data-cat="图像">
+            <a href="https://leonardo.ai/" target="_blank" rel="noopener" class="tool-card" data-name="Leonardo AI" data-cat="image">
                 <div class="tool-card-top">
                     <div class="tool-icon pink">🖼️</div>
                     <div class="tool-info">
                         <div class="tool-name">Leonardo AI</div>
-                        <div class="tool-rank">🏆 #10</div>
+                        <div class="tool-rank">🏆 #10 Image Generation</div>
                     </div>
                 </div>
-                <div class="tool-desc">AI图像生成平台，专注游戏素材和设计资产创作，免费额度充足，社区活跃。</div>
-                <div class="tool-tags"><span class="tag">图像生成</span><span class="tag">Freemium</span></div>
+                <div class="tool-desc">AI image generation platform focused on game assets and design. Generous free tier, active community, and powerful fine-tuning capabilities.</div>
+                <div class="tool-tags"><span class="tag">Image Generation</span><span class="tag">Freemium</span></div>
             </a>
 
         </div>
@@ -217,60 +238,59 @@
 <section class="section" id="categories">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">📂 AI 工具分类</h2>
-            <a href="#categories" class="section-more">查看全部 →</a>
+            <h2 class="section-title">📂 Browse by Category</h2>
         </div>
         <div class="category-grid">
-            <a href="/tools/?cat=chat" class="category-card">
+            <div class="category-card">
                 <div class="category-icon">💬</div>
-                <div class="category-name">AI对话</div>
+                <div class="category-name">AI Assistants</div>
                 <div class="category-count">ChatGPT · Claude · Gemini</div>
-            </a>
-            <a href="/tools/?cat=image" class="category-card">
+            </div>
+            <div class="category-card">
                 <div class="category-icon">🎨</div>
-                <div class="category-name">图像生成</div>
+                <div class="category-name">Image Generation</div>
                 <div class="category-count">Midjourney · DALL-E · SD</div>
-            </a>
-            <a href="/tools/?cat=video" class="category-card">
+            </div>
+            <div class="category-card">
                 <div class="category-icon">🎬</div>
-                <div class="category-name">视频创作</div>
+                <div class="category-name">Video Creation</div>
                 <div class="category-count">Sora · Runway · Pika</div>
-            </a>
-            <a href="/tools/?cat=audio" class="category-card">
+            </div>
+            <div class="category-card">
                 <div class="category-icon">🎵</div>
-                <div class="category-name">音频生成</div>
+                <div class="category-name">Audio & Music</div>
                 <div class="category-count">Suno · ElevenLabs</div>
-            </a>
-            <a href="/tools/?cat=coding" class="category-card">
+            </div>
+            <div class="category-card">
                 <div class="category-icon">💻</div>
-                <div class="category-name">编程助手</div>
+                <div class="category-name">Coding Assistants</div>
                 <div class="category-count">Cursor · Copilot · Windsurf</div>
-            </a>
-            <a href="/tools/?cat=writing" class="category-card">
+            </div>
+            <div class="category-card">
                 <div class="category-icon">✍️</div>
-                <div class="category-name">写作工具</div>
+                <div class="category-name">Writing Tools</div>
                 <div class="category-count">Jasper · Notion AI</div>
-            </a>
-            <a href="/tools/?cat=search" class="category-card">
+            </div>
+            <div class="category-card">
                 <div class="category-icon">🔍</div>
-                <div class="category-name">AI搜索</div>
-                <div class="category-count">Perplexity · 秘塔</div>
-            </a>
-            <a href="/tools/?cat=data" class="category-card">
+                <div class="category-name">AI Search</div>
+                <div class="category-count">Perplexity · You.com</div>
+            </div>
+            <div class="category-card">
                 <div class="category-icon">📊</div>
-                <div class="category-name">数据分析</div>
+                <div class="category-name">Data & Analytics</div>
                 <div class="category-count">Julius · Code Interpreter</div>
-            </a>
-            <a href="/tools/?cat=agent" class="category-card">
+            </div>
+            <div class="category-card">
                 <div class="category-icon">🤖</div>
-                <div class="category-name">AI Agent</div>
-                <div class="category-count">AutoGPT · OpenClaw</div>
-            </a>
-            <a href="/tools/?cat=design" class="category-card">
+                <div class="category-name">AI Agents</div>
+                <div class="category-count">AutoGPT · CrewAI</div>
+            </div>
+            <div class="category-card">
                 <div class="category-icon">🎯</div>
-                <div class="category-name">设计工具</div>
+                <div class="category-name">Design Tools</div>
                 <div class="category-count">Figma AI · Canva AI</div>
-            </a>
+            </div>
         </div>
     </div>
 </section>
@@ -279,31 +299,24 @@
 <section class="section" id="news">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">📰 最新 AI 资讯</h2>
-            <a href="/posts/" class="section-more">查看全部 →</a>
+            <h2 class="section-title">📰 Latest AI News</h2>
+            <a href="/posts/" class="section-more">View all →</a>
         </div>
-        <div class="news-list">
+        <div class="news-list" id="newsList">
+            <!-- Populated by daily auto-update -->
             <a href="/posts/2026-04-19-ai-news.html" class="news-item">
-                <div class="news-date-badge">04/19</div>
+                <div class="news-date-badge">Apr 19</div>
                 <div class="news-content">
-                    <div class="news-title">ChatGPT 突破10亿用户，Claude Design 上线，具身智能获4.55亿融资</div>
-                    <div class="news-excerpt">OpenAI宣布ChatGPT月活用户突破10亿里程碑；Anthropic推出Claude Design功能；具身智能领域获巨额融资...</div>
-                    <div class="news-meta">AI Sense 日报</div>
+                    <div class="news-title">ChatGPT Hits 1 Billion Users, Claude Design Launches, Embodied AI Raises $455M</div>
+                    <div class="news-excerpt">OpenAI's ChatGPT reaches 1B monthly active users. Anthropic launches Claude Design. Major funding rounds in embodied AI...</div>
+                    <div class="news-meta">AI Sense Daily</div>
                 </div>
             </a>
-            <a href="/posts/2026-04-19-ai-news.html" class="news-item">
-                <div class="news-date-badge">04/06</div>
+            <a href="/posts/2026-04-19-github-trending.html" class="news-item">
+                <div class="news-date-badge">Apr 19</div>
                 <div class="news-content">
-                    <div class="news-title">AI 行业持续高速发展，多模态能力全面升级</div>
-                    <div class="news-excerpt">各大AI厂商持续迭代产品，多模态能力成为标配，Agent生态加速成熟...</div>
-                    <div class="news-meta">AI Sense 日报</div>
-                </div>
-            </a>
-            <a href="/posts/2026-04-06-github-trending.html" class="news-item">
-                <div class="news-date-badge">04/06</div>
-                <div class="news-content">
-                    <div class="news-title">GitHub Trending: AI开源项目精选</div>
-                    <div class="news-excerpt">每日精选GitHub热门AI开源项目，发现值得关注的新工具和框架...</div>
+                    <div class="news-title">GitHub Trending: Top AI Open Source Projects</div>
+                    <div class="news-excerpt">Daily curated selection of trending AI repositories on GitHub — discover the tools and frameworks shaping the future...</div>
                     <div class="news-meta">GitHub Trending</div>
                 </div>
             </a>
@@ -314,13 +327,13 @@
 <!-- About -->
 <section class="about-section" id="about">
     <div class="container">
-        <h2>关于 AI Sense</h2>
-        <p>AI Sense 是一个中文AI工具导航平台，致力于帮助中文用户发现和了解最前沿的AI工具和资讯。我们每日精选热门AI工具、追踪行业动态，让每个人都能轻松驾驭AI的力量。</p>
+        <h2>About AI Sense</h2>
+        <p>AI Sense is the leading AI tools directory for creators, developers, and professionals. We curate and review the best AI tools daily, helping you find the perfect tool for any task. From AI assistants to image generation, video creation to coding — we've got you covered.</p>
         <div class="about-badges">
-            <span class="badge">🎯 聚焦中文市场</span>
-            <span class="badge">📰 每日更新资讯</span>
-            <span class="badge">🔧 精选500+工具</span>
-            <span class="badge">🤖 AI驱动运营</span>
+            <span class="badge">🎯 500+ Curated Tools</span>
+            <span class="badge">📰 Daily Updates</span>
+            <span class="badge">🌍 Global Coverage</span>
+            <span class="badge">🤖 AI-Powered Curation</span>
         </div>
     </div>
 </section>
@@ -328,19 +341,17 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
-        <p>© 2026 AI Sense - AI工具导航站 · 每日精选AI工具与资讯</p>
-        <p style="margin-top: 8px;">Powered by AI Sense · <a href="https://github.com/CainGao/aisense-top" target="_blank">GitHub</a></p>
+        <p>© 2026 AI Sense — The AI Tools Directory. Updated daily.</p>
+        <p style="margin-top: 8px;"><a href="https://github.com/CainGao/aisense-top" target="_blank" rel="noopener">GitHub</a> · <a href="/posts/">Archive</a></p>
     </div>
 </footer>
 
 <script>
-function filterTools() {
-    const q = document.getElementById('searchInput').value.toLowerCase();
-    document.querySelectorAll('.tool-card').forEach(card => {
-        const name = card.dataset.name.toLowerCase();
-        const cat = card.dataset.cat.toLowerCase();
-        const text = card.textContent.toLowerCase();
-        card.style.display = (!q || name.includes(q) || cat.includes(q) || text.includes(q)) ? '' : 'none';
+function filterTools(){
+    const q=document.getElementById('searchInput').value.toLowerCase();
+    document.querySelectorAll('.tool-card').forEach(c=>{
+        const t=c.textContent.toLowerCase();
+        c.style.display=(!q||t.includes(q))?'':'none';
     });
 }
 </script>
