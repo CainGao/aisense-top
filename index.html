@@ -3,222 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Sense - AI工具导航</title>
-    <meta name="description" content="AI Sense - 发现最好的AI工具，掌握最前沿AI资讯。每日精选AI工具推荐与评测。">
-    <meta name="keywords" content="AI工具,AI导航,AI工具推荐,人工智能,ChatGPT,Midjourney,Stable Diffusion">
+    <title>AI Sense - 发现最好的AI工具，掌握最前沿AI资讯</title>
+    <meta name="description" content="AI Sense 是中文AI工具导航平台，每日精选热门AI工具与AI资讯。覆盖AI对话、图像生成、视频创作、编程助手等10大分类，500+精选工具。">
+    <meta name="keywords" content="AI工具,AI导航,AI工具推荐,人工智能,ChatGPT,Claude,Midjourney,Sora,AI资讯">
+    <link rel="canonical" href="https://aisense.top/">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Sense - 发现最好的AI工具">
+    <meta property="og:description" content="中文AI工具导航平台，每日精选热门AI工具与资讯">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aisense.top/">
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AI Sense",
+      "url": "https://aisense.top/",
+      "description": "中文AI工具导航平台，每日精选热门AI工具与AI资讯",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://aisense.top/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-inner">
-                <a href="/" class="logo">
-                    <span class="logo-icon">🤖</span>
-                    <span class="logo-text">AI Sense</span>
-                </a>
-                <nav class="nav">
-                    <a href="#tools" class="nav-link">热门工具</a>
-                    <a href="#categories" class="nav-link">分类</a>
-                    <a href="#about" class="nav-link">关于</a>
-                </nav>
-            </div>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">🤖</span>
+                <span class="logo-text">AI Sense</span>
+            </a>
+            <nav class="nav">
+                <a href="#tools" class="nav-link">🔥 热门工具</a>
+                <a href="#categories" class="nav-link">📂 分类</a>
+                <a href="/posts/" class="nav-link">📰 AI日报</a>
+                <a href="#about" class="nav-link">关于</a>
+            </nav>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">🤖 AI Sense - AI工具导航</h1>
-            <p class="hero-subtitle">发现最好的AI工具，掌握最前沿AI资讯</p>
-            <p class="hero-date">📅 每日更新 · 2026年4月18日</p>
+<!-- Hero -->
+<section class="hero">
+    <div class="container">
+        <h1>发现最好的 AI 工具</h1>
+        <p>每日精选 AI 工具推荐与前沿资讯，让每个人都能驾驭 AI 的力量</p>
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="搜索 AI 工具，如 ChatGPT、Midjourney、Cursor..." oninput="filterTools()">
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Tools Grid -->
-    <section id="tools" class="tools-section">
-        <div class="container">
-            <h2 class="section-title">🔥 今日热门AI工具 TOP 10</h2>
-            <div class="tools-grid">
-
-                <a href="https://www.synthesia.io/" target="_blank" rel="noopener" class="tool-card">
-                    <div class="tool-icon">🎬</div>
-                    <div class="tool-rank">#1</div>
-                    <h3 class="tool-name">Synthesia</h3>
-                    <p class="tool-desc">AI视频生成平台，支持200+数字人角色，无需拍摄即可创建专业视频内容。</p>
-                    <div class="tool-tags">
-                        <span class="tag">视频生成</span>
-                        <span class="tag tag-pro">付费</span>
-                    </div>
-                </a>
-
-                <a href="https://runwayml.com/" target="_blank" rel="noopener" class="tool-card">
-                    <div class="tool-icon">🎥</div>
-                    <div class="tool-rank">#2</div>
-                    <h3 class="tool-name">Runway</h3>
-                    <p class="tool-desc">Gen-3 Alpha视频生成模型，从文字/图片直接生成高质量视频，创作者首选工具。</p>
-                    <div class="tool-tags">
-                        <span class="tag">视频生成</span>
-                        <span class="tag tag-pro">Freemium</span>
-                    </div>
-                </a>
-
-                <a href="https://www.heygen.com/" target="_blank" rel="noopener" class="tool-card">
-                    <div class="tool-icon">🗣️</div>
-                    <div class="tool-rank">#3</div>
-                    <h3 class="tool-name">HeyGen</h3>
-                    <p class="tool-desc">AI数字人视频制作平台，一键翻译视频口型，支持40+语言自动配音和翻译。</p>
-                    <div class="tool-tags">
-                        <span class="tag">数字人</span>
-                        <span class="tag tag-pro">Freemium</span>
-                    </div>
-                </a>
-
-                <a href="https://kling.kuaishou.com/" target="_blank" rel="noopener" class="tool-card">
-                    <div class="tool-icon">🎥</div>
-                    <div class="tool-rank">#4</div>
-                    <h3 class="tool-name">可灵AI</h3>
-                    <p class="tool-desc">快手推出的AI视频生成工具，支持长视频生成，中国版Sora级产品。</p>
-                    <div class="tool-tags">
-                        <span class="tag">视频生成</span>
-                        <span class="tag tag-free">免费试用</span>
-                    </div>
-                </a>
-
-                <a href="https://www.opus.pro/" target="_blank" rel="noopener" class="tool-card">
-                    <div class="tool-icon">✂️</div>
-                    <div class="tool-rank">#5</div>
-                    <h3 class="tool-name">OpusClip</h3>
-                    <p class="tool-desc">AI短视频剪辑工具，一键将长视频转为短视频，自动提取精彩片段，适配TikTok/Reels。</p>
-                    <div class="tool-tags">
-                        <span class="tag">视频剪辑</span>
-                        <span class="tag tag-pro">Freemium</span>
-                    </div>
-                </a>
-
-                <a href="https://chat.openai.com/" target="_blank" rel="noopener" class="tool-card">
-                    <div class="tool-icon">💬</div>
-                    <div class="tool-rank">#6</div>
-                    <h3 class="tool-name">ChatGPT</h3>
-                    <p class="tool-desc">OpenAI旗舰AI对话助手，全球最流行的AI工具，支持GPT-4o、代码解释器、联网搜索。</p>
-                    <div class="tool-tags">
-                        <span class="tag">AI对话</span>
-                        <span class="tag tag-free">免费</span>
-                    </div>
-                </a>
-
-                <a href="https://www.midjourney.com/" target="_blank" rel="noopener" class="tool-card">
-                    <div class="tool-icon">🎨</div>
-                    <div class="tool-rank">#7</div>
-                    <h3 class="tool-name">Midjourney</h3>
-                    <p class="tool-desc">顶级AI图像生成工具，以艺术风格著称，V7版本支持真实感照片级生成。</p>
-                    <div class="tool-tags">
-                        <span class="tag">图像生成</span>
-                        <span class="tag tag-pro">付费</span>
-                    </div>
-                </a>
-
-                <a href="https://claude.ai/" target="_blank" rel="noopener" class="tool-card">
-                    <div class="tool-icon">🧠</div>
-                    <div class="tool-rank">#8</div>
-                    <h3 class="tool-name">Claude</h3>
-                    <p class="tool-desc">Anthropic的AI助手，超强长文本处理能力（200K上下文），擅长写作、分析和编程。</p>
-                    <div class="tool-tags">
-                        <span class="tag">AI对话</span>
-                        <span class="tag tag-free">免费</span>
-                    </div>
-                </a>
-
-                <a href="https://www.perplexity.ai/" target="_blank" rel="noopener" class="tool-card">
-                    <div class="tool-icon">🔍</div>
-                    <div class="tool-rank">#9</div>
-                    <h3 class="tool-name">Perplexity</h3>
-                    <p class="tool-desc">AI搜索引擎，实时联网回答问题并附上来源引用，比传统搜索引擎更精准。</p>
-                    <div class="tool-tags">
-                        <span class="tag">AI搜索</span>
-                        <span class="tag tag-free">免费</span>
-                    </div>
-                </a>
-
-                <a href="https://leonardo.ai/" target="_blank" rel="noopener" class="tool-card">
-                    <div class="tool-icon">🖼️</div>
-                    <div class="tool-rank">#10</div>
-                    <h3 class="tool-name">Leonardo AI</h3>
-                    <p class="tool-desc">AI图像生成平台，专注游戏素材和设计资产创作，免费额度充足，社区活跃。</p>
-                    <div class="tool-tags">
-                        <span class="tag">图像生成</span>
-                        <span class="tag tag-free">免费试用</span>
-                    </div>
-                </a>
-
-            </div>
+<!-- Stats -->
+<div class="container">
+    <div class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-num">500+</div>
+            <div class="stat-label">精选工具</div>
         </div>
-    </section>
-
-    <!-- Categories -->
-    <section id="categories" class="categories-section">
-        <div class="container">
-            <h2 class="section-title">📂 AI工具分类</h2>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <span class="category-icon">💬</span>
-                    <span class="category-name">AI对话</span>
-                </div>
-                <div class="category-card">
-                    <span class="category-icon">🎨</span>
-                    <span class="category-name">图像生成</span>
-                </div>
-                <div class="category-card">
-                    <span class="category-icon">🎬</span>
-                    <span class="category-name">视频创作</span>
-                </div>
-                <div class="category-card">
-                    <span class="category-icon">🎵</span>
-                    <span class="category-name">音频生成</span>
-                </div>
-                <div class="category-card">
-                    <span class="category-icon">💻</span>
-                    <span class="category-name">编程助手</span>
-                </div>
-                <div class="category-card">
-                    <span class="category-icon">✍️</span>
-                    <span class="category-name">写作工具</span>
-                </div>
-                <div class="category-card">
-                    <span class="category-icon">🔍</span>
-                    <span class="category-name">AI搜索</span>
-                </div>
-                <div class="category-card">
-                    <span class="category-icon">📊</span>
-                    <span class="category-name">数据分析</span>
-                </div>
-            </div>
+        <div class="stat-item">
+            <div class="stat-num">10</div>
+            <div class="stat-label">工具分类</div>
         </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">关于 AI Sense</h2>
-            <p class="about-text">
-                AI Sense 是一个中文AI工具导航平台，致力于帮助中文用户发现和了解最前沿的AI工具。
-                我们每日精选热门AI工具，提供深度评测和使用指南，让每个人都能轻松驾驭AI的力量。
-            </p>
-            <p class="about-text">
-                🎯 <strong>聚焦中文市场</strong> · 📰 <strong>每日更新资讯</strong> · 🔧 <strong>精选500+工具</strong>
-            </p>
+        <div class="stat-item">
+            <div class="stat-num">每日</div>
+            <div class="stat-label">更新频率</div>
         </div>
-    </section>
+    </div>
+</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <p class="footer-text">© 2026 AI Sense - AI工具导航站</p>
-                <p class="footer-sub">Powered by AI Sense · 每日精选AI工具与资讯</p>
-            </div>
+<!-- Hot Tools -->
+<section class="section" id="tools">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">🔥 热门 AI 工具 TOP 10</h2>
+            <span class="stat-label">📅 2026年5月22日 更新</span>
         </div>
-    </footer>
+        <div class="tool-grid" id="toolGrid">
+
+            <a href="https://chat.openai.com/" target="_blank" class="tool-card" data-name="ChatGPT" data-cat="对话">
+                <div class="tool-card-top">
+                    <div class="tool-icon green">💬</div>
+                    <div class="tool-info">
+                        <div class="tool-name">ChatGPT</div>
+                        <div class="tool-rank">🏆 #1</div>
+                    </div>
+                </div>
+                <div class="tool-desc">OpenAI 旗舰AI对话助手，全球最流行的AI工具，支持GPT-4o、代码解释器、联网搜索、文件分析。</div>
+                <div class="tool-tags"><span class="tag">AI对话</span><span class="tag free">免费</span></div>
+            </a>
+
+            <a href="https://claude.ai/" target="_blank" class="tool-card" data-name="Claude" data-cat="对话">
+                <div class="tool-card-top">
+                    <div class="tool-icon purple">🧠</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Claude</div>
+                        <div class="tool-rank">🏆 #2</div>
+                    </div>
+                </div>
+                <div class="tool-desc">Anthropic 的AI助手，超强长文本处理（200K上下文），擅长写作、分析和编程，安全可靠。</div>
+                <div class="tool-tags"><span class="tag">AI对话</span><span class="tag free">免费</span></div>
+            </a>
+
+            <a href="https://www.midjourney.com/" target="_blank" class="tool-card" data-name="Midjourney" data-cat="图像">
+                <div class="tool-card-top">
+                    <div class="tool-icon pink">🎨</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Midjourney</div>
+                        <div class="tool-rank">🏆 #3</div>
+                    </div>
+                </div>
+                <div class="tool-desc">顶级AI图像生成工具，以艺术风格著称，V7版本支持真实感照片级生成，创作者首选。</div>
+                <div class="tool-tags"><span class="tag">图像生成</span><span class="tag paid">付费</span></div>
+            </a>
+
+            <a href="https://runwayml.com/" target="_blank" class="tool-card" data-name="Runway" data-cat="视频">
+                <div class="tool-card-top">
+                    <div class="tool-icon blue">🎥</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Runway</div>
+                        <div class="tool-rank">🏆 #4</div>
+                    </div>
+                </div>
+                <div class="tool-desc">Gen-3 Alpha视频生成模型，从文字/图片直接生成高质量视频，创作者首选视频AI工具。</div>
+                <div class="tool-tags"><span class="tag">视频生成</span><span class="tag">Freemium</span></div>
+            </a>
+
+            <a href="https://www.perplexity.ai/" target="_blank" class="tool-card" data-name="Perplexity" data-cat="搜索">
+                <div class="tool-card-top">
+                    <div class="tool-icon green">🔍</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Perplexity</div>
+                        <div class="tool-rank">🏆 #5</div>
+                    </div>
+                </div>
+                <div class="tool-desc">AI搜索引擎，实时联网回答问题并附上来源引用，比传统搜索引擎更精准、更高效。</div>
+                <div class="tool-tags"><span class="tag">AI搜索</span><span class="tag free">免费</span></div>
+            </a>
+
+            <a href="https://cursor.sh/" target="_blank" class="tool-card" data-name="Cursor" data-cat="编程">
+                <div class="tool-card-top">
+                    <div class="tool-icon purple">💻</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Cursor</div>
+                        <div class="tool-rank">🏆 #6</div>
+                    </div>
+                </div>
+                <div class="tool-desc">AI驱动的代码编辑器，基于VS Code，内置AI代码补全和对话，开发效率提升10倍。</div>
+                <div class="tool-tags"><span class="tag">编程助手</span><span class="tag">Freemium</span></div>
+            </a>
+
+            <a href="https://www.synthesia.io/" target="_blank" class="tool-card" data-name="Synthesia" data-cat="视频">
+                <div class="tool-card-top">
+                    <div class="tool-icon orange">🎬</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Synthesia</div>
+                        <div class="tool-rank">🏆 #7</div>
+                    </div>
+                </div>
+                <div class="tool-desc">AI视频生成平台，支持200+数字人角色，无需拍摄即可创建专业视频内容。</div>
+                <div class="tool-tags"><span class="tag">视频生成</span><span class="tag paid">付费</span></div>
+            </a>
+
+            <a href="https://suno.com/" target="_blank" class="tool-card" data-name="Suno" data-cat="音频">
+                <div class="tool-card-top">
+                    <div class="tool-icon red">🎵</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Suno</div>
+                        <div class="tool-rank">🏆 #8</div>
+                    </div>
+                </div>
+                <div class="tool-desc">AI音乐生成平台，输入文字描述即可生成完整歌曲，支持多种风格和语言。</div>
+                <div class="tool-tags"><span class="tag">音频生成</span><span class="tag">Freemium</span></div>
+            </a>
+
+            <a href="https://www.heygen.com/" target="_blank" class="tool-card" data-name="HeyGen" data-cat="视频">
+                <div class="tool-card-top">
+                    <div class="tool-icon blue">🗣️</div>
+                    <div class="tool-info">
+                        <div class="tool-name">HeyGen</div>
+                        <div class="tool-rank">🏆 #9</div>
+                    </div>
+                </div>
+                <div class="tool-desc">AI数字人视频制作平台，一键翻译视频口型，支持40+语言自动配音和翻译。</div>
+                <div class="tool-tags"><span class="tag">数字人</span><span class="tag">Freemium</span></div>
+            </a>
+
+            <a href="https://leonardo.ai/" target="_blank" class="tool-card" data-name="Leonardo AI" data-cat="图像">
+                <div class="tool-card-top">
+                    <div class="tool-icon pink">🖼️</div>
+                    <div class="tool-info">
+                        <div class="tool-name">Leonardo AI</div>
+                        <div class="tool-rank">🏆 #10</div>
+                    </div>
+                </div>
+                <div class="tool-desc">AI图像生成平台，专注游戏素材和设计资产创作，免费额度充足，社区活跃。</div>
+                <div class="tool-tags"><span class="tag">图像生成</span><span class="tag">Freemium</span></div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- Categories -->
+<section class="section" id="categories">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">📂 AI 工具分类</h2>
+            <a href="#categories" class="section-more">查看全部 →</a>
+        </div>
+        <div class="category-grid">
+            <a href="/tools/?cat=chat" class="category-card">
+                <div class="category-icon">💬</div>
+                <div class="category-name">AI对话</div>
+                <div class="category-count">ChatGPT · Claude · Gemini</div>
+            </a>
+            <a href="/tools/?cat=image" class="category-card">
+                <div class="category-icon">🎨</div>
+                <div class="category-name">图像生成</div>
+                <div class="category-count">Midjourney · DALL-E · SD</div>
+            </a>
+            <a href="/tools/?cat=video" class="category-card">
+                <div class="category-icon">🎬</div>
+                <div class="category-name">视频创作</div>
+                <div class="category-count">Sora · Runway · Pika</div>
+            </a>
+            <a href="/tools/?cat=audio" class="category-card">
+                <div class="category-icon">🎵</div>
+                <div class="category-name">音频生成</div>
+                <div class="category-count">Suno · ElevenLabs</div>
+            </a>
+            <a href="/tools/?cat=coding" class="category-card">
+                <div class="category-icon">💻</div>
+                <div class="category-name">编程助手</div>
+                <div class="category-count">Cursor · Copilot · Windsurf</div>
+            </a>
+            <a href="/tools/?cat=writing" class="category-card">
+                <div class="category-icon">✍️</div>
+                <div class="category-name">写作工具</div>
+                <div class="category-count">Jasper · Notion AI</div>
+            </a>
+            <a href="/tools/?cat=search" class="category-card">
+                <div class="category-icon">🔍</div>
+                <div class="category-name">AI搜索</div>
+                <div class="category-count">Perplexity · 秘塔</div>
+            </a>
+            <a href="/tools/?cat=data" class="category-card">
+                <div class="category-icon">📊</div>
+                <div class="category-name">数据分析</div>
+                <div class="category-count">Julius · Code Interpreter</div>
+            </a>
+            <a href="/tools/?cat=agent" class="category-card">
+                <div class="category-icon">🤖</div>
+                <div class="category-name">AI Agent</div>
+                <div class="category-count">AutoGPT · OpenClaw</div>
+            </a>
+            <a href="/tools/?cat=design" class="category-card">
+                <div class="category-icon">🎯</div>
+                <div class="category-name">设计工具</div>
+                <div class="category-count">Figma AI · Canva AI</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Latest News -->
+<section class="section" id="news">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">📰 最新 AI 资讯</h2>
+            <a href="/posts/" class="section-more">查看全部 →</a>
+        </div>
+        <div class="news-list">
+            <a href="/posts/2026-04-19-ai-news.html" class="news-item">
+                <div class="news-date-badge">04/19</div>
+                <div class="news-content">
+                    <div class="news-title">ChatGPT 突破10亿用户，Claude Design 上线，具身智能获4.55亿融资</div>
+                    <div class="news-excerpt">OpenAI宣布ChatGPT月活用户突破10亿里程碑；Anthropic推出Claude Design功能；具身智能领域获巨额融资...</div>
+                    <div class="news-meta">AI Sense 日报</div>
+                </div>
+            </a>
+            <a href="/posts/2026-04-19-ai-news.html" class="news-item">
+                <div class="news-date-badge">04/06</div>
+                <div class="news-content">
+                    <div class="news-title">AI 行业持续高速发展，多模态能力全面升级</div>
+                    <div class="news-excerpt">各大AI厂商持续迭代产品，多模态能力成为标配，Agent生态加速成熟...</div>
+                    <div class="news-meta">AI Sense 日报</div>
+                </div>
+            </a>
+            <a href="/posts/2026-04-06-github-trending.html" class="news-item">
+                <div class="news-date-badge">04/06</div>
+                <div class="news-content">
+                    <div class="news-title">GitHub Trending: AI开源项目精选</div>
+                    <div class="news-excerpt">每日精选GitHub热门AI开源项目，发现值得关注的新工具和框架...</div>
+                    <div class="news-meta">GitHub Trending</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section class="about-section" id="about">
+    <div class="container">
+        <h2>关于 AI Sense</h2>
+        <p>AI Sense 是一个中文AI工具导航平台，致力于帮助中文用户发现和了解最前沿的AI工具和资讯。我们每日精选热门AI工具、追踪行业动态，让每个人都能轻松驾驭AI的力量。</p>
+        <div class="about-badges">
+            <span class="badge">🎯 聚焦中文市场</span>
+            <span class="badge">📰 每日更新资讯</span>
+            <span class="badge">🔧 精选500+工具</span>
+            <span class="badge">🤖 AI驱动运营</span>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 AI Sense - AI工具导航站 · 每日精选AI工具与资讯</p>
+        <p style="margin-top: 8px;">Powered by AI Sense · <a href="https://github.com/CainGao/aisense-top" target="_blank">GitHub</a></p>
+    </div>
+</footer>
+
+<script>
+function filterTools() {
+    const q = document.getElementById('searchInput').value.toLowerCase();
+    document.querySelectorAll('.tool-card').forEach(card => {
+        const name = card.dataset.name.toLowerCase();
+        const cat = card.dataset.cat.toLowerCase();
+        const text = card.textContent.toLowerCase();
+        card.style.display = (!q || name.includes(q) || cat.includes(q) || text.includes(q)) ? '' : 'none';
+    });
+}
+</script>
+
 </body>
 </html>
