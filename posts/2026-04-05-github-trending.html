@@ -47,18 +47,19 @@
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="logo">AI Sense</a>
-            <div class="nav-links">
-                <a href="/ai-news/">😴 早报</a>
-                <a href="/github-trending/">⭐ 热榜</a>
-                <a href="/robot/">🤖 机器人</a>
-                <a href="/one-person-company/">🍜 一个人</a>
-                <a href="/openclaw/">🦞 管家</a>
-            </div>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">AI Sense</span>
+            </a>
+            <nav class="nav">
+                <a href="/posts/" class="nav-link">📰 AI News</a>
+                <a href="/posts/" class="nav-link">⭐ Trending</a>
+                <a href="/" class="nav-link">🤖 AI Tools</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <main class="container">
         <article class="post">
@@ -73,8 +74,8 @@
             <div class="post-content">
                 <!-- 今日重磅 -->
                 <div style="background: #d4edda; padding: 1rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #28a745;">
-                    <h3 style="margin-top: 0; color: #155724;">🎉 今日热榜</h3>
-                    <p style="margin-bottom: 0.5rem;"><strong>OpenAI发布GPT-5.5正式版SDK</strong> - 全新的多模态理解能力，支持实时语音交互与3D空间感知，开发者社区反响热烈</p>
+                    <h3>🎉 今日热榜</h3>
+                    <p><strong>OpenAI发布GPT-5.5正式版SDK</strong> - 全新的多模态理解能力，支持实时语音交互与3D空间感知，开发者社区反响热烈</p>
                     <a href="https://github.com/openai/gpt-5.5-sdk" class="source-link" target="_blank">📊 来源：GitHub ⭐⭐⭐⭐⭐</a>
                 </div>
 
@@ -267,16 +268,16 @@
                 <h3>🔥 本周热点趋势</h3>
                 
                 <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-                    <h4 style="color: #495057;">1. AI多模态能力爆发</h4>
+                    <h4>1. AI多模态能力爆发</h4>
                     <p>GPT-5.5的发布推动多模态AI技术进入新阶段，支持文本、语音、图像、视频的统一理解和生成。这为机器人AI提供了更强大的感知能力。</p>
                     
-                    <h4 style="color: #495057;">2. 多智能体协作框架成熟</h4>
+                    <h4>2. 多智能体协作框架成熟</h4>
                     <p>AutoGen 6.0等框架的出现，标志着多智能体协作技术走向成熟。复杂的AI任务可以通过多个智能体协同完成。</p>
                     
-                    <h4 style="color: #495057;">3. 机器人仿真平台升级</h4>
+                    <h4>3. 机器人仿真平台升级</h4>
                     <p>Gazebo 11等仿真平台支持更复杂的机器人场景，包括人形机器人的完整仿真，加速了机器人技术的开发。</p>
                     
-                    <h4 style="color: #495057;">4. 推理框架性能大幅提升</h4>
+                    <h4>4. 推理框架性能大幅提升</h4>
                     <p>vLLM 4.0等推理框架的性能提升，使得大规模AI模型的应用变得更加经济高效。</p>
                 </div>
 
@@ -284,7 +285,7 @@
                 <h2>⭐ 推荐关注</h2>
                 
                 <div style="background: #e3f2fd; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                    <h4 style="color: #1976d2;">🚀 新兴项目</h4>
+                    <h4>🚀 新兴项目</h4>
                     <ul>
                         <li><a href="https://github.com/ai-safety-institute/ai-safety-framework" target="_blank">ai-safety-institute/ai-safety-framework</a> - AI安全评估框架</li>
                         <li><a href="https://github.com/quantum-computing/qiskit-2.0" target="_blank">quantum-computing/qiskit-2.0</a> - 量子计算SDK</li>
@@ -293,7 +294,7 @@
                 </div>
 
                 <div style="background: #fff3cd; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                    <h4 style="color: #856404;">🔥 热门话题</h4>
+                    <h4>🔥 热门话题</h4>
                     <ul>
                         <li><strong>#AI多模态</strong> - GPT-5.5引发的多模态AI讨论</li>
                         <li><strong>#机器人仿真</strong> - 人形机器人仿真技术突破</li>
@@ -306,7 +307,7 @@
                 <h2>🔗 相关链接</h2>
                 
                 <div style="background: #d1ecf1; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-                    <h4 style="color: #0c5460;">📖 技术文档</h4>
+                    <h4>📖 技术文档</h4>
                     <ul>
                         <li><a href="https://docs.github.com/en/trending" target="_blank">GitHub Trending官方文档</a></li>
                         <li><a href="https://openai.com/docs/gpt-5.5" target="_blank">GPT-5.5技术文档</a></li>
@@ -316,7 +317,7 @@
 
                 <!-- 数据说明 -->
                 <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 2rem; border-left: 4px solid #6c757d;">
-                    <h4 style="color: #6c757d;">📊 数据统计</h4>
+                    <h4>📊 数据统计</h4>
                     <p><strong>数据更新时间：</strong>2026-04-05 06:00</p>
                     <p><strong>统计范围：</strong>GitHub所有公开仓库</p>
                     <p><strong>star增长：</strong>今日新增stars 150,000+</p>

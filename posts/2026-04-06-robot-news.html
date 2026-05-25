@@ -32,16 +32,19 @@
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="nav-logo">🌐 AI Sense</a>
-            <ul class="nav-menu">
-                <li><a href="/ai-news/">😴 睡醒就有早报看</a></li>
-                <li><a href="/github-trending/">⭐ 今天又Star了啥</a></li>
-                <li><a href="/robot/">🤖 机器人时代来了</a></li>
-            </ul>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">AI Sense</span>
+            </a>
+            <nav class="nav">
+                <a href="/posts/" class="nav-link">📰 AI News</a>
+                <a href="/posts/" class="nav-link">⭐ Trending</a>
+                <a href="/" class="nav-link">🤖 AI Tools</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <main class="container">
         <article class="post">
@@ -56,8 +59,8 @@
             <div class="post-content">
                 <!-- 今日重磅 -->
                 <div class="highlight-box">
-                    <h3 style="margin-top: 0; color: #155724;">🎉 今日重磅</h3>
-                    <p style="margin-bottom: 0.5rem;"><strong>OpenAI发布GPT-6预览版开启机器人智能新纪元</strong> - OpenAI正式发布GPT-6预览版，新增机器人专用API接口，支持实时传感器数据融合和多模态环境理解，为人形机器人智能控制带来突破性进展。</p>
+                    <h3>🎉 今日重磅</h3>
+                    <p><strong>OpenAI发布GPT-6预览版开启机器人智能新纪元</strong> - OpenAI正式发布GPT-6预览版，新增机器人专用API接口，支持实时传感器数据融合和多模态环境理解，为人形机器人智能控制带来突破性进展。</p>
                     <a href="https://openai.com/blog/gpt-6-preview" class="source-link" target="_blank">📊 来源：OpenAI官网 ⭐⭐⭐⭐⭐</a>
                 </div>
 
@@ -320,16 +323,16 @@
                 <h2>💡 今日观点</h2>
                 
                 <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-                    <h3 style="color: #495057; margin-top: 0;">🤖 AI与机器人融合加速推进</h3>
+                    <h3>🤖 AI与机器人融合加速推进</h3>
                     <p>今天OpenAI发布的GPT-6预览版标志着AI与机器人融合进入新阶段。大模型在机器人控制领域的应用正在从理论研究走向实际落地，未来将有更多场景实现AI驱动的智能机器人。</p>
                     
-                    <h3 style="color: #495057; margin-top: 1rem;">🏭 工业机器人智能化升级</h3>
+                    <h3>🏭 工业机器人智能化升级</h3>
                     <p>传统工业机器人正在向智能化方向发展，AI视觉、力控系统、自主学习等技术的集成，使工业机器人能够处理更复杂的任务，适应更多样化的生产场景。</p>
                     
-                    <h3 style="color: #495057; margin-top: 1rem;">🏥 服务机器人商业化提速</h3>
+                    <h3>🏥 服务机器人商业化提速</h3>
                     <p>服务机器人领域在成本下降和技术成熟的双重推动下，商业化进程明显加快。医院、养老、物流等场景的机器人应用正从试点走向规模化部署。</p>
                     
-                    <h3 style="color: #495057; margin-top: 1rem;">💰 投资热度持续高涨</h3>
+                    <h3>💰 投资热度持续高涨</h3>
                     <p>机器人产业投资热度持续高涨，反映出资本市场对机器人行业的看好。随着技术的不断突破和应用的快速落地，机器人行业将迎来爆发式增长。</p>
                 </div>
 

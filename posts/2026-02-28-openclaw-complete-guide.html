@@ -11,22 +11,19 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="/" class="logo">
-                    <h1>AI Sense</h1>
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="/">🏠 首页</a></li>
-                    <li><a href="/ai-news/">😴 睡醒就有早报看</a></li>
-                    <li><a href="/github-trending/">⭐ 今天又Star了啥</a></li>
-                    <li><a href="/robot/">🤖 机器人时代来了</a></li>
-                    <li><a href="/one-person-company/">🍜 一个人如何混饭吃</a></li>
-                    <li><a href="/openclaw/">🦞 我的AI管家</a></li>
-                    <li><a href="/about/">🙋 关于我</a></li>
-                </ul>
-            </div>
-        </nav>
+        <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">AI Sense</span>
+            </a>
+            <nav class="nav">
+                <a href="/posts/" class="nav-link">📰 AI News</a>
+                <a href="/posts/" class="nav-link">⭐ Trending</a>
+                <a href="/" class="nav-link">🤖 AI Tools</a>
+            </nav>
+        </div>
+    </header>
     </header>
     
     <main class="container">
@@ -43,7 +40,7 @@
 <div class="guide-header">
             <h1>🦞 OpenClaw完整部署指南</h1>
             <p class="subtitle">从安装到实战配置，打造你的AI私人助理</p>
-            <p style="margin-top: 1rem; opacity: 0.8;">作者：功哥 | 更新时间：2026年2月28日 | 阅读时长：约25分钟</p>
+            <p>作者：功哥 | 更新时间：2026年2月28日 | 阅读时长：约25分钟</p>
         </div>
         
         <div class="toc">
@@ -66,7 +63,7 @@
             
             <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem; border-radius: 10px; text-align: center; margin: 2rem 0;">
                 <h2 style="margin: 0; font-size: 3rem;">🦞 OpenClaw</h2>
-                <p style="margin: 1rem 0 0 0; font-size: 1.5rem;">开源AI助手平台 · 多通道 · 可扩展</p>
+                <p>开源AI助手平台 · 多通道 · 可扩展</p>
                 <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
                     <div style="text-align: center;">
                         <div style="font-size: 2rem; font-weight: bold;">50+</div>
@@ -88,7 +85,7 @@
             <h3>OpenClaw基础框架</h3>
             
             <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
-                <h4 style="margin-top: 0;">🏗️ 架构组件</h4>
+                <h4>🏗️ 架构组件</h4>
                 <ul style="line-height: 1.8;">
                     <li><strong>Gateway（网关）</strong>：核心服务，处理所有通道连接和消息路由</li>
                     <li><strong>Agent（代理）</strong>：AI助手实例，处理用户对话和任务执行</li>
@@ -98,12 +95,12 @@
                     <li><strong>MCP Server</strong>：标准化协议扩展，连接外部服务</li>
                 </ul>
                 
-                <h4 style="margin-top: 2rem;">🔄 工作流程</h4>
+                <h4>🔄 工作流程</h4>
                 <div style="background: white; padding: 1.5rem; border-radius: 6px; font-family: monospace; overflow-x: auto;">
 用户消息 → Gateway → Agent → AI模型 → 工具调用 → 响应生成 → Gateway → 用户
                 </div>
                 
-                <h4 style="margin-top: 2rem;">📁 目录结构</h4>
+                <h4>📁 目录结构</h4>
                 <div class="code-block" style="margin-top: 0.5rem;">
                     <code>~/.openclaw/
 ├── workspace/              # 工作空间
@@ -296,7 +293,7 @@ llm:
             
             <div class="warning-box">
                 <strong>⚠️ GLM接入重要说明</strong>
-                <p style="margin: 0.5rem 0;">智谱GLM-5有两个API端点，请根据你的套餐类型正确配置：</p>
+                <p>智谱GLM-5有两个API端点，请根据你的套餐类型正确配置：</p>
                 <div class="code-block" style="margin: 1rem 0;">
                     <code># 通用API端点（默认）
 https://open.bigmodel.cn/api/paas/v4
@@ -304,14 +301,14 @@ https://open.bigmodel.cn/api/paas/v4
 # GLM编码套餐专用端点（仅限编码场景）
 https://open.bigmodel.cn/api/coding/paas/v4</code>
                 </div>
-                <p style="margin: 0.5rem 0;"><strong>注意：</strong></p>
+                <p><strong>注意：</strong></p>
                 <ul style="margin: 0.5rem 0 0 1.5rem;">
                     <li>使用<strong>GLM编码套餐</strong>时，必须配置专属的Coding端点</li>
                     <li>Coding端点仅限编码场景，不适用于通用API场景</li>
                     <li>通用场景请使用通用端点</li>
                     <li>API密钥获取：<a href="https://bigmodel.cn/usercenter/proj-mgmt/apikeys" target="_blank">API Keys页面</a></li>
                 </ul>
-                <p style="margin-top: 1rem;"><strong>配置示例：</strong></p>
+                <p><strong>配置示例：</strong></p>
                 <div class="code-block" style="margin: 0.5rem 0;">
                     <code># 通用套餐
 llm:
@@ -527,9 +524,9 @@ openclaw cron create
             
             <h3>6.3 任务类型</h3>
             
-            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <table>
                 <thead>
-                    <tr style="background: #f8f9fa;">
+                    <tr>
                         <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: left;">类型</th>
                         <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: left;">说明</th>
                         <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: left;">适用场景</th>
@@ -537,14 +534,14 @@ openclaw cron create
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;"><code>isolated</code></td>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">独立运行，不阻塞主会话</td>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">日报生成、数据采集</td>
+                        <td><code>isolated</code></td>
+                        <td>独立运行，不阻塞主会话</td>
+                        <td>日报生成、数据采集</td>
                     </tr>
                     <tr>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;"><code>main</code></td>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">在主会话中执行</td>
-                        <td style="padding: 0.75rem; border: 1px solid #ddd;">需要用户交互的任务</td>
+                        <td><code>main</code></td>
+                        <td>在主会话中执行</td>
+                        <td>需要用户交互的任务</td>
                     </tr>
                 </tbody>
             </table>
@@ -572,7 +569,7 @@ openclaw cron logs <task-id></code>
             
             <div class="tip-box">
                 <strong>📝 实战案例：玄幻小说自动创作</strong>
-                <p style="margin-top: 0.5rem;">配置7个定时任务，每天凌晨0-6点，每小时自动创作3章小说：</p>
+                <p>配置7个定时任务，每天凌晨0-6点，每小时自动创作3章小说：</p>
                 <div class="code-block" style="margin-top: 0.5rem;">
                     <code># 任务1：0点创作
 openclaw cron create
@@ -820,7 +817,7 @@ openclaw migrate</code>
             </div>
             
             <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
-                <h3 style="margin-top: 0;">📚 相关资源</h3>
+                <h3>📚 相关资源</h3>
                 <p>
                     <a href="https://github.com/openclaw/openclaw" target="_blank" style="margin-right: 1rem;">GitHub仓库</a>
                     <a href="https://docs.openclaw.ai" target="_blank" style="margin-right: 1rem;">官方文档</a>
@@ -830,12 +827,12 @@ openclaw migrate</code>
         </div>
         
         <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
-            <p style="color: #666;">
+            <p>
                 <strong>作者：</strong>功哥 | 
                 <strong>更新时间：</strong>2026年2月28日 | 
                 <strong>字数：</strong>约6500字
             </p>
-            <p style="color: #999; font-size: 0.9rem; margin-top: 1rem;">
+            <p>
                 本文首发于 <a href="https://aisense.top">AI Sense</a>，转载请注明出处
             </p>
         </div>
@@ -851,7 +848,7 @@ openclaw migrate</code>
     
     <footer>
         <div class="container">
-            <p style="font-size: 1.1rem; font-weight: 500; color: #666; margin-bottom: 1rem;">
+            <p>
                 大人，时代变了 🤖 现在到我的主场了
             </p>
             

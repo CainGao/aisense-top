@@ -70,16 +70,19 @@
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31ca64f66cc74b79864d2af8e0c90cde"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="nav-logo">🌐 AI Sense</a>
-            <ul class="nav-menu">
-                <li><a href="/posts/">📰 AI News</a></li>
-                <li><a href="/posts/">⭐ GitHub Trending</a></li>
-                <li><a href="/">🤖 AI Tools</a></li>
-            </ul>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">AI Sense</span>
+            </a>
+            <nav class="nav">
+                <a href="/posts/" class="nav-link">📰 AI News</a>
+                <a href="/posts/" class="nav-link">⭐ Trending</a>
+                <a href="/" class="nav-link">🤖 AI Tools</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <main class="container">
         <article class="post">
@@ -94,7 +97,7 @@
             <div class="post-content">
 
                 <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #4CAF50;">
-                    <h3 style="margin-top: 0; color: #2e7d32;">📈 Today's Highlights</h3>
+                    <h3>📈 Today's Highlights</h3>
                     <p>AI coding agent tooling dominates today's GitHub trending. Anthropic's official Claude Plugins directory leads with 2,556 stars in a single day. Code knowledge graphs and AI-powered dev tools continue to surge as developers race to build the next generation of AI-assisted programming environments.</p>
                 </div>
 
@@ -183,18 +186,10 @@
                 </div>
 
                 <!-- Trend Analysis -->
-                <div style="background: #fff3cd; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; border-left: 4px solid #ffc107;">
-                    <h3 style="margin-top: 0; color: #856404;">📊 Trend Analysis</h3>
-                    <p><strong>AI Coding Agent Ecosystem Explosion:</strong> Five of today's top trending repos directly serve AI coding agents (Claude Plugins, CodeGraph, Understand-Anything, Chrome DevTools MCP, oh-my-pi). The ecosystem is rapidly maturing beyond chat-based coding to deep codebase understanding and browser-level tool integration.</p>
-                    <p><strong>Code Knowledge Graphs Emerge:</strong> Both CodeGraph and Understand-Anything tackle the same problem — giving AI agents structured understanding of large codebases. This category is becoming a must-have infrastructure layer.</p>
-                    <p><strong>MCP as the New Standard:</strong> Chrome DevTools MCP reinforces the Model Context Protocol as the de facto standard for exposing tools to AI agents. Expect every developer tool to ship an MCP server.</p>
-                </div>
-
-                <!-- Navigation -->
-                <div style="margin-top: 3rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
-                    <a href="/" style="display: inline-block; padding: 0.75rem 2rem; background: #1976d2; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">🏠 Back to Home</a>
-                    <a href="/posts/2026-05-23-ai-news.html" style="display: inline-block; padding: 0.75rem 2rem; background: #28a745; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">📰 Today's AI News</a>
-                    <a href="/posts/" style="display: inline-block; padding: 0.75rem 2rem; background: #ff9800; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">📂 News Archive</a>
+                >
+                    <a href="/" class="btn-primary">🏠 Back to Home</a>
+                    <a href="/posts/2026-05-23-ai-news.html" class="btn-success">📰 Today's AI News</a>
+                    <a href="/posts/" class="btn-warning">📂 News Archive</a>
                 </div>
             </div>
         </article>

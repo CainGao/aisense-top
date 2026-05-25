@@ -55,16 +55,19 @@
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="nav-logo">🌐 AI Sense</a>
-            <ul class="nav-menu">
-                <li><a href="/ai-news/">😴 睡醒就有早报看</a></li>
-                <li><a href="/github-trending/">⭐ 今天又Star了啥</a></li>
-                <li><a href="/robot/">🤖 机器人时代来了</a></li>
-            </ul>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">AI Sense</span>
+            </a>
+            <nav class="nav">
+                <a href="/posts/" class="nav-link">📰 AI News</a>
+                <a href="/posts/" class="nav-link">⭐ Trending</a>
+                <a href="/" class="nav-link">🤖 AI Tools</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <main class="container">
         <article class="post">
@@ -79,8 +82,8 @@
             <div class="post-content">
                 <!-- 今日重磅 -->
                 <div style="background: #d4edda; padding: 1rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #28a745;">
-                    <h3 style="margin-top: 0; color: #155724;">🎉 今日热榜第一</h3>
-                    <p style="margin-bottom: 0.5rem;"><strong>openai/gpt-6-sdk</strong> - OpenAI正式发布GPT-6 SDK，新增机器人专用API接口，支持实时传感器数据融合和多模态环境理解，单日新增Star超过15000+。</p>
+                    <h3>🎉 今日热榜第一</h3>
+                    <p><strong>openai/gpt-6-sdk</strong> - OpenAI正式发布GPT-6 SDK，新增机器人专用API接口，支持实时传感器数据融合和多模态环境理解，单日新增Star超过15000+。</p>
                     <a href="https://github.com/openai/gpt-6-sdk" class="source-link" target="_blank">📊 来源：GitHub ⭐⭐⭐⭐⭐</a>
                 </div>
 
@@ -181,13 +184,13 @@
                 <h2>📈 热榜趋势分析</h2>
                 
                 <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-                    <h3 style="color: #495057; margin-top: 0;">🤖 AI与机器人融合项目占主导</h3>
+                    <h3>🤖 AI与机器人融合项目占主导</h3>
                     <p>今日热榜中，AI与机器人融合相关项目占据6席，显示出该领域的强劲发展势头。OpenAI的GPT-6 SDK和Meta的Autogen框架成为最大赢家，反映了大模型在机器人控制领域的突破性进展。</p>
                     
-                    <h3 style="color: #495057; margin-top: 1rem;">🚀 开发工具持续升级</h3>
+                    <h3>🚀 开发工具持续升级</h3>
                     <p>Hugging Face、LangChain、vLLM等开发工具平台纷纷发布新版本，针对AI和机器人应用进行专门优化。这表明开发者生态正在快速成熟，为AI应用落地提供强大支持。</p>
                     
-                    <h3 style="color: #495057; margin-top: 1rem;">🌐 本地化部署需求增长</h3>
+                    <h3>🌐 本地化部署需求增长</h3>
                     <p>Ollama Pro等本地化部署项目受到关注，反映出企业和开发者对数据安全和私有化部署的需求正在增长。混合云+本地部署的模式将成为主流。</p>
                 </div>
 
@@ -196,23 +199,23 @@
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
                     <div style="background: #e3f2fd; padding: 1rem; border-radius: 8px; text-align: center;">
-                        <h4 style="color: #1976d2;">AI框架</h4>
-                        <p style="font-size: 2rem; font-weight: bold; color: #1976d2;">4个</p>
+                        <h4>AI框架</h4>
+                        <p>4个</p>
                         <p>占比40%</p>
                     </div>
                     <div style="background: #f3e5f5; padding: 1rem; border-radius: 8px; text-align: center;">
-                        <h4 style="color: #7b1fa2;">开发工具</h4>
-                        <p style="font-size: 2rem; font-weight: bold; color: #7b1fa2;">3个</p>
+                        <h4>开发工具</h4>
+                        <p>3个</p>
                         <p>占比30%</p>
                     </div>
                     <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px; text-align: center;">
-                        <h4 style="color: #388e3c;">仿真平台</h4>
-                        <p style="font-size: 2rem; font-weight: bold; color: #388e3c;">2个</p>
+                        <h4>仿真平台</h4>
+                        <p>2个</p>
                         <p>占比20%</p>
                     </div>
                     <div style="background: #fff3e0; padding: 1rem; border-radius: 8px; text-align: center;">
-                        <h4 style="color: #f57c00;">其他</h4>
-                        <p style="font-size: 2rem; font-weight: bold; color: #f57c00;">1个</p>
+                        <h4>其他</h4>
+                        <p>1个</p>
                         <p>占比10%</p>
                     </div>
                 </div>
@@ -221,14 +224,14 @@
                 <h2>💡 推荐关注</h2>
                 
                 <div style="background: #fff3e0; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-                    <h3 style="color: #f57c00; margin-top: 0;">🔥 必关注项目</h3>
+                    <h3>🔥 必关注项目</h3>
                     <ul style="margin: 1rem 0;">
                         <li><strong>openai/gpt-6-sdk</strong> - 机器人AI开发的未来，必学必用</li>
                         <li><strong>meta/autogen-7.0</strong> - 多智能体协作框架，构建复杂AI系统</li>
                         <li><strong>huggingface/transformers-6.0</strong> - 模型库标准，支持所有最新模型</li>
                     </ul>
                     
-                    <h3 style="color: #f57c00; margin-top: 1rem;">📈 上升新星</h3>
+                    <h3>📈 上升新星</h3>
                     <ul style="margin: 1rem 0;">
                         <li><strong>langchainai/langflow-5.0</strong> - 可视化编程，降低AI开发门槛</li>
                         <li><strong>ollama/ollama-pro</strong> - 本地部署大模型，数据安全首选</li>

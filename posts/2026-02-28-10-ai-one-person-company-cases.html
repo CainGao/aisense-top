@@ -11,22 +11,19 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="/" class="logo">
-                    <h1>AI Sense</h1>
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="/">🏠 首页</a></li>
-                    <li><a href="/ai-news/">😴 睡醒就有早报看</a></li>
-                    <li><a href="/github-trending/">⭐ 今天又Star了啥</a></li>
-                    <li><a href="/robot/">🤖 机器人时代来了</a></li>
-                    <li><a href="/one-person-company/">🍜 一个人如何混饭吃</a></li>
-                    <li><a href="/openclaw/">🦞 我的AI管家</a></li>
-                    <li><a href="/about/">🙋 关于我</a></li>
-                </ul>
-            </div>
-        </nav>
+        <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">AI Sense</span>
+            </a>
+            <nav class="nav">
+                <a href="/posts/" class="nav-link">📰 AI News</a>
+                <a href="/posts/" class="nav-link">⭐ Trending</a>
+                <a href="/" class="nav-link">🤖 AI Tools</a>
+            </nav>
+        </div>
+    </header>
     </header>
 
     <main class="container">
@@ -46,10 +43,10 @@
                 <p>以下10个案例都是<strong>真实存在</strong>的AI一人公司，月收入超过$20,000（约合人民币14万元），而且<strong>只需1个人</strong>就能运营。我们将深度分析他们的成功模式。</p>
 
                 <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-                    <h4 style="margin-top: 0;">📈 10个案例概览</h4>
-                    <table style="width: 100%; margin-top: 1rem; border-collapse: collapse;">
+                    <h4>📈 10个案例概览</h4>
+                    <table>
                         <thead>
-                            <tr style="background: white;">
+                            <tr>
                                 <th style="padding: 0.8rem; text-align: left; border: 1px solid #e8e8e8;">案例</th>
                                 <th style="padding: 0.8rem; text-align: left; border: 1px solid #e8e8e8;">类型</th>
                                 <th style="padding: 0.8rem; text-align: left; border: 1px solid #e8e8e8;">月收入</th>
@@ -58,64 +55,64 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;"><strong>PhotoAI</strong></td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">AI工具</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">$100k+</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">2023年</td>
-                            </tr>
-                            <tr style="background: white;">
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;"><strong>InteriorAI</strong></td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">AI工具</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">$40k+</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">2023年</td>
+                                <td><strong>PhotoAI</strong></td>
+                                <td>AI工具</td>
+                                <td>$100k+</td>
+                                <td>2023年</td>
                             </tr>
                             <tr>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;"><strong>HeadshotPro</strong></td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">AI工具</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">$60k+</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">2023年</td>
-                            </tr>
-                            <tr style="background: white;">
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;"><strong>ChatPDF</strong></td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">AI工具</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">$50k+</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">2023年</td>
+                                <td><strong>InteriorAI</strong></td>
+                                <td>AI工具</td>
+                                <td>$40k+</td>
+                                <td>2023年</td>
                             </tr>
                             <tr>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;"><strong>Durable</strong></td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">AI建站</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">$200k+</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">2023年</td>
-                            </tr>
-                            <tr style="background: white;">
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;"><strong>Jasper (早期)</strong></td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">AI写作</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">$100k+</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">2021年</td>
+                                <td><strong>HeadshotPro</strong></td>
+                                <td>AI工具</td>
+                                <td>$60k+</td>
+                                <td>2023年</td>
                             </tr>
                             <tr>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;"><strong>Copy.ai (早期)</strong></td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">AI文案</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">$80k+</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">2020年</td>
-                            </tr>
-                            <tr style="background: white;">
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;"><strong>Notion AI</strong></td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">AI笔记</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">$500k+</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">2023年</td>
+                                <td><strong>ChatPDF</strong></td>
+                                <td>AI工具</td>
+                                <td>$50k+</td>
+                                <td>2023年</td>
                             </tr>
                             <tr>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;"><strong>Midjourney (早期)</strong></td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">AI绘图</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">$300k+</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">2022年</td>
+                                <td><strong>Durable</strong></td>
+                                <td>AI建站</td>
+                                <td>$200k+</td>
+                                <td>2023年</td>
                             </tr>
-                            <tr style="background: white;">
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;"><strong>Perplexity</strong></td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">AI搜索</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">$150k+</td>
-                                <td style="padding: 0.8rem; border: 1px solid #e8e8e8;">2022年</td>
+                            <tr>
+                                <td><strong>Jasper (早期)</strong></td>
+                                <td>AI写作</td>
+                                <td>$100k+</td>
+                                <td>2021年</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Copy.ai (早期)</strong></td>
+                                <td>AI文案</td>
+                                <td>$80k+</td>
+                                <td>2020年</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Notion AI</strong></td>
+                                <td>AI笔记</td>
+                                <td>$500k+</td>
+                                <td>2023年</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Midjourney (早期)</strong></td>
+                                <td>AI绘图</td>
+                                <td>$300k+</td>
+                                <td>2022年</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Perplexity</strong></td>
+                                <td>AI搜索</td>
+                                <td>$150k+</td>
+                                <td>2022年</td>
                             </tr>
                         </tbody>
                     </table>
@@ -124,7 +121,7 @@
                 <h2>🎯 案例1：PhotoAI - 月收入$100k+</h2>
 
                 <div style="background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
-                    <h3 style="margin-top: 0;">基本信息</h3>
+                    <h3>基本信息</h3>
                     <ul style="line-height: 1.8;">
                         <li><strong>创始人：</strong>Pieter Levels（独立开发者）</li>
                         <li><strong>产品：</strong>AI生成个人照片</li>
@@ -143,7 +140,7 @@
                         <li>$29/月订阅（生成30张照片）</li>
                         <li>$199一次性（生成100张照片）</li>
                     </ul>
-                    <p style="margin-top: 1rem;"><strong>成本结构：</strong></p>
+                    <p><strong>成本结构：</strong></p>
                     <ul style="margin-top: 0.5rem;">
                         <li>服务器：$500-1000/月</li>
                         <li>API成本（Stable Diffusion）：$2000-5000/月</li>
@@ -176,7 +173,7 @@
                 <h2>🎯 案例2：InteriorAI - 月收入$40k+</h2>
 
                 <div style="background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
-                    <h3 style="margin-top: 0;">基本信息</h3>
+                    <h3>基本信息</h3>
                     <ul style="line-height: 1.8;">
                         <li><strong>创始人：</strong>独立开发者（匿名）</li>
                         <li><strong>产品：</strong>AI室内设计</li>
@@ -196,7 +193,7 @@
                         <li>室内设计师（快速生成方案）</li>
                         <li>房地产经纪人（房屋美化）</li>
                     </ul>
-                    <p style="margin-top: 1rem;"><strong>收费模式：</strong></p>
+                    <p><strong>收费模式：</strong></p>
                     <ul style="margin-top: 0.5rem;">
                         <li>$19/月（生成50张）</li>
                         <li>$29一次性（生成30张）</li>
@@ -226,7 +223,7 @@
                 <h2>🎯 案例3：HeadshotPro - 月收入$60k+</h2>
 
                 <div style="background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
-                    <h3 style="margin-top: 0;">基本信息</h3>
+                    <h3>基本信息</h3>
                     <ul style="line-height: 1.8;">
                         <li><strong>创始人：</strong>2人团队（后发展为小团队）</li>
                         <li><strong>产品：</strong>AI职业头像</li>
@@ -246,7 +243,7 @@
                         <li>定制品牌风格</li>
                         <li>团队管理后台</li>
                     </ul>
-                    <p style="margin-top: 1rem;"><strong>客单价：</strong></p>
+                    <p><strong>客单价：</strong></p>
                     <ul style="margin-top: 0.5rem;">
                         <li>个人：$29</li>
                         <li>企业：$950（50人）</li>
@@ -277,7 +274,7 @@
                 <h2>🎯 案例4：ChatPDF - 月收入$50k+</h2>
 
                 <div style="background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
-                    <h3 style="margin-top: 0;">基本信息</h3>
+                    <h3>基本信息</h3>
                     <ul style="line-height: 1.8;">
                         <li><strong>创始人：</strong>独立开发者</li>
                         <li><strong>产品：</strong>AI阅读PDF文档</li>
@@ -298,7 +295,7 @@
                         <li>律师（合同审阅）</li>
                         <li>医生（病历分析）</li>
                     </ul>
-                    <p style="margin-top: 1rem;"><strong>Freemium模式：</strong></p>
+                    <p><strong>Freemium模式：</strong></p>
                     <ul style="margin-top: 0.5rem;">
                         <li>免费：3个PDF/月，每个<10页</li>
                         <li>付费：无限PDF，每个<500页</li>
@@ -328,7 +325,7 @@
                 <h2>📊 10大成功模式总结</h2>
 
                 <div style="background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); padding: 2.5rem; border-radius: 12px; margin: 2rem 0;">
-                    <h3 style="margin-top: 0;">🎯 共同特征</h3>
+                    <h3>🎯 共同特征</h3>
                     <ol style="line-height: 2; margin-top: 1rem;">
                         <li><strong>垂直细分：</strong>不做通用工具，专注一个场景</li>
                         <li><strong>视觉冲击：</strong>效果立竿见影，用户愿意分享</li>
@@ -346,7 +343,7 @@
                 <h2>💡 给一人公司的启示</h2>
 
                 <div style="background: white; border: 2px solid #e8e8e8; border-radius: 12px; padding: 2.5rem; margin: 2rem 0;">
-                    <h3 style="margin-top: 0;">🚀 实操建议</h3>
+                    <h3>🚀 实操建议</h3>
                     <ol style="line-height: 2; margin-top: 1rem;">
                         <li><strong>选择垂直场景：</strong>不要做通用工具，找一个足够小的细分市场</li>
                         <li><strong>快速验证：</strong>2周内完成MVP，不要追求完美</li>
@@ -362,7 +359,7 @@
                 </div>
 
                 <div style="background: #fff5f5; border-left: 4px solid #f56565; padding: 1.5rem; border-radius: 8px; margin: 2rem 0;">
-                    <h4 style="color: #c53030; margin-top: 0;">⚠️ 需要避开的坑</h4>
+                    <h4>⚠️ 需要避开的坑</h4>
                     <ul style="margin-top: 1rem; line-height: 1.8;">
                         <li><strong>过度追求完美：</strong>MVP阶段不要追求完美，快速验证更重要</li>
                         <li><strong>忽视营销：</strong>产品好≠用户会来，必须主动营销</li>
@@ -375,7 +372,7 @@
                 <h2>🎯 总结</h2>
 
                 <div style="background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%); padding: 2.5rem; border-radius: 12px; margin: 2rem 0;">
-                    <p style="font-size: 1.2rem; line-height: 1.8; margin: 0;">
+                    <p>
                         <strong>一人公司不是梦。</strong><br><br>
                         这10个案例证明了：<strong>1个人+AI工具=月入$20k+</strong><br><br>
                         关键在于：<br>
@@ -388,7 +385,7 @@
                 </div>
 
                 <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; text-align: center;">
-                    <p style="margin: 0; color: #666;">
+                    <p>
                         <strong>📚 延伸阅读：</strong><br>
                         <a href="/posts/2026-02-28-ai-gold-rush-strategy.html">AI淘金热中的卖铲人</a> | 
                         <a href="/posts/2026-02-27-one-person-company-guide.html">AI一人公司完全指南</a> | 
@@ -408,7 +405,7 @@
 
     <footer>
         <div class="container">
-            <p style="font-size: 1.1rem; font-weight: 500; color: #666; margin-bottom: 1rem;">
+            <p>
                 大人，时代变了 🤖 现在到我的主场了
             </p>
 

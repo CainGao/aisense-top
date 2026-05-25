@@ -69,16 +69,19 @@
 </head>
 <body>
     <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="nav-logo">🌐 AI Sense</a>
-            <ul class="nav-menu">
-                <li><a href="/ai-news/">😴 睡醒就有早报看</a></li>
-                <li><a href="/github-trending/">⭐ 今天又Star了啥</a></li>
-                <li><a href="/robot/">🤖 机器人时代来了</a></li>
-            </ul>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">AI Sense</span>
+            </a>
+            <nav class="nav">
+                <a href="/posts/" class="nav-link">📰 AI News</a>
+                <a href="/posts/" class="nav-link">⭐ Trending</a>
+                <a href="/" class="nav-link">🤖 AI Tools</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <main class="container">
         <article class="post">
@@ -180,32 +183,32 @@
 
                 <!-- 趋势总结 -->
                 <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; border-left: 4px solid #1976d2;">
-                    <h3 style="margin-top: 0;">📊 今日GitHub AI趋势总结</h3>
-                    <table style="width: 100%; border-collapse: collapse;">
-                        <tr style="border-bottom: 1px solid #bbb;">
-                            <td style="padding: 0.5rem; font-weight: bold;">🔥 最热方向</td>
-                            <td style="padding: 0.5rem;">AI Agent框架（Dify, Agents-Flex, DeerFlow）</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #bbb;">
-                            <td style="padding: 0.5rem; font-weight: bold;">⚡ 技术热点</td>
-                            <td style="padding: 0.5rem;">LLM推理优化（FlashMLA, DeepEP, KTransformers）</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #bbb;">
-                            <td style="padding: 0.5rem; font-weight: bold;">🔗 协议生态</td>
-                            <td style="padding: 0.5rem;">MCP协议快速扩展，大量Server/桥接工具涌现</td>
+                    <h3>📊 今日GitHub AI趋势总结</h3>
+                    <table>
+                        <tr>
+                            <td>🔥 最热方向</td>
+                            <td>AI Agent框架（Dify, Agents-Flex, DeerFlow）</td>
                         </tr>
                         <tr>
-                            <td style="padding: 0.5rem; font-weight: bold;">🏢 国产力量</td>
-                            <td style="padding: 0.5rem;">DeepSeek、清华KVCache、字节跳动、阿里Qwen持续领跑</td>
+                            <td>⚡ 技术热点</td>
+                            <td>LLM推理优化（FlashMLA, DeepEP, KTransformers）</td>
+                        </tr>
+                        <tr>
+                            <td>🔗 协议生态</td>
+                            <td>MCP协议快速扩展，大量Server/桥接工具涌现</td>
+                        </tr>
+                        <tr>
+                            <td>🏢 国产力量</td>
+                            <td>DeepSeek、清华KVCache、字节跳动、阿里Qwen持续领跑</td>
                         </tr>
                     </table>
                 </div>
 
                 <!-- 导航 -->
-                <div style="margin-top: 3rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
-                    <a href="/" style="display: inline-block; padding: 0.75rem 2rem; background: #1976d2; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">🏠 返回首页</a>
-                    <a href="/posts/2026-04-19-ai-news.html" style="display: inline-block; padding: 0.75rem 2rem; background: #ff9800; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">😴 今日AI早报</a>
-                    <a href="/posts/2026-04-19-robot-news.html" style="display: inline-block; padding: 0.75rem 2rem; background: #28a745; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">🤖 今日机器人日报</a>
+                <div class="post-nav">
+                    <a href="/" class="btn-primary">🏠 返回首页</a>
+                    <a href="/posts/2026-04-19-ai-news.html" class="btn-warning">😴 今日AI早报</a>
+                    <a href="/posts/2026-04-19-robot-news.html" class="btn-success">🤖 今日机器人日报</a>
                 </div>
             </div>
         </article>

@@ -114,8 +114,11 @@
 <section class="section" id="tools">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">🔥 Top 10 AI Tools</h2>
-            <span class="stat-label">📅 Updated May 25, 2026</span>
+            <h2 class="section-title" id="toolsTitle">🔥 Top 10 AI Tools</h2>
+            <div style="display:flex;gap:8px;align-items:center;">
+                <button id="clearFilter" onclick="filterTools(null)" style="display:none;padding:4px 12px;border-radius:20px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-secondary);cursor:pointer;font-size:0.82rem;">✕ Show All</button>
+                <span class="stat-label">📅 Updated May 25, 2026</span>
+            </div>
         </div>
         <div class="tool-grid" id="toolGrid">
 
@@ -250,56 +253,56 @@
             <h2 class="section-title">📂 Browse by Category</h2>
         </div>
         <div class="category-grid">
-            <div class="category-card">
+            <a href="#tools" class="category-card" onclick="filterTools('assistant')">
                 <div class="category-icon">💬</div>
                 <div class="category-name">AI Assistants</div>
                 <div class="category-count">ChatGPT · Claude · Gemini</div>
-            </div>
-            <div class="category-card">
+            </a>
+            <a href="#tools" class="category-card" onclick="filterTools('image')">
                 <div class="category-icon">🎨</div>
                 <div class="category-name">Image Generation</div>
                 <div class="category-count">Midjourney · DALL-E · SD</div>
-            </div>
-            <div class="category-card">
+            </a>
+            <a href="#tools" class="category-card" onclick="filterTools('video')">
                 <div class="category-icon">🎬</div>
                 <div class="category-name">Video Creation</div>
                 <div class="category-count">Sora · Runway · Pika</div>
-            </div>
-            <div class="category-card">
+            </a>
+            <a href="#tools" class="category-card" onclick="filterTools('audio')">
                 <div class="category-icon">🎵</div>
                 <div class="category-name">Audio & Music</div>
                 <div class="category-count">Suno · ElevenLabs</div>
-            </div>
-            <div class="category-card">
+            </a>
+            <a href="#tools" class="category-card" onclick="filterTools('coding')">
                 <div class="category-icon">💻</div>
                 <div class="category-name">Coding Assistants</div>
                 <div class="category-count">Cursor · Copilot · Windsurf</div>
-            </div>
-            <div class="category-card">
+            </a>
+            <a href="#tools" class="category-card" onclick="filterTools('writing')">
                 <div class="category-icon">✍️</div>
                 <div class="category-name">Writing Tools</div>
                 <div class="category-count">Jasper · Notion AI</div>
-            </div>
-            <div class="category-card">
+            </a>
+            <a href="#tools" class="category-card" onclick="filterTools('search')">
                 <div class="category-icon">🔍</div>
                 <div class="category-name">AI Search</div>
                 <div class="category-count">Perplexity · You.com</div>
-            </div>
-            <div class="category-card">
+            </a>
+            <a href="#tools" class="category-card" onclick="filterTools('data')">
                 <div class="category-icon">📊</div>
                 <div class="category-name">Data & Analytics</div>
                 <div class="category-count">Julius · Code Interpreter</div>
-            </div>
-            <div class="category-card">
+            </a>
+            <a href="#tools" class="category-card" onclick="filterTools('agents')">
                 <div class="category-icon">🤖</div>
                 <div class="category-name">AI Agents</div>
                 <div class="category-count">AutoGPT · CrewAI</div>
-            </div>
-            <div class="category-card">
+            </a>
+            <a href="#tools" class="category-card" onclick="filterTools('design')">
                 <div class="category-icon">🎯</div>
                 <div class="category-name">Design Tools</div>
                 <div class="category-count">Figma AI · Canva AI</div>
-            </div>
+            </a>
         </div>
     </div>
 </section>
@@ -377,5 +380,34 @@ function filterTools(){
 }
 </script>
 
+<script>
+function filterTools(cat) {
+    const cards = document.querySelectorAll('.tool-card');
+    const btn = document.getElementById('clearFilter');
+    const title = document.getElementById('toolsTitle');
+    
+    if (!cat) {
+        cards.forEach(c => c.style.display = '');
+        btn.style.display = 'none';
+        title.textContent = '🔥 Top 10 AI Tools';
+        return;
+    }
+    
+    const catNames = {assistant:'AI Assistants',image:'Image Generation',video:'Video Creation',audio:'Audio & Music',coding:'Coding Assistants',writing:'Writing Tools',search:'AI Search',data:'Data & Analytics',agents:'AI Agents',design:'Design Tools'};
+    
+    let count = 0;
+    cards.forEach(c => {
+        if (c.dataset.cat === cat) {
+            c.style.display = '';
+            count++;
+        } else {
+            c.style.display = 'none';
+        }
+    });
+    
+    btn.style.display = 'inline-block';
+    title.textContent = catNames[cat] || cat;
+}
+</script>
 </body>
 </html>

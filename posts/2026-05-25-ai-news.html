@@ -11,22 +11,7 @@
     <meta property="og:type" content="article">
     <link rel="canonical" href="https://aisense.top/posts/2026-05-25-ai-news.html">
     <link rel="stylesheet" href="/style.css">
-    <style>
-        .source-link {
-            display: inline-block;
-            margin-top: 0.5rem;
-            padding: 0.25rem 0.75rem;
-            background: #e3f2fd;
-            color: #1976d2;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            text-decoration: none;
-        }
-        .source-link:hover {
-            background: #bbdefb;
-        }
-    </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LPV4JLKBQV"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPV4JLKBQV"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -36,16 +21,19 @@
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31ca64f66cc74b79864d2af8e0c90cde"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="nav-logo">🌐 AI Sense</a>
-            <ul class="nav-menu">
-                <li><a href="/posts/">📰 AI News</a></li>
-                <li><a href="/posts/">⭐ GitHub Trending</a></li>
-                <li><a href="/">🤖 AI Tools</a></li>
-            </ul>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">AI Sense</span>
+            </a>
+            <nav class="nav">
+                <a href="/posts/" class="nav-link">📰 AI News</a>
+                <a href="/posts/" class="nav-link">⭐ Trending</a>
+                <a href="/" class="nav-link">🤖 AI Tools</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <main class="container">
         <article class="post">
@@ -59,21 +47,21 @@
 
             <div class="post-content">
 
-                <div style="background: #d4edda; padding: 1rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #28a745;">
-                    <h3 style="margin-top: 0; color: #155724;">🔥 Headlines</h3>
-                    <p style="margin-bottom: 0.5rem;"><strong>DeepSeek Launches Reasonix — A Native Coding Agent Built for Speed</strong> — DeepSeek unveiled Reasonix, a coding-focused AI agent engineered for high caching efficiency and low operational cost. The agent runs natively (no browser wrapper) and targets professional developers who want fast, reliable code generation without the premium price tag of Western competitors.</p>
+                <div class="headlines-box">
+                    <h3>🔥 Headlines</h3>
+                    <p ><strong>DeepSeek Launches Reasonix — A Native Coding Agent Built for Speed</strong> — DeepSeek unveiled Reasonix, a coding-focused AI agent engineered for high caching efficiency and low operational cost. The agent runs natively (no browser wrapper) and targets professional developers who want fast, reliable code generation without the premium price tag of Western competitors.</p>
                     <a href="https://esengine.github.io/DeepSeek-Reasonix/" class="source-link" target="_blank" rel="noopener">📰 DeepSeek Reasonix</a>
                 </div>
 
                 <h2>🔬 Research & Analysis</h2>
 
-                <div style="border-left: 3px solid #4CAF50; padding-left: 1rem; margin-bottom: 1.5rem;">
+                <div class="news-card">
                     <h4>1. Constraint Decay: Why LLM Agents Fail at Complex Backend Code</h4>
                     <p>A new research paper published on arXiv reveals a critical weakness in LLM-based coding agents: "constraint decay." As agents generate longer and more complex backend code, they progressively lose track of architectural constraints, leading to subtle bugs and security vulnerabilities. The finding has major implications for enterprises relying on AI agents for production code — guardrails alone may not be enough.</p>
                     <a href="https://arxiv.org/abs/2605.06445" class="source-link" target="_blank" rel="noopener">📄 arXiv Paper</a>
                 </div>
 
-                <div style="border-left: 3px solid #4CAF50; padding-left: 1rem; margin-bottom: 1.5rem;">
+                <div class="news-card">
                     <h4>2. Apple Publishes Perceptual Image Codec Research</h4>
                     <p>Apple's machine learning team released a new paper on "Perceptual Image Codec" — a learned image compression system that focuses on what matters most in practical deployment. The research pushes beyond pure PSNR metrics to optimize for perceptual quality, addressing the gap between academic benchmarks and real-world image delivery. Apple continues to quietly invest in AI infrastructure that powers its ecosystem.</p>
                     <a href="https://apple.github.io/ml-pico/" class="source-link" target="_blank" rel="noopener">📰 Apple ML Research</a>
@@ -81,7 +69,7 @@
 
                 <h2>💰 Industry & Business</h2>
 
-                <div style="border-left: 3px solid #2196F3; padding-left: 1rem; margin-bottom: 1.5rem;">
+                <div class="news-card">
                     <h4>3. 'AI Washing' Exposed: Firms Scramble to Rebrand as Tech-Focused</h4>
                     <p>The Guardian published a deep investigation into "AI washing" — the growing trend of companies rushing to rebrand themselves as AI-driven, regardless of their actual technology. PR firms are cashing in as companies from retail to real estate slap "AI-powered" labels on their products. Regulators in the US and EU are beginning to take notice, with potential enforcement actions on the horizon.</p>
                     <a href="https://www.theguardian.com/technology/2026/may/24/ai-washing-pr-firms-scrambling-rebrand" class="source-link" target="_blank" rel="noopener">📰 The Guardian</a>
@@ -89,50 +77,48 @@
 
                 <h2>🛠️ Developer Tools & Languages</h2>
 
-                <div style="border-left: 3px solid #9C27B0; padding-left: 1rem; margin-bottom: 1.5rem;">
+                <div class="news-card">
                     <h4>4. Vercel Labs Unveils ZeroLang — A Programming Language Built for AI Agents</h4>
                     <p>Vercel Labs launched ZeroLang, a new programming language specifically designed for AI agents. The language aims to be the lingua franca for agent-to-agent communication and task execution, abstracting away the complexity of traditional programming languages. With 4,445 stars in its first weeks, the developer community is watching closely to see if this becomes the standard for agentic computing.</p>
                     <a href="https://github.com/vercel-labs/zerolang" class="source-link" target="_blank" rel="noopener">🔗 GitHub</a>
                 </div>
 
-                <div style="border-left: 3px solid #9C27B0; padding-left: 1rem; margin-bottom: 1.5rem;">
+                <div class="news-card">
                     <h4>5. antirez Releases ds4 — DeepSeek 4 Flash Local Inference Engine</h4>
                     <p>Redis creator Salvatore Sanfilippo (antirez) released ds4, a blazing-fast local inference engine for DeepSeek 4 Flash models, optimized for both Apple Metal and NVIDIA CUDA. The project racked up over 11,600 stars in weeks, underscoring the massive demand for running frontier AI models locally without cloud dependencies. It's a signal that local AI inference is becoming a mainstream developer need.</p>
                     <a href="https://github.com/antirez/ds4" class="source-link" target="_blank" rel="noopener">🔗 GitHub</a>
                 </div>
 
                 <!-- Summary -->
-                <div style="background: #fff3cd; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; border-left: 4px solid #ffc107;">
-                    <h3 style="margin-top: 0; color: #856404;">📊 Today's Trend Summary</h3>
-                    <table style="width: 100%; border-collapse: collapse;">
-                        <tr style="border-bottom: 1px solid #ddd;">
-                            <td style="padding: 0.5rem; font-weight: bold;">AI Agents</td>
-                            <td style="padding: 0.5rem;">DeepSeek Reasonix launches native coding agent; constraint decay research reveals LLM fragility</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #ddd;">
-                            <td style="padding: 0.5rem; font-weight: bold;">Agent Infrastructure</td>
-                            <td style="padding: 0.5rem;">Vercel ZeroLang for agents, antirez ds4 for local inference — the agent toolchain matures</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #ddd;">
-                            <td style="padding: 0.5rem; font-weight: bold;">AI Ethics</td>
-                            <td style="padding: 0.5rem;">The Guardian exposes AI washing trend; regulatory scrutiny intensifies</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #ddd;">
-                            <td style="padding: 0.5rem; font-weight: bold;">AI Research</td>
-                            <td style="padding: 0.5rem;">Apple's perceptual image codec pushes practical learned compression forward</td>
+                >
+                        <tr>
+                            <td>AI Agents</td>
+                            <td>DeepSeek Reasonix launches native coding agent; constraint decay research reveals LLM fragility</td>
                         </tr>
                         <tr>
-                            <td style="padding: 0.5rem; font-weight: bold;">Key Takeaway</td>
-                            <td style="padding: 0.5rem;">The AI ecosystem is bifurcating: serious tooling for agents vs. hype-driven AI washing</td>
+                            <td>Agent Infrastructure</td>
+                            <td>Vercel ZeroLang for agents, antirez ds4 for local inference — the agent toolchain matures</td>
+                        </tr>
+                        <tr>
+                            <td>AI Ethics</td>
+                            <td>The Guardian exposes AI washing trend; regulatory scrutiny intensifies</td>
+                        </tr>
+                        <tr>
+                            <td>AI Research</td>
+                            <td>Apple's perceptual image codec pushes practical learned compression forward</td>
+                        </tr>
+                        <tr>
+                            <td>Key Takeaway</td>
+                            <td>The AI ecosystem is bifurcating: serious tooling for agents vs. hype-driven AI washing</td>
                         </tr>
                     </table>
                 </div>
 
                 <!-- Navigation -->
-                <div style="margin-top: 3rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
-                    <a href="/" style="display: inline-block; padding: 0.75rem 2rem; background: #1976d2; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">🏠 Back to Home</a>
-                    <a href="/posts/2026-05-25-github-trending.html" style="display: inline-block; padding: 0.75rem 2rem; background: #28a745; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">⭐ Today's GitHub Trending</a>
-                    <a href="/posts/" style="display: inline-block; padding: 0.75rem 2rem; background: #ff9800; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">📰 News Archive</a>
+                <div class="post-nav">
+                    <a href="/" class="btn-primary">🏠 Back to Home</a>
+                    <a href="/posts/2026-05-25-github-trending.html" class="btn-success">⭐ Today's GitHub Trending</a>
+                    <a href="/posts/" class="btn-warning">📰 News Archive</a>
                 </div>
             </div>
         </article>

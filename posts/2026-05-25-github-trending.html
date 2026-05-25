@@ -49,16 +49,19 @@
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31ca64f66cc74b79864d2af8e0c90cde"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="nav-logo">🌐 AI Sense</a>
-            <ul class="nav-menu">
-                <li><a href="/posts/">📰 AI News</a></li>
-                <li><a href="/posts/">⭐ GitHub Trending</a></li>
-                <li><a href="/">🤖 AI Tools</a></li>
-            </ul>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="logo-icon">🌐</span>
+                <span class="logo-text">AI Sense</span>
+            </a>
+            <nav class="nav">
+                <a href="/posts/" class="nav-link">📰 AI News</a>
+                <a href="/posts/" class="nav-link">⭐ Trending</a>
+                <a href="/" class="nav-link">🤖 AI Tools</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
     <main class="container">
         <article class="post">
@@ -73,14 +76,14 @@
             <div class="post-content">
 
                 <div style="background: #d4edda; padding: 1rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid #28a745;">
-                    <h3 style="margin-top: 0; color: #155724;">🚀 Today's Top AI Repo</h3>
-                    <p style="margin-bottom: 0.5rem;"><strong>antirez/ds4</strong> — A lightning-fast DeepSeek 4 Flash local inference engine for Apple Metal and NVIDIA CUDA, created by Redis inventor Salvatore Sanfilippo. <strong>11,664 stars</strong> and climbing — proving that local AI inference is no longer a niche desire but a mainstream developer need.</p>
+                    <h3>🚀 Today's Top AI Repo</h3>
+                    <p><strong>antirez/ds4</strong> — A lightning-fast DeepSeek 4 Flash local inference engine for Apple Metal and NVIDIA CUDA, created by Redis inventor Salvatore Sanfilippo. <strong>11,664 stars</strong> and climbing — proving that local AI inference is no longer a niche desire but a mainstream developer need.</p>
                     <a href="https://github.com/antirez/ds4" class="source-link" target="_blank" rel="noopener">🔗 GitHub</a>
                 </div>
 
                 <h2>🏆 Top 5 AI Repositories by Stars</h2>
 
-                <div style="border-left: 3px solid #FF9800; padding-left: 1rem; margin-bottom: 1.5rem;">
+                <div class="news-card">
                     <h4>1. antirez/ds4 — DeepSeek 4 Flash Local Inference Engine</h4>
                     <p>Redis creator antirez delivers again — this time with a bare-metal inference engine for DeepSeek 4 Flash models. Optimized for both Apple's Metal framework and NVIDIA CUDA, ds4 brings frontier model performance to local machines without cloud dependencies. The rapid star growth reflects a clear market signal: developers want to run powerful AI models on their own hardware, with their own data.</p>
                     <div class="repo-stats">
@@ -92,7 +95,7 @@
                     <a href="https://github.com/antirez/ds4" class="source-link" target="_blank" rel="noopener">🔗 GitHub</a>
                 </div>
 
-                <div style="border-left: 3px solid #2196F3; padding-left: 1rem; margin-bottom: 1.5rem;">
+                <div class="news-card">
                     <h4>2. BigPizzaV3/CodexPlusPlus — Enhanced Codex Experience</h4>
                     <p>An enhanced toolkit for OpenAI's Codex App, striving to make the coding agent experience better and more comfortable. The community-driven project adds features and improvements that the official app lacks, highlighting how open-source ecosystems organically fill gaps in commercial AI tools.</p>
                     <div class="repo-stats">
@@ -104,7 +107,7 @@
                     <a href="https://github.com/BigPizzaV3/CodexPlusPlus" class="source-link" target="_blank" rel="noopener">🔗 GitHub</a>
                 </div>
 
-                <div style="border-left: 3px solid #4CAF50; padding-left: 1rem; margin-bottom: 1.5rem;">
+                <div class="news-card">
                     <h4>3. nexu-io/html-anything — The Agentic HTML Editor</h4>
                     <p>An AI-powered HTML editor where your local AI agent writes the HTML and you ship it. With 75 built-in skills, html-anything represents a new paradigm in web development: describe what you want, and the agent builds it. The project's rapid growth signals strong demand for AI-assisted frontend development tools.</p>
                     <div class="repo-stats">
@@ -116,7 +119,7 @@
                     <a href="https://github.com/nexu-io/html-anything" class="source-link" target="_blank" rel="noopener">🔗 GitHub</a>
                 </div>
 
-                <div style="border-left: 3px solid #9C27B0; padding-left: 1rem; margin-bottom: 1.5rem;">
+                <div class="news-card">
                     <h4>4. vercel-labs/zerolang — The Programming Language for AI Agents</h4>
                     <p>Vercel Labs introduces ZeroLang, a programming language purpose-built for AI agents. Rather than forcing agents to work with human-centric languages, ZeroLang is designed from the ground up for agent-to-agent communication and task execution. If it catches on, it could become the assembly language of the agentic era.</p>
                     <div class="repo-stats">
@@ -128,7 +131,7 @@
                     <a href="https://github.com/vercel-labs/zerolang" class="source-link" target="_blank" rel="noopener">🔗 GitHub</a>
                 </div>
 
-                <div style="border-left: 3px solid #00BCD4; padding-left: 1rem; margin-bottom: 1.5rem;">
+                <div class="news-card">
                     <h4>5. strukto-ai/mirage — Unified Virtual Filesystem for AI Agents</h4>
                     <p>Mirage provides a unified virtual filesystem that lets AI agents interact with files, APIs, databases, and remote services through a single consistent interface. By abstracting away the complexity of different data sources, Mirage solves one of the hardest problems in agent development: giving agents reliable, structured access to the tools and data they need.</p>
                     <div class="repo-stats">
@@ -143,51 +146,51 @@
                 <h2>📊 Notable Mentions</h2>
 
                 <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1.5rem;">
-                    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
-                        <tr style="border-bottom: 1px solid #ddd;">
-                            <td style="padding: 0.5rem; font-weight: bold;">Repo</td>
-                            <td style="padding: 0.5rem; font-weight: bold;">Stars</td>
-                            <td style="padding: 0.5rem; font-weight: bold;">Focus</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 0.5rem;"><a href="https://github.com/vercel-labs/zero-native" target="_blank" rel="noopener">vercel-labs/zero-native</a></td>
-                            <td style="padding: 0.5rem;">⭐ 3,981</td>
-                            <td style="padding: 0.5rem;">Desktop + mobile apps with Zig + web UI</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 0.5rem;"><a href="https://github.com/simplifaisoul/osiris" target="_blank" rel="noopener">simplifaisoul/osiris</a></td>
-                            <td style="padding: 0.5rem;">⭐ 2,832</td>
-                            <td style="padding: 0.5rem;">Open-source OSINT dashboard — Palantir alternative</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 0.5rem;"><a href="https://github.com/huangserva/3DCellForge" target="_blank" rel="noopener">huangserva/3DCellForge</a></td>
-                            <td style="padding: 0.5rem;">⭐ 2,322</td>
-                            <td style="padding: 0.5rem;">AI-powered 3D model generation studio</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #eee;">
-                            <td style="padding: 0.5rem;"><a href="https://github.com/asgeirtj/system_prompts_leaks" target="_blank" rel="noopener">asgeirtj/system_prompts_leaks</a></td>
-                            <td style="padding: 0.5rem;">⭐ 40,707</td>
-                            <td style="padding: 0.5rem;">Extracted system prompts from Claude, GPT, and more</td>
+                    <table>
+                        <tr>
+                            <td>Repo</td>
+                            <td>Stars</td>
+                            <td>Focus</td>
                         </tr>
                         <tr>
-                            <td style="padding: 0.5rem;"><a href="https://github.com/screenpipe/screenpipe" target="_blank" rel="noopener">screenpipe/screenpipe</a></td>
-                            <td style="padding: 0.5rem;">⭐ 18,877</td>
-                            <td style="padding: 0.5rem;">YC S26 — Give AI the ability to live your experience</td>
+                            <td><a href="https://github.com/vercel-labs/zero-native" target="_blank" rel="noopener">vercel-labs/zero-native</a></td>
+                            <td>⭐ 3,981</td>
+                            <td>Desktop + mobile apps with Zig + web UI</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/simplifaisoul/osiris" target="_blank" rel="noopener">simplifaisoul/osiris</a></td>
+                            <td>⭐ 2,832</td>
+                            <td>Open-source OSINT dashboard — Palantir alternative</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/huangserva/3DCellForge" target="_blank" rel="noopener">huangserva/3DCellForge</a></td>
+                            <td>⭐ 2,322</td>
+                            <td>AI-powered 3D model generation studio</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/asgeirtj/system_prompts_leaks" target="_blank" rel="noopener">asgeirtj/system_prompts_leaks</a></td>
+                            <td>⭐ 40,707</td>
+                            <td>Extracted system prompts from Claude, GPT, and more</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/screenpipe/screenpipe" target="_blank" rel="noopener">screenpipe/screenpipe</a></td>
+                            <td>⭐ 18,877</td>
+                            <td>YC S26 — Give AI the ability to live your experience</td>
                         </tr>
                     </table>
                 </div>
 
                 <!-- Trend Analysis -->
                 <div style="background: #fff3cd; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; border-left: 4px solid #ffc107;">
-                    <h3 style="margin-top: 0; color: #856404;">📈 Trend Analysis</h3>
+                    <h3>📈 Trend Analysis</h3>
                     <p><strong>Local inference and agent infrastructure dominate.</strong> antirez's ds4 proving that local DeepSeek inference can be both fast and practical is a watershed moment — it challenges the assumption that frontier models must live in the cloud. Meanwhile, ZeroLang and Mirage represent two sides of the same coin: building the foundational infrastructure for an agentic future. The fact that both a legendary systems programmer (antirez) and a major platform company (Vercel) are investing in this space simultaneously tells you everything about where the puck is heading.</p>
                 </div>
 
                 <!-- Navigation -->
-                <div style="margin-top: 3rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; text-align: center;">
-                    <a href="/" style="display: inline-block; padding: 0.75rem 2rem; background: #1976d2; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">🏠 Back to Home</a>
-                    <a href="/posts/2026-05-25-ai-news.html" style="display: inline-block; padding: 0.75rem 2rem; background: #ff9800; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">📰 Today's AI News</a>
-                    <a href="/posts/" style="display: inline-block; padding: 0.75rem 2rem; background: #28a745; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem;">📂 News Archive</a>
+                <div class="post-nav">
+                    <a href="/" class="btn-primary">🏠 Back to Home</a>
+                    <a href="/posts/2026-05-25-ai-news.html" class="btn-warning">📰 Today's AI News</a>
+                    <a href="/posts/" class="btn-success">📂 News Archive</a>
                 </div>
             </div>
         </article>
